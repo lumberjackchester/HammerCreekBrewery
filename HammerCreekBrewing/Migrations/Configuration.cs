@@ -19,9 +19,17 @@ namespace HammerCreekBrewing.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
 
             context.Styles.AddOrUpdate(new Style { StyleId = 1, StyleName = "WitBier" });
-            context.Styles.AddOrUpdate(new Style { StyleId = 1, StyleName = "Stout" });
+            context.Styles.AddOrUpdate(new Style { StyleId = 2, StyleName = "Stout" });
             context.Beers.AddOrUpdate(new Beer { BeerId = 1, StyleId = 1, Name = "Peach On Wit", BrewDate = new DateTime(2013, 9, 28) });
         }
     }

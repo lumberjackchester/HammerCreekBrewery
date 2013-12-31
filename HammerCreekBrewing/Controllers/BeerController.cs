@@ -1,51 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using HammerCreekBrewing.DTOs;
+using HammerCreekBrewing.Models;
+using System;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
-using System.Net.Http;
-using System.Web;
+using System.Threading.Tasks;
 using System.Web.Http;
-using HammerCreekBrewing.Models;
+using System.Web.Http.Description;
 
 namespace HammerCreekBrewing.Controllers
 {
     public class BeerController : ApiController
     {
         private HammerCreekBrewingContext db = new HammerCreekBrewingContext();
+        private readonly Expression<Func<Beer, BeerDto>> AsBeerDto = x => new BeerDto { Name = x.Name, Style = x.Style.StyleName };
 
-        // GET api/Default1
-        public IEnumerable<Beer> GetBeers()
+        // GET api/Beer
+        public IQueryable<BeerDto> GetBeers()
         {
-            var beers = db.Beers.Include(b => b.Style);
-            return beers.AsEnumerable();
+            return db.Beers.Include(b=>b.Style).Select(AsBeerDto);
         }
 
-        // GET api/Default1/5
-        public Beer GetBeer(int id)
+        // GET api/Beer/5
+        [ResponseType(typeof(Beer))]
+        public async Task<IHttpActionResult> GetBeer(int id)
         {
-            Beer beer = db.Beers.Find(id);
+            var beer = await db.Beers.Include(s => s.Style).Where(b => b.BeerId == id).Select(AsBeerDto).FirstOrDefaultAsync();
             if (beer == null)
             {
-                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
+                return NotFound();
             }
 
-            return beer;
+            return Ok(beer);
         }
 
-        // PUT api/Default1/5
-        public HttpResponseMessage PutBeer(int id, Beer beer)
+        // PUT api/Beer/5
+        public IHttpActionResult PutBeer(int id, Beer beer)
         {
             if (!ModelState.IsValid)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                return BadRequest(ModelState);
             }
 
             if (id != beer.BeerId)
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest);
+                return BadRequest();
             }
 
             db.Entry(beer).State = EntityState.Modified;
@@ -54,59 +56,64 @@ namespace HammerCreekBrewing.Controllers
             {
                 db.SaveChanges();
             }
-            catch (DbUpdateConcurrencyException ex)
+            catch (DbUpdateConcurrencyException)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex);
+                if (!BeerExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
             }
 
-            return Request.CreateResponse(HttpStatusCode.OK);
+            return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST api/Default1
-        public HttpResponseMessage PostBeer(Beer beer)
+        // POST api/Beer
+        [ResponseType(typeof(Beer))]
+        public IHttpActionResult PostBeer(Beer beer)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                db.Beers.Add(beer);
-                db.SaveChanges();
+                return BadRequest(ModelState);
+            }
 
-                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, beer);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = beer.BeerId }));
-                return response;
-            }
-            else
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-            }
+            db.Beers.Add(beer);
+            db.SaveChanges();
+
+            return CreatedAtRoute("DefaultApi", new { id = beer.BeerId }, beer);
         }
 
-        // DELETE api/Default1/5
-        public HttpResponseMessage DeleteBeer(int id)
+        // DELETE api/Beer/5
+        [ResponseType(typeof(Beer))]
+        public IHttpActionResult DeleteBeer(int id)
         {
             Beer beer = db.Beers.Find(id);
             if (beer == null)
             {
-                return Request.CreateResponse(HttpStatusCode.NotFound);
+                return NotFound();
             }
 
             db.Beers.Remove(beer);
+            db.SaveChanges();
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex);
-            }
-
-            return Request.CreateResponse(HttpStatusCode.OK, beer);
+            return Ok(beer);
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            if (disposing)
+            {
+                db.Dispose();
+            }
             base.Dispose(disposing);
+        }
+
+        private bool BeerExists(int id)
+        {
+            return db.Beers.Count(e => e.BeerId == id) > 0;
         }
     }
 }

@@ -10,12 +10,15 @@ namespace HammerCreekBrewing.Models
     public class Beer
     {
         [Key]
+        [Required]
         public int BeerId { get; set; }
         [Required]
         public string Name { get; set; }
         
         [ForeignKey("StyleId")]
         public Style Style { get; set; }
+
+        [Required]
         public int StyleId { get; set; }
         public string TapName { get; set; }
         public string LocationId { get; set; }
