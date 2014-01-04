@@ -119,8 +119,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BeerController.cs" />
-    <Compile Include="DTOs\BeerDetailsDTOcs.cs" />
-    <Compile Include="DTOs\BeerDTO.cs" />
+    <Compile Include="DTOs\BeerDetailsDto.cs" />
+    <Compile Include="DTOs\BeerDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -133,6 +133,8 @@
     <Compile Include="Models\HammerCreekBrewingContext.cs" />
     <Compile Include="Models\Style.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BeerService.cs" />
+    <Compile Include="Services\IBeerService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />

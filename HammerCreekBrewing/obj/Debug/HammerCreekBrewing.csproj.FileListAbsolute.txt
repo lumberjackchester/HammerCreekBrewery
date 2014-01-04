@@ -61,3 +61,4 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBre
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csproj.GenerateResource.Cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache

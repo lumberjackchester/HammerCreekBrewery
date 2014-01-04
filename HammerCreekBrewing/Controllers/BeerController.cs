@@ -1,4 +1,4 @@
-﻿using HammerCreekBrewing.DTOs;
+﻿using HammerCreekBrewing.Dtos;
 using HammerCreekBrewing.Models;
 using System;
 using System.Data;
@@ -13,19 +13,22 @@ using System.Web.Http.Description;
 
 namespace HammerCreekBrewing.Controllers
 {
+    [RoutePrefix("api/beers")]
     public class BeerController : ApiController
     {
         private HammerCreekBrewingContext db = new HammerCreekBrewingContext();
         private readonly Expression<Func<Beer, BeerDto>> AsBeerDto = x => new BeerDto { Name = x.Name, Style = x.Style.StyleName };
 
+        [Route("")]
         // GET api/Beer
         public IQueryable<BeerDto> GetBeers()
         {
             return db.Beers.Include(b=>b.Style).Select(AsBeerDto);
         }
 
+        [Route("{id:int}")]
         // GET api/Beer/5
-        [ResponseType(typeof(Beer))]
+        [ResponseType(typeof(BeerDto))]
         public async Task<IHttpActionResult> GetBeer(int id)
         {
             var beer = await db.Beers.Include(s => s.Style).Where(b => b.BeerId == id).Select(AsBeerDto).FirstOrDefaultAsync();
