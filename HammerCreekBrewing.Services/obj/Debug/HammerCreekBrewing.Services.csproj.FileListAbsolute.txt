@@ -1,0 +1,4 @@
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.pdb
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.pdb

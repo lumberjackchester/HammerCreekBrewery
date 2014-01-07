@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.1.5\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi">
+      <HintPath>..\packages\Autofac.WebApi.3.1.0\lib\net40\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
@@ -118,9 +124,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutoFacConfig.cs" />
     <Compile Include="Controllers\BeerController.cs" />
-    <Compile Include="DTOs\BeerDetailsDto.cs" />
-    <Compile Include="DTOs\BeerDto.cs" />
+    <Compile Include="Factories\MvcControllerFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -130,11 +136,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Beer.cs" />
-    <Compile Include="Models\HammerCreekBrewingContext.cs" />
     <Compile Include="Models\Style.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\BeerService.cs" />
-    <Compile Include="Services\IBeerService.cs" />
+    <Compile Include="Root\StartupModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -160,7 +164,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <ProjectReference Include="..\HammerCreekBrewing.Domain\HammerCreekBrewing.Domain.csproj">
+      <Project>{1231a8dc-8707-4dc2-b127-6671d6732502}</Project>
+      <Name>HammerCreekBrewing.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\HammerCreekBrewing.Repository.csproj">
+      <Project>{73b24d97-45eb-4f98-b0f3-d4e9faabea7a}</Project>
+      <Name>HammerCreekBrewing.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

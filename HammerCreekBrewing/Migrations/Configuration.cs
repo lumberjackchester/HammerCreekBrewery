@@ -1,19 +1,20 @@
 namespace HammerCreekBrewing.Migrations
 {
-    using HammerCreekBrewing.Models;
+    using Domain;
+    using Repository;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<HammerCreekBrewing.Models.HammerCreekBrewingContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Repository.RepositoryContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(HammerCreekBrewing.Models.HammerCreekBrewingContext context)
+        protected override void Seed(Repository.RepositoryContext context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -28,9 +29,9 @@ namespace HammerCreekBrewing.Migrations
             //    );
             //
 
-            context.Styles.AddOrUpdate(new Style { StyleId = 1, StyleName = "WitBier" });
-            context.Styles.AddOrUpdate(new Style { StyleId = 2, StyleName = "Stout" });
-            context.Beers.AddOrUpdate(new Beer { BeerId = 1, StyleId = 1, Name = "Peach On Wit", BrewDate = new DateTime(2013, 9, 28) });
+            context.Styles.AddOrUpdate(new Style { Id = 1, StyleName = "WitBier" });
+            context.Styles.AddOrUpdate(new Style { Id = 2, StyleName = "Stout" });
+            context.Beers.AddOrUpdate(new Beer { Id = 1, StyleId = 1, Name = "Peach On Wit", BrewDate = new DateTime(2013, 9, 28) });
         }
     }
 }
