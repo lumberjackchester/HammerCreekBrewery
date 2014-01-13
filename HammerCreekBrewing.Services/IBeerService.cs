@@ -1,4 +1,4 @@
-﻿using HammerCreekBrewing.Dtos;
+﻿using HammerCreekBrewing.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +10,9 @@ namespace HammerCreekBrewing.Services
 {
     public interface IBeerService
     {
-         List<BeerDto> GetCurrentMenu();
-         List<BeerDto> GetAllBeers();
-         BeerDto GetBeer(int id);
+        Task<List<Beer>> GetCurrentMenu();
+         Task<List<Beer>> GetAllBeersAsync();
+         Task<Beer> GetBeerAsync(int id);
 
     }
 }

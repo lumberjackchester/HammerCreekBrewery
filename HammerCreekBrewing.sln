@@ -7,9 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing", "Hamme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Services", "HammerCreekBrewing.Services\HammerCreekBrewing.Services.csproj", "{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Repository", "Repository\HammerCreekBrewing.Repository.csproj", "{73B24D97-45EB-4F98-B0F3-D4E9FAABEA7A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F0EA2AE9-7180-477E-A584-F8AEB324486D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Domain", "HammerCreekBrewing.Domain\HammerCreekBrewing.Domain.csproj", "{1231A8DC-8707-4DC2-B127-6671D6732502}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Models", "HammerCreekBrewing.Models\HammerCreekBrewing.Models.csproj", "{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Framework", "HammerCreekBrewing.Framework\HammerCreekBrewing.Framework.csproj", "{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +32,14 @@ Global
 		{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73B24D97-45EB-4F98-B0F3-D4E9FAABEA7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73B24D97-45EB-4F98-B0F3-D4E9FAABEA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73B24D97-45EB-4F98-B0F3-D4E9FAABEA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73B24D97-45EB-4F98-B0F3-D4E9FAABEA7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1231A8DC-8707-4DC2-B127-6671D6732502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1231A8DC-8707-4DC2-B127-6671D6732502}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1231A8DC-8707-4DC2-B127-6671D6732502}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1231A8DC-8707-4DC2-B127-6671D6732502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
