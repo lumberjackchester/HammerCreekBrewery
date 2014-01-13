@@ -15,8 +15,9 @@ using HammerCreekBrewing.Services;
 namespace HammerCreekBrewing.Controllers
 {
     public class BeerMenuController : ApiController
-    {
-      
+    {           
+      //  private HCBContext db = new HCBContext();
+               
         private readonly IBeerService _beerService;
         private readonly ILogging _logger;
 
