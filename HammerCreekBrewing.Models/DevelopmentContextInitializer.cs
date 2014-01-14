@@ -37,13 +37,15 @@ namespace HammerCreekBrewing.Models
 
                  db.BeerStyles.Add(new BeerStyle { BeerStyleId = 1, StyleName = "WitBier" });
                  db.BeerStyles.Add(new BeerStyle { BeerStyleId = 2, StyleName = "Stout" });
+                 db.BeerStyles.Add(new BeerStyle { BeerStyleId = 3, StyleName = "Ale" });
 
                 #endregion  
 
-            #region Beers
+                #region Beers
 
 
                  db.Beers.Add(new Beer { BeerId = 1, StyleId = 1, Name = "Peach On Wit", BrewDate = new DateTime(2013, 9, 28) });
+                 db.Beers.Add(new Beer { BeerId = 2, StyleId = 3, OnTap = true, Name = "Pumpkin Ale", BrewDate = new DateTime(2013, 9, 28) });
 
             #endregion
 

@@ -14,10 +14,14 @@ namespace HammerCreekBrewing.Services
     {
         private readonly HCBContext db = new HCBContext();
         //private readonly Expression<Func<Beer, BeerDto>> AsBeerDto = x => new BeerDto { Name = x.Name, Style = x.Style.StyleName };
-        public async Task<List<Beer>> GetCurrentMenu()
+
+        public IQueryable<Beer> GetCurrentMenu()
         {
-            var beers = await db.Beers.Where(b=> b.OnTap).ToListAsync();
-            return new List<Beer>();
+            return db.Beers.Where(b => b.OnTap);
+        }
+        public async Task<List<Beer>> GetCurrentMenuAsync()
+        { 
+            return await GetCurrentMenu().ToListAsync();
         }
         public async Task<List<Beer>> GetAllBeersAsync()
         {

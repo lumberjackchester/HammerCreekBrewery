@@ -1,35 +1,30 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Integration.Mvc;
+using HammerCreekBrewing.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-using System.Web.Http;
-using System.Web.Http.Dispatcher;
-using System.Web.Mvc; 
+using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
-using Autofac;
-using Autofac.Integration.WebApi;
-using Autofac.Integration.Mvc;
-using Autofac.Integration;
+using System.Web.Http; 
 using WebMatrix.WebData;
-using HammerCreekBrewing.Models;
-using HammerCreekBrewing.Environment;
-using HammerCreekBrewing.Framework.Mvc; 
-
+using HammerCreekBrewing.Framework.Mvc;
 
 namespace HammerCreekBrewing
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-    // visit http://go.microsoft.com/?LinkId=9394801
     public class MvcApplication : System.Web.HttpApplication
     {
         private IContainer _container;
         protected void Application_Start()
         {
+            //AreaRegistration.RegisterAllAreas();
+            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            //RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            // early dev only!  not in production!!
-            // seed the database
-            // Publish to RELEASE configuration when deploying to server, or you will fuck it up!
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
                 Database.SetInitializer(new DevelopmentContextInitializer());
@@ -43,16 +38,20 @@ namespace HammerCreekBrewing
             if (!WebSecurity.Initialized)
                 WebSecurity.InitializeDatabaseConnection("DefaultConnection",
                                                          "UserProfile", "UserId", "UserName", autoCreateTables: true);
-
             AreaRegistration.RegisterAllAreas();
 
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
+            //WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            //FilterConfig.RegisterHttpFilters(GlobalConfiguration.Configuration.Filters);
+
+            //GlobalConfiguration.Configuration.Filters.Add(new ExceptionHandlingAttribute());
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-     
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //AuthConfig.RegisterAuth();
+            
             // new container
             var builder = new ContainerBuilder();
-            builder.RegisterModule<HCBModule>();
+            builder.RegisterModule<HammerCreekBrewing.Environment.HCBModule>();
             _container = builder.Build();
 
             // initialize controller factory
@@ -60,10 +59,6 @@ namespace HammerCreekBrewing
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);
             DependencyResolver.SetResolver(new AutofacDependencyResolver(_container));
 
-
-            // initialize web api controller activator
-            GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpControllerActivator),
-                                                               new HttpControllerActivator(_container));
         }
     }
 }

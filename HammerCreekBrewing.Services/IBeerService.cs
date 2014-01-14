@@ -10,7 +10,8 @@ namespace HammerCreekBrewing.Services
 {
     public interface IBeerService
     {
-        Task<List<Beer>> GetCurrentMenu();
+         IQueryable<Beer> GetCurrentMenu();
+         Task<List<Beer>> GetCurrentMenuAsync();
          Task<List<Beer>> GetAllBeersAsync();
          Task<Beer> GetBeerAsync(int id);
 

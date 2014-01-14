@@ -31,15 +31,9 @@ namespace HammerCreekBrewing.Framework.Mvc
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
         {
             var scope = _container.BeginLifetimeScope();
-            //
-            if (controllerType != null)
-            {
-                return (IController)_container.Resolve(controllerType);
-            }
-            else
-            {
-                return base.GetControllerInstance(controllerType);
-            } var controller = (IController)scope.Resolve(controllerType);
+        
+            var controller = (IController)scope.Resolve(controllerType);
+
 
             lock (_syncRoot)
             {

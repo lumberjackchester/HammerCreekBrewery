@@ -1,0 +1,98 @@
+﻿@model HammerCreekBrewing.Models.Beer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Beer</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Style.StyleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Style.StyleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TapName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TapName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrewDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrewDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KeggedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KeggedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TappedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TappedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Abv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Abv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KegId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KegId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnTap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnTap)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BeerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

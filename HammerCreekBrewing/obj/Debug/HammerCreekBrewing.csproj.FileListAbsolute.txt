@@ -1,162 +1,78 @@
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\HammerCreekBrewing.dll.config
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\HammerCreekBrewing.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\HammerCreekBrewing.pdb
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\EntityFramework.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\Microsoft.Web.Infrastructure.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\Newtonsoft.Json.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Net.Http.Formatting.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.Helpers.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.Http.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.Http.WebHost.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.Mvc.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.Razor.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.WebPages.Deployment.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.WebPages.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.WebPages.Razor.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\EntityFramework.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\Newtonsoft.Json.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Net.Http.Formatting.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.Helpers.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.Http.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.Http.WebHost.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.Mvc.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.Razor.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.WebPages.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.WebPages.Deployment.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\bin\System.Web.WebPages.Razor.xml
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
-c:\users\craig.clark\documents\visual studio 2013\Projects\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll.config
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.pdb
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Autofac.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Autofac.Integration.WebApi.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\EntityFramework.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\EntityFramework.SqlServer.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.Framework.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.Models.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.Services.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\log4net.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Web.Infrastructure.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Newtonsoft.Json.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Net.Http.Formatting.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Helpers.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Http.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Http.WebHost.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Mvc.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Razor.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.WebPages.Deployment.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.WebPages.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.WebPages.Razor.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\WebMatrix.Data.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\WebMatrix.WebData.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.Framework.pdb
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.Models.pdb
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.Services.pdb
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Autofac.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\EntityFramework.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\EntityFramework.SqlServer.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\log4net.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Newtonsoft.Json.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Net.Http.Formatting.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Helpers.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Http.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Http.WebHost.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Mvc.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Razor.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.WebPages.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.WebPages.Deployment.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.WebPages.Razor.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\WebMatrix.Data.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\WebMatrix.WebData.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
-D:\Hammer Creek\HammerCreekBrewing\bin\HammerCreekBrewing.dll.config
-D:\Hammer Creek\HammerCreekBrewing\bin\HammerCreekBrewing.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\HammerCreekBrewing.pdb
-D:\Hammer Creek\HammerCreekBrewing\bin\Autofac.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\Autofac.Integration.Mvc.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\EntityFramework.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\EntityFramework.SqlServer.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\HammerCreekBrewing.Framework.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\HammerCreekBrewing.Models.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\HammerCreekBrewing.Services.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\log4net.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\Microsoft.Data.Edm.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\Microsoft.Data.OData.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\Microsoft.Web.Helpers.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\Microsoft.Web.Infrastructure.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\Newtonsoft.Json.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Net.Http.Formatting.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Spatial.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Helpers.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Http.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Http.OData.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Http.Tracing.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Http.WebHost.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Mvc.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Razor.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.WebPages.Deployment.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.WebPages.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.WebPages.Razor.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\WebMatrix.Data.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\WebMatrix.WebData.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\HammerCreekBrewing.Framework.pdb
-D:\Hammer Creek\HammerCreekBrewing\bin\HammerCreekBrewing.Models.pdb
-D:\Hammer Creek\HammerCreekBrewing\bin\HammerCreekBrewing.Services.pdb
-D:\Hammer Creek\HammerCreekBrewing\bin\Autofac.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\Autofac.Integration.Mvc.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\EntityFramework.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\EntityFramework.SqlServer.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\log4net.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\Microsoft.Data.Edm.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\Microsoft.Data.OData.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\Newtonsoft.Json.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Net.Http.Formatting.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Spatial.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Helpers.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Http.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Http.OData.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Http.Tracing.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Http.WebHost.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Mvc.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.Razor.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.WebPages.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.WebPages.Deployment.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\System.Web.WebPages.Razor.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\WebMatrix.Data.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\WebMatrix.WebData.xml
-D:\Hammer Creek\HammerCreekBrewing\bin\de\Microsoft.Data.Edm.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\es\Microsoft.Data.Edm.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\fr\Microsoft.Data.Edm.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\it\Microsoft.Data.Edm.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\ja\Microsoft.Data.Edm.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\ko\Microsoft.Data.Edm.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\ru\Microsoft.Data.Edm.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\de\Microsoft.Data.OData.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\es\Microsoft.Data.OData.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\fr\Microsoft.Data.OData.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\it\Microsoft.Data.OData.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\ja\Microsoft.Data.OData.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\ko\Microsoft.Data.OData.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\ru\Microsoft.Data.OData.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\zh-Hans\Microsoft.Data.OData.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\zh-Hant\Microsoft.Data.OData.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\de\System.Spatial.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\es\System.Spatial.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\fr\System.Spatial.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\it\System.Spatial.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\ja\System.Spatial.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\ko\System.Spatial.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\ru\System.Spatial.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\zh-Hans\System.Spatial.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\bin\zh-Hant\System.Spatial.resources.dll
-D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
-D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
-D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\HammerCreekBrewing.dll.config
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\HammerCreekBrewing.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\HammerCreekBrewing.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Antlr3.Runtime.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Autofac.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Autofac.Integration.Mvc.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Autofac.Integration.WebApi.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\EntityFramework.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\EntityFramework.SqlServer.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\HammerCreekBrewing.Framework.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\HammerCreekBrewing.Models.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\HammerCreekBrewing.Services.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.Google.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Web.Helpers.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Web.Infrastructure.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Newtonsoft.Json.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Owin.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Net.Http.Formatting.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.Helpers.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.Http.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.Mvc.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.Optimization.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.Razor.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.WebPages.Deployment.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.WebPages.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.WebPages.Razor.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\WebGrease.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\WebMatrix.Data.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\WebMatrix.WebData.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\log4net.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\HammerCreekBrewing.Framework.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\HammerCreekBrewing.Models.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\HammerCreekBrewing.Services.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Autofac.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Autofac.Integration.Mvc.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Autofac.Integration.WebApi.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Net.Http.Formatting.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.Http.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.Helpers.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.Mvc.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.Optimization.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.Razor.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.WebPages.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.WebPages.Deployment.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\System.Web.WebPages.Razor.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Newtonsoft.Json.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Antlr3.Runtime.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\WebMatrix.Data.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\WebMatrix.WebData.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\EntityFramework.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\EntityFramework.SqlServer.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.Google.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\bin\log4net.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb

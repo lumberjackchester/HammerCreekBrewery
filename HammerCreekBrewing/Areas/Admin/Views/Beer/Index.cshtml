@@ -1,0 +1,87 @@
+﻿@model IEnumerable<HammerCreekBrewing.Models.Beer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Style.StyleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TapName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrewDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KeggedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TappedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Abv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KegId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OnTap)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Style.StyleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TapName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrewDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KeggedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TappedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Abv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KegId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OnTap)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BeerId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BeerId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BeerId })
+        </td>
+    </tr>
+}
+
+</table>

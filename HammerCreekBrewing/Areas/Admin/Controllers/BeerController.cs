@@ -2,103 +2,123 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
-using System.Web.Http;
-using System.Web.Http.Description;
+using System.Net;
+using System.Web;
+using System.Web.Mvc;
 using HammerCreekBrewing.Models;
 
 namespace HammerCreekBrewing.Areas.Admin.Controllers
 {
-    public class BeerController : ApiController
+    public class BeerController : Controller
     {
         private HCBContext db = new HCBContext();
 
-        // GET api/Beern
-        public IQueryable<Beer> GetBeers()
+        // GET: /Admin/Beer/
+        public async Task<ActionResult> Index()
         {
-            return db.Beers;
+            var beers = db.Beers.Include(b => b.Style);
+            return View(await beers.ToListAsync());
         }
 
-        // GET api/Beern/5
-        [ResponseType(typeof(Beer))]
-        public async Task<IHttpActionResult> GetBeer(int id)
+        // GET: /Admin/Beer/Details/5
+        public async Task<ActionResult> Details(int? id)
         {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             Beer beer = await db.Beers.FindAsync(id);
             if (beer == null)
             {
-                return NotFound();
+                return HttpNotFound();
             }
-
-            return Ok(beer);
+            return View(beer);
         }
 
-        // PUT api/Beern/5
-        public async Task<IHttpActionResult> PutBeer(int id, Beer beer)
+        // GET: /Admin/Beer/Create
+        public ActionResult Create()
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            ViewBag.StyleId = new SelectList(db.BeerStyles, "BeerStyleId", "StyleName");
+            return View();
+        }
 
-            if (id != beer.BeerId)
+        // POST: /Admin/Beer/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create([Bind(Include="BeerId,Name,StyleId,TapName,LocationId,BrewDate,KeggedDate,TappedDate,Abv,KegId,OnTap")] Beer beer)
+        {
+            if (ModelState.IsValid)
             {
-                return BadRequest();
-            }
-
-            db.Entry(beer).State = EntityState.Modified;
-
-            try
-            {
+                db.Beers.Add(beer);
                 await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!BeerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return RedirectToAction("Index");
             }
 
-            return StatusCode(HttpStatusCode.NoContent);
+            ViewBag.StyleId = new SelectList(db.BeerStyles, "BeerStyleId", "StyleName", beer.StyleId);
+            return View(beer);
         }
 
-        // POST api/Beern
-        [ResponseType(typeof(Beer))]
-        public async Task<IHttpActionResult> PostBeer(Beer beer)
+        // GET: /Admin/Beer/Edit/5
+        public async Task<ActionResult> Edit(int? id)
         {
-            if (!ModelState.IsValid)
+            if (id == null)
             {
-                return BadRequest(ModelState);
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
-            db.Beers.Add(beer);
-            await db.SaveChangesAsync();
-
-            return CreatedAtRoute("DefaultApi", new { id = beer.BeerId }, beer);
-        }
-
-        // DELETE api/Beern/5
-        [ResponseType(typeof(Beer))]
-        public async Task<IHttpActionResult> DeleteBeer(int id)
-        {
             Beer beer = await db.Beers.FindAsync(id);
             if (beer == null)
             {
-                return NotFound();
+                return HttpNotFound();
             }
+            ViewBag.StyleId = new SelectList(db.BeerStyles, "BeerStyleId", "StyleName", beer.StyleId);
+            return View(beer);
+        }
 
+        // POST: /Admin/Beer/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit([Bind(Include="BeerId,Name,StyleId,TapName,LocationId,BrewDate,KeggedDate,TappedDate,Abv,KegId,OnTap")] Beer beer)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(beer).State = EntityState.Modified;
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            ViewBag.StyleId = new SelectList(db.BeerStyles, "BeerStyleId", "StyleName", beer.StyleId);
+            return View(beer);
+        }
+
+        // GET: /Admin/Beer/Delete/5
+        public async Task<ActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Beer beer = await db.Beers.FindAsync(id);
+            if (beer == null)
+            {
+                return HttpNotFound();
+            }
+            return View(beer);
+        }
+
+        // POST: /Admin/Beer/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> DeleteConfirmed(int id)
+        {
+            Beer beer = await db.Beers.FindAsync(id);
             db.Beers.Remove(beer);
             await db.SaveChangesAsync();
-
-            return Ok(beer);
+            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
@@ -108,11 +128,6 @@ namespace HammerCreekBrewing.Areas.Admin.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        private bool BeerExists(int id)
-        {
-            return db.Beers.Count(e => e.BeerId == id) > 0;
         }
     }
 }

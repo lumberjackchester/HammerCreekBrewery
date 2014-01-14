@@ -34,3 +34,21 @@ D:\Hammer Creek\HammerCreekBrewing.Services\bin\Debug\WebMatrix.WebData.xml
 D:\Hammer Creek\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
 D:\Hammer Creek\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.dll
 D:\Hammer Creek\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.dll.config
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\EntityFramework.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Models.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\log4net.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\WebMatrix.Data.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\WebMatrix.WebData.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Models.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\EntityFramework.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\log4net.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\WebMatrix.Data.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\bin\Debug\WebMatrix.WebData.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.pdb

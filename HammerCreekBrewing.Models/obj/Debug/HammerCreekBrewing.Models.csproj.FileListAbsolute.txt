@@ -23,6 +23,18 @@ D:\Hammer Creek\HammerCreekBrewing.Models\bin\Debug\EntityFramework.xml
 D:\Hammer Creek\HammerCreekBrewing.Models\bin\Debug\EntityFramework.SqlServer.xml
 D:\Hammer Creek\HammerCreekBrewing.Models\bin\Debug\WebMatrix.Data.xml
 D:\Hammer Creek\HammerCreekBrewing.Models\bin\Debug\WebMatrix.WebData.xml
-D:\Hammer Creek\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Models.csprojResolveAssemblyReference.cache
 D:\Hammer Creek\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Models.dll
 D:\Hammer Creek\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Models.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Models.dll.config
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Models.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Models.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\EntityFramework.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\WebMatrix.Data.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\WebMatrix.WebData.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\EntityFramework.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\WebMatrix.Data.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\WebMatrix.WebData.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Models.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Models.pdb

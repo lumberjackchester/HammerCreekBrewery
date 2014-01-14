@@ -47,6 +47,30 @@ D:\Hammer Creek\HammerCreekBrewing.Framework\bin\Debug\System.Web.Razor.xml
 D:\Hammer Creek\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.xml
 D:\Hammer Creek\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Hammer Creek\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.Razor.xml
-D:\Hammer Creek\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.csprojResolveAssemblyReference.cache
 D:\Hammer Creek\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.dll
 D:\Hammer Creek\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\HammerCreekBrewing.Framework.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\HammerCreekBrewing.Framework.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\Autofac.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\Autofac.Integration.WebApi.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.Helpers.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.Http.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.Http.WebHost.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.Mvc.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.Razor.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\Autofac.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\Autofac.Integration.WebApi.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.Helpers.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.Http.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.Http.WebHost.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.Mvc.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.Razor.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.dll
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.pdb
