@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.WebApi;
+using Autofac.Integration.Mvc;
+using Autofac.Integration;
 using WebMatrix.WebData;
 using HammerCreekBrewing.Models;
 using HammerCreekBrewing.Environment;
@@ -47,16 +49,16 @@ namespace HammerCreekBrewing
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-             
+     
             // new container
             var builder = new ContainerBuilder();
-            builder.RegisterModule<HammerCreekBrewing.Environment.HCBModule>();
+            builder.RegisterModule<HCBModule>();
             _container = builder.Build();
 
             // initialize controller factory
             var controllerFactory = new ControllerFactory(_container);
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);
-            DependencyResolver.SetResolver(new AutofacWebApiDependencyResolver(_container));
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(_container));
 
 
             // initialize web api controller activator
