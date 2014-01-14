@@ -15,13 +15,17 @@ namespace HammerCreekBrewing.Services
         private readonly HCBContext db = new HCBContext();
         //private readonly Expression<Func<Beer, BeerDto>> AsBeerDto = x => new BeerDto { Name = x.Name, Style = x.Style.StyleName };
 
-        public IQueryable<Beer> GetCurrentMenu()
+        public IQueryable<Beer> GetBeerOnTap()
         {
             return db.Beers.Where(b => b.OnTap);
         }
-        public async Task<List<Beer>> GetCurrentMenuAsync()
+        public IQueryable<Beer> GetBeerInFridge()
+        {
+            return db.Beers.Where(b => !b.OnTap);
+        }
+        public async Task<List<Beer>> GetBeerOnTapAsync()
         { 
-            return await GetCurrentMenu().ToListAsync();
+            return await GetBeerOnTap().ToListAsync();
         }
         public async Task<List<Beer>> GetAllBeersAsync()
         {

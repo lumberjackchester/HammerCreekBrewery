@@ -22,9 +22,8 @@ namespace HammerCreekBrewing.Controllers
         }
 
         public ActionResult Index()
-        {
-            var beersOnTap = _beerService.GetCurrentMenu();
-            return View();
+        { 
+            return View(new ViewModels.HomeViewModel(_beerService));
         }
 
         //

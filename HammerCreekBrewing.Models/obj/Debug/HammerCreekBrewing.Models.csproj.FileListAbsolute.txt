@@ -38,3 +38,4 @@ D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Deb
 D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\bin\Debug\WebMatrix.WebData.xml
 D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Models.dll
 D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Models.pdb
+D:\Hammer Creek Brewing\hammercreekbrewing.com\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Models.csprojResolveAssemblyReference.cache
