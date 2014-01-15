@@ -21,7 +21,10 @@ namespace HammerCreekBrewing.Models
         [Required]
         public int StyleId { get; set; }
         public string TapName { get; set; }
-        public string LocationId { get; set; }
+        [ForeignKey("LocationId")]        
+        public Location Location { get; set; }
+        [Required]
+        public int LocationId { get; set; }
         [Required]
         public DateTime BrewDate { get; set; }
         public DateTime? KeggedDate { get; set; }
@@ -31,6 +34,10 @@ namespace HammerCreekBrewing.Models
         public int? KegId { get; set; }
         [Required]
         public bool OnTap { get; set; }
+        [ForeignKey("BreweryId")]
+        public Brewery Brewery { get; set; }
+        [Required]
+        public int BreweryId { get; set; }
 
     }
 }

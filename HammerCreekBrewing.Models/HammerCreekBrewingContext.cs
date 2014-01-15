@@ -16,6 +16,8 @@ namespace HammerCreekBrewing.Models{
         
         public DbSet<Beer> Beers { get; set; }
         public DbSet<BeerStyle> BeerStyles {get; set;}
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<Brewery> Breweries { get; set; }
 
     }
 }

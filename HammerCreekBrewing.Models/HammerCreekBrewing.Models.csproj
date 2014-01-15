@@ -64,6 +64,8 @@
     <Compile Include="HammerCreekBrewingContext.cs" />
     <Compile Include="ProductionContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="Brewery.cs" />
     <Compile Include="Style.cs" />
   </ItemGroup>
   <ItemGroup>
