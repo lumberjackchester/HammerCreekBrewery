@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using HammerCreekBrewing.Services;
+using HammerCreekBrewing.ViewModels;
+using HammerCreekBrewing.Data.Models;
+using System.Linq.Expressions;
 
 namespace HammerCreekBrewing.Controllers
 {
@@ -12,6 +15,9 @@ namespace HammerCreekBrewing.Controllers
         private readonly IBeerService _beerService;
         private readonly ILogging _logger;
 
+        //private readonly Expression<Func<BeerStyle, BeerStyleViewModel>> AsStyleViewModel = x => new BeerStyleViewModel { Name = x.StyleName, Id = x.Style.StyleName };
+        //private readonly Expression<Func<Location, LocationViewModel>> AsLocationViewModel = x => new LocationViewModel { Name = x.Name, Style = x.Style.StyleName };
+        //private readonly Expression<Func<Beer, BeerViewModel>> AsBeerViewModel = x => new BeerViewModel { Name = x.Name, Style =  };
 
         //
         // GET: /Home/
@@ -23,7 +29,7 @@ namespace HammerCreekBrewing.Controllers
 
         public ActionResult Index()
         { 
-            return View(new ViewModels.HomeViewModel(_beerService));
+            return View(new ViewModels.HomeViewModel());
         }
 
         //

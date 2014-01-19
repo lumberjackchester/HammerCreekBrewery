@@ -12,6 +12,7 @@ using System.Web.Routing;
 using System.Web.Http; 
 using WebMatrix.WebData;
 using HammerCreekBrewing.Framework.Mvc;
+using HammerCreekBrewing.Environment;
 
 namespace HammerCreekBrewing
 {
@@ -27,13 +28,15 @@ namespace HammerCreekBrewing
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             //if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
-            //    Database.SetInitializer(new DevelopmentContextInitializer());
+          //  Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
             //else if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "CreateIfNotExists")
             //    Database.SetInitializer(new ProductionContextInitializer());
             //else
             //    Database.SetInitializer<HCBContext>(null);
-
-            var db = new HCBContext();
+            
+            //// The connetion string for dev/production  
+            var connection = "name=HammerCreekBrewingContext";
+            var db = new HCBContext(connection);
             db.Database.Initialize(true);
             if (!WebSecurity.Initialized)
                 WebSecurity.InitializeDatabaseConnection("HammerCreekBrewingContext",
@@ -51,7 +54,7 @@ namespace HammerCreekBrewing
             
             // new container
             var builder = new ContainerBuilder();
-            builder.RegisterModule<HammerCreekBrewing.Environment.HCBModule>();
+            builder.RegisterModule(new HCBModule(connection));
             _container = builder.Build();
 
             // initialize controller factory

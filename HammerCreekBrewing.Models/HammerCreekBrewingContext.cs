@@ -9,8 +9,9 @@ using HammerCreekBrewing.Data.Models;
 
 namespace HammerCreekBrewing.Data{
     public class HCBContext : DbContext {
-        public HCBContext()
-            : base("name=HammerCreekBrewingContext")
+        public HCBContext(string connectionString)
+            : base(connectionString ?? "name=HammerCreekBrewingContext")
+         //   : base("name=HammerCreekBrewingContext")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
@@ -20,5 +21,9 @@ namespace HammerCreekBrewing.Data{
         public DbSet<Location> Locations { get; set; }
         public DbSet<Brewery> Breweries { get; set; }
 
+        //private string GetConnectionStringName()
+        //{
+
+        //}
     }
 }

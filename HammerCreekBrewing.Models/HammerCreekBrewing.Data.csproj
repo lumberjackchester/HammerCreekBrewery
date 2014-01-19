@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DevelopmentContextInitializer.cs" />
     <Compile Include="Enums\Enums.cs" />
     <Compile Include="Migrations\201401182329477_HCBDataBaseMigration.cs" />
     <Compile Include="Migrations\201401182329477_HCBDataBaseMigration.Designer.cs">

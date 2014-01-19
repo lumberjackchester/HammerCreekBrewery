@@ -154,7 +154,6 @@ D:\Hammer Creek\HammerCreekBrewing\bin\log4net.xml
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll.config
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.pdb
@@ -230,5 +229,6 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.Secur
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Twitter.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\log4net.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb

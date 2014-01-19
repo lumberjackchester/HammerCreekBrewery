@@ -11,9 +11,9 @@ namespace HammerCreekBrewing.Data
         private readonly IDictionary<Type, object> _repositories;
 
 
-        public UnitOfWork()
+        public UnitOfWork(string connection)
         {
-            CreateDbContext();
+            CreateDbContext(connection);
             _repositories = new Dictionary<Type, object>();
         }
 
@@ -82,10 +82,10 @@ namespace HammerCreekBrewing.Data
            return await this.DbContext.SaveChangesAsync();
         }
 
-        protected void CreateDbContext()
+        protected void CreateDbContext(string connection)
         {
 
-            this.DbContext = new HCBContext();
+            this.DbContext = new HCBContext(connection);
 
             // Do NOT enable proxied entities, else serialization fails
             this.DbContext.Configuration.ProxyCreationEnabled = false;
