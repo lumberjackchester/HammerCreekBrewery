@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HammerCreekBrewing.Data.Enums
+{
+    public enum Locations
+    {
+        Basement = 1,
+        Garage = 2,
+        Storage = 3
+    }
+
+}

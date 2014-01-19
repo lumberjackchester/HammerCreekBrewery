@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing", "HammerCreekBrewing\HammerCreekBrewing.csproj", "{38AA0E74-50E7-4659-B824-7E067DCEE9B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Models", "HammerCreekBrewing.Models\HammerCreekBrewing.Models.csproj", "{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Data", "HammerCreekBrewing.Models\HammerCreekBrewing.Data.csproj", "{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{08C14CC9-6754-4D6E-B03F-94C486C0EB96}"
 	ProjectSection(SolutionItems) = preProject

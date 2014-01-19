@@ -4,16 +4,16 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web.Security;
 using WebMatrix.WebData;
-using HammerCreekBrewing.Models;
+using HammerCreekBrewing.Data.Models;
 
 
-namespace HammerCreekBrewing.Models
+namespace HammerCreekBrewing.Data
 {
-    public class DevelopmentContextInitializer : DropCreateDatabaseIfModelChanges<HCBContext>
+    public class DevelopmentContextInitializer : DropCreateDatabaseAlways<HCBContext>
     {
         protected override void Seed(HCBContext db)
         {
-            WebSecurity.InitializeDatabaseConnection("DefaultConnection",
+            WebSecurity.InitializeDatabaseConnection("HammerCreekBrewingContext",
                 "UserProfile", "UserId", "UserName", autoCreateTables: true);
             var roles = (SimpleRoleProvider)Roles.Provider;
             var membership = (SimpleMembershipProvider)Membership.Provider;
@@ -46,6 +46,7 @@ namespace HammerCreekBrewing.Models
             db.Locations.Add(new Location { LocationId = 3, Name = "Storage" });
             
             #endregion
+
             #region BeerStyles
 
             db.BeerStyles.Add(new BeerStyle { BeerStyleId = 1, StyleName = "WitBier"});

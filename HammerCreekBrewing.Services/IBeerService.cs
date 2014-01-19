@@ -1,4 +1,4 @@
-﻿using HammerCreekBrewing.Models;
+﻿using HammerCreekBrewing.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +11,14 @@ namespace HammerCreekBrewing.Services
     public interface IBeerService
     {
         IQueryable<Beer> GetBeerOnTap();
+        IQueryable<Beer> GetBeerOnTapInside();
+        IQueryable<Beer> GetBeerOnTapGarage();
         IQueryable<Beer> GetBeerInFridge();
          Task<List<Beer>> GetBeerOnTapAsync();
          Task<List<Beer>> GetAllBeersAsync();
-         Task<Beer> GetBeerAsync(int id);
+         Task<Beer> GetBeerAsync(int? id);
 
+
+        // IEnumerable<Beer> GetBeerOnTapInside();
     }
 }

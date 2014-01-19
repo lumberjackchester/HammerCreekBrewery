@@ -5,11 +5,12 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HammerCreekBrewing.Data.Models;
 
-namespace HammerCreekBrewing.Models{
+namespace HammerCreekBrewing.Data{
     public class HCBContext : DbContext {
         public HCBContext()
-            : base("name=DefaultConnection")
+            : base("name=HammerCreekBrewingContext")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }

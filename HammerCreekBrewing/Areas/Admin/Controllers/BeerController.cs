@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using HammerCreekBrewing.Models;
+using HammerCreekBrewing.Data;
+using HammerCreekBrewing.Data.Models;
 
 namespace HammerCreekBrewing.Areas.Admin.Controllers
 {
@@ -54,7 +55,7 @@ namespace HammerCreekBrewing.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 db.Beers.Add(beer);
-                await db.SaveChangesAsync();
+                await db.CommitAsync();
                 return RedirectToAction("Index");
             }
 
@@ -88,7 +89,7 @@ namespace HammerCreekBrewing.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(beer).State = EntityState.Modified;
-                await db.SaveChangesAsync();
+                await db.CommitAsync();
                 return RedirectToAction("Index");
             }
             ViewBag.StyleId = new SelectList(db.BeerStyles, "BeerStyleId", "StyleName", beer.StyleId);
@@ -117,7 +118,7 @@ namespace HammerCreekBrewing.Areas.Admin.Controllers
         {
             Beer beer = await db.Beers.FindAsync(id);
             db.Beers.Remove(beer);
-            await db.SaveChangesAsync();
+            await db.CommitAsync();
             return RedirectToAction("Index");
         }
 

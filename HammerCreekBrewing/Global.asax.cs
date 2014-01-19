@@ -1,6 +1,6 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
-using HammerCreekBrewing.Models;
+using HammerCreekBrewing.Data;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -26,17 +26,17 @@ namespace HammerCreekBrewing
 
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
-                Database.SetInitializer(new DevelopmentContextInitializer());
-            else if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "CreateIfNotExists")
-                Database.SetInitializer(new ProductionContextInitializer());
-            else
-                Database.SetInitializer<HCBContext>(null);
+            //if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
+            //    Database.SetInitializer(new DevelopmentContextInitializer());
+            //else if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "CreateIfNotExists")
+            //    Database.SetInitializer(new ProductionContextInitializer());
+            //else
+            //    Database.SetInitializer<HCBContext>(null);
 
             var db = new HCBContext();
             db.Database.Initialize(true);
             if (!WebSecurity.Initialized)
-                WebSecurity.InitializeDatabaseConnection("DefaultConnection",
+                WebSecurity.InitializeDatabaseConnection("HammerCreekBrewingContext",
                                                          "UserProfile", "UserId", "UserName", autoCreateTables: true);
             AreaRegistration.RegisterAllAreas();
 

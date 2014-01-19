@@ -7,40 +7,37 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using HammerCreekBrewing.Models;
+using HammerCreekBrewing.Data;
+using HammerCreekBrewing.Data.Models;
+using HammerCreekBrewing.Services;
 
 namespace HammerCreekBrewing.Controllers
 {
     public class OnTapController : Controller
     {
-        private HCBContext db = new HCBContext();
+        private readonly IUnitOfWork _uow;
+        private readonly ILogging _logger;
+        private readonly IBeerService _beerService; 
+        private readonly IBeerStylesService _styleService; 
+        public OnTapController(IUnitOfWork unit, IBeerService beerServ, IBeerStylesService _styleServ, ILogging logger)
+        {
+            _uow = unit;
+            _beerService = beerServ;
+            _styleService = _styleServ;
+            _logger = logger;
+        }
 
         // GET: /Tap/
         public async Task<ActionResult> Index()
         {
-            var beers = db.Beers.Include(b => b.Style);
-            return View(await beers.ToListAsync());
+            var beers = await _beerService.GetAllBeersAsync();
+            return View(beers);
         }
-
-        // GET: /Tap/Details/5
-        public async Task<ActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Beer beer = await db.Beers.FindAsync(id);
-            if (beer == null)
-            {
-                return HttpNotFound();
-            }
-            return View(beer);
-        }
-
+        
         // GET: /Tap/Create
         public ActionResult Create()
         {
-            ViewBag.StyleId = new SelectList(db.BeerStyles, "BeerStyleId", "StyleName");
+            ViewBag.StyleId = new SelectList(_styleService.GetBeerStyles(), "BeerStyleId", "StyleName");
             return View();
         }
 
@@ -53,12 +50,12 @@ namespace HammerCreekBrewing.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Beers.Add(beer);
-                await db.SaveChangesAsync();
+                _uow.Beers.Add(beer);
+                await _uow.CommitAsync();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.StyleId = new SelectList(db.BeerStyles, "BeerStyleId", "StyleName", beer.StyleId);
+            ViewBag.StyleId = new SelectList( await _styleService.GetBeerStylesAsync(), "BeerStyleId", "StyleName", beer.StyleId);
             return View(beer);
         }
 
@@ -69,12 +66,12 @@ namespace HammerCreekBrewing.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Beer beer = await db.Beers.FindAsync(id);
+            Beer beer = await _beerService.GetBeerAsync(id);
             if (beer == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.StyleId = new SelectList(db.BeerStyles, "BeerStyleId", "StyleName", beer.StyleId);
+            ViewBag.StyleId = new SelectList(await _styleService.GetBeerStylesAsync(), "BeerStyleId", "StyleName", beer.StyleId);
             return View(beer);
         }
 
@@ -87,11 +84,11 @@ namespace HammerCreekBrewing.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(beer).State = EntityState.Modified;
-                await db.SaveChangesAsync();
+                _uow.Beers.Update(beer);
+                await _uow.CommitAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.StyleId = new SelectList(db.BeerStyles, "BeerStyleId", "StyleName", beer.StyleId);
+            ViewBag.StyleId = new SelectList(await _styleService.GetBeerStylesAsync(), "BeerStyleId", "StyleName", beer.StyleId);
             return View(beer);
         }
 
@@ -102,7 +99,7 @@ namespace HammerCreekBrewing.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Beer beer = await db.Beers.FindAsync(id);
+            Beer beer = await _beerService.GetBeerAsync(id);
             if (beer == null)
             {
                 return HttpNotFound();
@@ -115,19 +112,19 @@ namespace HammerCreekBrewing.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Beer beer = await db.Beers.FindAsync(id);
-            db.Beers.Remove(beer);
-            await db.SaveChangesAsync();
+            Beer beer = await _beerService.GetBeerAsync(id);
+            _uow.Beers.Delete(beer);
+            await _uow.CommitAsync();
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
+        //        _uow.dis.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
     }
 }
