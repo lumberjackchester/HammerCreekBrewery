@@ -54,6 +54,8 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Hamm
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Autofac.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Autofac.Integration.WebApi.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Newtonsoft.Json.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Net.Http.Formatting.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Web.Helpers.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Web.Http.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Web.Http.WebHost.dll
@@ -64,6 +66,8 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Syst
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.Razor.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Autofac.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Autofac.Integration.WebApi.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Newtonsoft.Json.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Net.Http.Formatting.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Web.Helpers.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Web.Http.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Web.Http.WebHost.xml

@@ -59,8 +59,8 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\Newto
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\Owin.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\System.Web.Optimization.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebGrease.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.Data.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.WebData.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.Data.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Data.pdb
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\Antlr3.Runtime.pdb
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\EntityFramework.xml
@@ -80,8 +80,8 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\Micro
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.Twitter.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\Newtonsoft.Json.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\System.Web.Optimization.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.Data.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.WebData.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.Data.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.pdb
