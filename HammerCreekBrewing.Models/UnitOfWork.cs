@@ -11,9 +11,10 @@ namespace HammerCreekBrewing.Data
         private readonly IDictionary<Type, object> _repositories;
 
 
-        public UnitOfWork(string connection)
+        public UnitOfWork(HCBContext context)
         {
-            CreateDbContext(connection);
+            DbContext = context;
+            SetDbContextProperties();
             _repositories = new Dictionary<Type, object>();
         }
 
@@ -82,10 +83,10 @@ namespace HammerCreekBrewing.Data
            return await this.DbContext.SaveChangesAsync();
         }
 
-        protected void CreateDbContext(string connection)
+        protected void SetDbContextProperties()
         {
 
-            this.DbContext = new HCBContext(connection);
+        //    this.DbContext = new HCBContext(System.Configuration.ConfigurationManager.AppSettings["DatabaseContextConnectionName"]);
 
             // Do NOT enable proxied entities, else serialization fails
             this.DbContext.Configuration.ProxyCreationEnabled = false;

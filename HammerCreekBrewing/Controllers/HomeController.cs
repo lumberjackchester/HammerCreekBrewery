@@ -7,6 +7,7 @@ using HammerCreekBrewing.Services;
 using HammerCreekBrewing.ViewModels;
 using HammerCreekBrewing.Data.Models;
 using System.Linq.Expressions;
+using AutoMapper;
 
 namespace HammerCreekBrewing.Controllers
 {
@@ -14,11 +15,7 @@ namespace HammerCreekBrewing.Controllers
     {
         private readonly IBeerService _beerService;
         private readonly ILogging _logger;
-
-        //private readonly Expression<Func<BeerStyle, BeerStyleViewModel>> AsStyleViewModel = x => new BeerStyleViewModel { Name = x.StyleName, Id = x.Style.StyleName };
-        //private readonly Expression<Func<Location, LocationViewModel>> AsLocationViewModel = x => new LocationViewModel { Name = x.Name, Style = x.Style.StyleName };
-        //private readonly Expression<Func<Beer, BeerViewModel>> AsBeerViewModel = x => new BeerViewModel { Name = x.Name, Style =  };
-
+        
         //
         // GET: /Home/
         public HomeController(IBeerService beerService, ILogging logger)
@@ -28,8 +25,12 @@ namespace HammerCreekBrewing.Controllers
         }
 
         public ActionResult Index()
-        { 
-            return View(new ViewModels.HomeViewModel());
+        {
+            var homeVM = new ViewModels.HomeViewModel();
+            homeVM.BeerOnTapInside = Mapper.Map<IEnumerable<Beer>, IEnumerable<BeerMenuViewModel>>(_beerService.GetBeerOnTapInside());
+            homeVM.BeerOnTapGarage = Mapper.Map<IEnumerable<Beer>, IEnumerable<BeerMenuViewModel>>(_beerService.GetBeerOnTapGarage());
+            homeVM.BeerInFridge = Mapper.Map<IEnumerable<Beer>, IEnumerable<BeerMenuViewModel>>(_beerService.GetBeerInFridge());
+            return View(homeVM);
         }
 
         //

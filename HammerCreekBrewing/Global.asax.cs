@@ -14,53 +14,27 @@ using WebMatrix.WebData;
 using HammerCreekBrewing.Framework.Mvc;
 using HammerCreekBrewing.Environment;
 
+
 namespace HammerCreekBrewing
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        private IContainer _container;
         protected void Application_Start()
         {
-            //AreaRegistration.RegisterAllAreas();
-            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            //RouteConfig.RegisterRoutes(RouteTable.Routes);
-
-            //BundleConfig.RegisterBundles(BundleTable.Bundles);
-
             //if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
           //  Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
             //else if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "CreateIfNotExists")
             //    Database.SetInitializer(new ProductionContextInitializer());
             //else
             //    Database.SetInitializer<HCBContext>(null);
+
             
-            //// The connetion string for dev/production  
-            var connection = "name=HammerCreekBrewingContext";
-            var db = new HCBContext(connection);
-            db.Database.Initialize(true);
-            if (!WebSecurity.Initialized)
-                WebSecurity.InitializeDatabaseConnection("HammerCreekBrewingContext",
-                                                         "UserProfile", "UserId", "UserName", autoCreateTables: true);
-            AreaRegistration.RegisterAllAreas();
-
-            //WebApiConfig.Register(GlobalConfiguration.Configuration);
+            AreaRegistration.RegisterAllAreas(); 
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            //FilterConfig.RegisterHttpFilters(GlobalConfiguration.Configuration.Filters);
-
-            //GlobalConfiguration.Configuration.Filters.Add(new ExceptionHandlingAttribute());
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            //AuthConfig.RegisterAuth();
-            
-            // new container
-            var builder = new ContainerBuilder();
-            builder.RegisterModule(new HCBModule(connection));
-            _container = builder.Build();
-
-            // initialize controller factory
-            var controllerFactory = new ControllerFactory(_container);
-            ControllerBuilder.Current.SetControllerFactory(controllerFactory);
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(_container));
+            Bootstrapper.Run(System.Configuration.ConfigurationManager.AppSettings["DatabaseContextConnectionName"]);
+    
 
         }
     }

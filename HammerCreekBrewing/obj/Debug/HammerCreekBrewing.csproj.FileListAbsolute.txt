@@ -154,6 +154,7 @@ D:\Hammer Creek\HammerCreekBrewing\bin\log4net.xml
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\AutoMapper.Net4.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll.config
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.pdb
@@ -161,6 +162,7 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Antlr3.Runtime.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Autofac.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Autofac.Integration.Mvc.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Autofac.Integration.WebApi.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\AutoMapper.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\EntityFramework.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\EntityFramework.SqlServer.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.Data.dll
@@ -201,6 +203,7 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.S
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Autofac.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Autofac.Integration.Mvc.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Autofac.Integration.WebApi.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\AutoMapper.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Cookies.xml

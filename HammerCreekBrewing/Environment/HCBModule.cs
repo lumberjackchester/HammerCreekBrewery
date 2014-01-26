@@ -9,17 +9,17 @@ namespace HammerCreekBrewing.Environment
 {
     public class HCBModule : Module
     {
-        private readonly string _conn;
-        public HCBModule(string connection)
+        private readonly HCBContext context;
+        public HCBModule(HCBContext dbcontext)
         {
-            _conn = connection;
+            context = dbcontext;
         }
         protected override void Load(ContainerBuilder builder)
         {
             // register repository dependencies
-          //  builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().WithParameter("connection", new UnitOfWork(_conn)).InstancePerLifetimeScope();
-
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
+           // builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().WithParameter("connection", new UnitOfWork(_conn)).InstancePerLifetimeScope();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().WithParameter("context", context).InstancePerLifetimeScope();
             // register Beer service
             builder.RegisterType<BeerService>().As<IBeerService>().InstancePerLifetimeScope();
             

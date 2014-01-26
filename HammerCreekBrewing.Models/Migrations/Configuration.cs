@@ -1,49 +1,24 @@
 namespace HammerCreekBrewing.Data.Migrations
 {
+    using HammerCreekBrewing.Data.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
     using System.Web.Security;
     using WebMatrix.WebData;
-    using HammerCreekBrewing.Data.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<HammerCreekBrewing.Data.HCBContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(HammerCreekBrewing.Data.HCBContext context)
-        {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
-
-            if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
-            {
-                SeedDevDB(context);
-            }
-            //else if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "CreateIfNotExists")
-            //    Database.SetInitializer(new ProductionContextInitializer());
-            //else
-            //    Database.SetInitializer<HCBContext>(null);
-        }
-
-        private void SeedDevDB(HCBContext db)
-        {
+        protected override void Seed(HammerCreekBrewing.Data.HCBContext db)
+        { 
             //WebSecurity.InitializeDatabaseConnection("HammerCreekBrewingContext",
-            //      "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            //    "UserProfile", "UserId", "UserName", autoCreateTables: true);
             //var roles = (SimpleRoleProvider)Roles.Provider;
             //var membership = (SimpleMembershipProvider)Membership.Provider;
 
@@ -57,7 +32,7 @@ namespace HammerCreekBrewing.Data.Migrations
             //}
             //if (!roles.GetRolesForUser("Administrator").Contains("Admin"))
             //{
-            //    roles.AddOrUpdateUsersToRoles(new[] { "Administrator" }, new[] { "Admin" });
+            //    roles.AddUsersToRoles(new[] { "Administrator" }, new[] { "Admin" });
             //}
 
             // Database data initialization -- needs expanding upon.
@@ -88,15 +63,24 @@ namespace HammerCreekBrewing.Data.Migrations
             #region Beers
 
 
-            db.Beers.AddOrUpdate(new Beer { BeerId = 1, StyleId = 1, LocationId = (int)Enums.Locations.Storage, BreweryId = 1, Name = "Peach On Wit", BrewDate = new DateTime(2013, 9, 28) });
-            db.Beers.AddOrUpdate(new Beer { BeerId = 2, StyleId = 2, LocationId = (int)Enums.Locations.Storage, BreweryId = 1, Name = "Milk Stout", BrewDate = new DateTime(2013, 9, 28) });
-            db.Beers.AddOrUpdate(new Beer { BeerId = 3, StyleId = 3, LocationId = (int)Enums.Locations.Basement, BreweryId = 1, OnTap = true, Name = "Pumpkin Ale", BrewDate = new DateTime(2013, 9, 28) });
-            db.Beers.AddOrUpdate(new Beer { BeerId = 4, StyleId = 3, LocationId = (int)Enums.Locations.Garage, BreweryId = 1, Name = "Tremens", BrewDate = new DateTime(2013, 9, 28) });
+            db.Beers.AddOrUpdate(new Beer { BeerId = 1, StyleId = 1, LocationId = 2, BreweryId = 1, Name = "Peach On Wit", BrewDate = new DateTime(2013, 9, 28) });
+            db.Beers.AddOrUpdate(new Beer { BeerId = 2, StyleId = 2, LocationId = 2, BreweryId = 1, Name = "Milk Stout", BrewDate = new DateTime(2013, 9, 28) });
+            db.Beers.AddOrUpdate(new Beer
+            {
+                BeerId = 3,
+                StyleId = 3,
+                LocationId = 1,
+                BreweryId = 1,
+                TapName = "Dale's Pale Ale",
+                OnTap = true,
+                Name = "Pumpkin Ale",
+                BrewDate = new DateTime(2013, 9, 28)
+            });
+            db.Beers.AddOrUpdate(new Beer { BeerId = 4, StyleId = 3, LocationId = 2, BreweryId = 1, Name = "Tremens", BrewDate = new DateTime(2013, 9, 28) });
 
             #endregion
 
             #endregion
-
         }
     }
 }

@@ -19,13 +19,14 @@ namespace HammerCreekBrewing.Test.Unit
         [TestInitialize]
         public void tstStart()
         {
-            db = new HCBContext(Connection); 
-            db.Database.Initialize(true);
+            //db = new HCBContext(Connection); 
+            //db.Database.Initialize(true);
+            Bootstrapper.Run(Connection);
 
-            //// The connetion string for Testing 
-            var builder = new ContainerBuilder();
-            builder.RegisterModule(new HCBModule(Connection));
-            Container = builder.Build();
+            ////// The connetion string for Testing 
+            //var builder = new ContainerBuilder();
+            //builder.RegisterModule(new HCBModule(db));
+            //Container = builder.Build();
 
             // initialize controller factory
             var controllerFactory = new ControllerFactory(Container);

@@ -9,16 +9,9 @@ namespace HammerCreekBrewing.ViewModels
 {
     public class HomeViewModel
     {
-        public IEnumerable<BeerViewModel> BeerOnTapInside { get; set; }
-        public IEnumerable<BeerViewModel> BeerOnTapGarage { get; set; }
-        public IEnumerable<BeerViewModel> BeerInFridge { get; set; }
-
-        //public HomeViewModel()
-        //{
-        //   // BeerOnTap = beerService.GetBeerOnTap().ToList();
-        //    BeerInFridge = beerService.GetBeerInFridge().ToList();
-        //    BeerOnTapInside = beerService.GetBeerOnTapInside().ToList();
-        //    BeerOnTapGarage = beerService.GetBeerOnTapGarage().ToList();
-        //}
+        public IEnumerable<BeerMenuViewModel> BeerOnTapInside { get; set; }
+        public IEnumerable<BeerMenuViewModel> BeerOnTapGarage { get; set; }
+        public IEnumerable<BeerMenuViewModel> BeerInFridge { get; set; }
+               
     }
 }

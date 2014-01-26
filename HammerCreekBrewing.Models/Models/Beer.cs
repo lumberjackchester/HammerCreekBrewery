@@ -38,6 +38,7 @@ namespace HammerCreekBrewing.Data.Models
         public Brewery Brewery { get; set; }
         [Required]
         public int BreweryId { get; set; }
+        
 
     }
 }

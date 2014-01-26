@@ -54,14 +54,15 @@ namespace HammerCreekBrewing.Data
             db.BeerStyles.Add(new BeerStyle { BeerStyleId = 3, StyleName = "Ale" });
             db.BeerStyles.Add(new BeerStyle { BeerStyleId = 4, StyleName = "Belgium" });
 
-            #endregion
+            #endregion 
 
             #region Beers
 
 
             db.Beers.Add(new Beer { BeerId = 1, StyleId = 1, LocationId = 2, BreweryId = 1, Name = "Peach On Wit", BrewDate = new DateTime(2013, 9, 28) });
             db.Beers.Add(new Beer { BeerId = 2, StyleId = 2, LocationId = 2, BreweryId = 1, Name = "Milk Stout", BrewDate = new DateTime(2013, 9, 28) });
-            db.Beers.Add(new Beer { BeerId = 3, StyleId = 3, LocationId = 1, BreweryId = 1, OnTap = true, Name = "Pumpkin Ale", BrewDate = new DateTime(2013, 9, 28) });
+            db.Beers.Add(new Beer { BeerId = 3, StyleId = 3, LocationId = 1, BreweryId = 1, TapName = "Dale's Pale Ale",
+                                    OnTap = true, Name = "Pumpkin Ale", BrewDate = new DateTime(2013, 9, 28) });
             db.Beers.Add(new Beer { BeerId = 4, StyleId = 3, LocationId = 2, BreweryId = 1, Name = "Tremens", BrewDate = new DateTime(2013, 9, 28) });
 
             #endregion

@@ -60,11 +60,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DevelopmentContextInitializer.cs" />
+    <Compile Include="DevelopmentContextInitializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Enums\Enums.cs" />
     <Compile Include="Migrations\201401182329477_HCBDataBaseMigration.cs" />
     <Compile Include="Migrations\201401182329477_HCBDataBaseMigration.Designer.cs">
       <DependentUpon>201401182329477_HCBDataBaseMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201401262020095_AutoMapper.cs" />
+    <Compile Include="Migrations\201401262020095_AutoMapper.Designer.cs">
+      <DependentUpon>201401262020095_AutoMapper.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs">
       <SubType>Code</SubType>
@@ -87,6 +93,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201401182329477_HCBDataBaseMigration.resx">
       <DependentUpon>201401182329477_HCBDataBaseMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201401262020095_AutoMapper.resx">
+      <DependentUpon>201401262020095_AutoMapper.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

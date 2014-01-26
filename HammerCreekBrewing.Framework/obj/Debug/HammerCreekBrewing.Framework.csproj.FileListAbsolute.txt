@@ -49,6 +49,7 @@ D:\Hammer Creek\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.Razor
 D:\Hammer Creek\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.csprojResolveAssemblyReference.cache
 D:\Hammer Creek\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.dll
 D:\Hammer Creek\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.pdb
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\AutoMapper.Net4.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\HammerCreekBrewing.Framework.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\HammerCreekBrewing.Framework.pdb
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Autofac.dll
@@ -76,5 +77,6 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\Syst
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Framework\obj\Debug\HammerCreekBrewing.Framework.pdb

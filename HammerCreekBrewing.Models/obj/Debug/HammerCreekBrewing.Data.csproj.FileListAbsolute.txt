@@ -13,3 +13,5 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerC
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.csproj.GenerateResource.Cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.pdb
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.csprojResolveAssemblyReference.cache
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.Migrations.AutoMapper.resources
