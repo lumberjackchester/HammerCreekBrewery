@@ -4,6 +4,8 @@ using Autofac.Integration.WebApi;
 using Autofac.Integration.Mvc;
 using System.Web.Http;
 using HammerCreekBrewing.Data;
+using AutoMapper;
+using AutoMapper.Mappers;
 
 namespace HammerCreekBrewing.Environment
 {
@@ -16,6 +18,15 @@ namespace HammerCreekBrewing.Environment
         }
         protected override void Load(ContainerBuilder builder)
         {
+
+            // register auto mapping
+            builder.Register(ctx => new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers))
+                   .AsImplementedInterfaces()
+                   .SingleInstance();
+
+            builder.RegisterType<MappingEngine>()
+                   .As<IMappingEngine>();
+
             // register repository dependencies
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
            
@@ -35,7 +46,7 @@ namespace HammerCreekBrewing.Environment
             //builder.RegisterControllers(typeof(HammerCreekBrewing.Controllers.OnTapController).Assembly);
 
             //register home controller
-            //    builder.RegisterControllers(typeof(HammerCreekBrewing.Controllers.HomeController).Assembly);      
+            builder.RegisterControllers(typeof(HammerCreekBrewing.Controllers.HomeController).Assembly);      
 
             // register logging service
             builder.Register(c => new Logging())

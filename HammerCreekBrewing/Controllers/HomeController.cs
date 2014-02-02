@@ -8,6 +8,7 @@ using HammerCreekBrewing.ViewModels;
 using HammerCreekBrewing.Data.Models;
 using System.Linq.Expressions;
 using AutoMapper;
+using System.Threading.Tasks;
 
 namespace HammerCreekBrewing.Controllers
 {
@@ -24,12 +25,13 @@ namespace HammerCreekBrewing.Controllers
             _logger = logger;
         }
 
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
             var homeVM = new ViewModels.HomeViewModel();
-            homeVM.BeerOnTapInside = await _beerService.GetBeerOnTapAsync<BeerMenuViewModel>();
-            homeVM.BeerOnTapGarage =  _beerService.GetBeerOnTapGarage<BeerMenuViewModel>();
-            homeVM.BeerInFridge = _beerService.GetBeerInFridge<BeerMenuViewModel>();
+            homeVM.BeerOnTapInside =  await _beerService.GetBeerOnTapAsync<BeerMenuViewModel>();
+            homeVM.BeerOnTapGarage = await _beerService.GetBeerOnTapGarage<BeerMenuViewModel>();
+            homeVM.BeerInFridge = await _beerService.GetBeerInFridge<BeerMenuViewModel>();
+
             return View(homeVM);
         }
 

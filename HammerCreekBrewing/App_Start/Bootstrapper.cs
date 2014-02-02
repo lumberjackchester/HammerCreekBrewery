@@ -21,9 +21,9 @@ namespace HammerCreekBrewing
         public static void Run(string dbConnection)
         {
             _dbconn = dbConnection;
-            SetAutofacContainer();
-            //Configure AutoMapper
+            // Initilize mapping Profiles
             AutoMapperConfiguration.Configure();
+            SetAutofacContainer(); 
         }
         private static void SetAutofacContainer()
         {
@@ -39,13 +39,6 @@ namespace HammerCreekBrewing
             builder.RegisterModule(new HCBModule(db));
             var _container = builder.Build();
 
-            // register auto mapping
-            builder.Register(ctx => new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers))
-                   .AsImplementedInterfaces()
-                   .SingleInstance();
-
-            builder.RegisterType<MappingEngine>()
-                   .As<IMappingEngine>();
 
             // initialize controller factory
             var controllerFactory = new ControllerFactory(_container);
