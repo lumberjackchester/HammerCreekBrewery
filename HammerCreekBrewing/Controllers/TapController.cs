@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using HammerCreekBrewing.Data;
 using HammerCreekBrewing.Data.Models;
 using HammerCreekBrewing.Services;
+using HammerCreekBrewing.Data.ViewModels;
 
 namespace HammerCreekBrewing.Controllers
 {
@@ -30,7 +31,7 @@ namespace HammerCreekBrewing.Controllers
         // GET: /Tap/
         public async Task<ActionResult> Index()
         {
-            var beers = await _beerService.GetAllBeersAsync();
+            var beers = await _beerService.GetAllBeersAsync<BeerMenuViewModel>();
             return View(beers);
         }
         
@@ -59,21 +60,21 @@ namespace HammerCreekBrewing.Controllers
             return View(beer);
         }
 
-        // GET: /Tap/Edit/5
-        public async Task<ActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Beer beer = await _beerService.GetBeerAsync(id);
-            if (beer == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.StyleId = new SelectList(await _styleService.GetBeerStylesAsync(), "BeerStyleId", "StyleName", beer.StyleId);
-            return View(beer);
-        }
+        //// GET: /Tap/Edit/5
+        //public async Task<ActionResult> Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Beer beer = await _beerService.GetBeerAsync(id);
+        //    if (beer == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    ViewBag.StyleId = new SelectList(await _styleService.GetBeerStylesAsync(), "BeerStyleId", "StyleName", beer.StyleId);
+        //    return View(beer);
+        //}
 
         // POST: /Tap/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -92,39 +93,32 @@ namespace HammerCreekBrewing.Controllers
             return View(beer);
         }
 
-        // GET: /Tap/Delete/5
-        public async Task<ActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Beer beer = await _beerService.GetBeerAsync(id);
-            if (beer == null)
-            {
-                return HttpNotFound();
-            }
-            return View(beer);
-        }
-
-        // POST: /Tap/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
-        {
-            Beer beer = await _beerService.GetBeerAsync(id);
-            _uow.Beers.Delete(beer);
-            await _uow.CommitAsync();
-            return RedirectToAction("Index");
-        }
-
-        //protected override void Dispose(bool disposing)
+        //// GET: /Tap/Delete/5
+        //public async Task<ActionResult> Delete(int? id)
         //{
-        //    if (disposing)
+        //    if (id == null)
         //    {
-        //        _uow.dis.Dispose();
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
         //    }
-        //    base.Dispose(disposing);
+        //    Beer beer = await _beerService.GetBeerAsync(id);
+        //    if (beer == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(beer);
         //}
+
+        //// POST: /Tap/Delete/5
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> DeleteConfirmed(int id)
+        //{
+        //    Beer beer = await _beerService.GetBeerAsync(id);
+        //    _uow.Beers.Delete(beer);
+        //    await _uow.CommitAsync();
+        //    return RedirectToAction("Index");
+        //}
+
+        
     }
 }

@@ -85,6 +85,12 @@
     <Compile Include="Models\Style.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="UnitOfWork.cs" />
+    <Compile Include="ViewModels\BeerMenuViewModel.cs" />
+    <Compile Include="ViewModels\BeerStyleViewModel.cs" />
+    <Compile Include="ViewModels\BreweryViewModel.cs" />
+    <Compile Include="ViewModels\EntityBaseViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\LocationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

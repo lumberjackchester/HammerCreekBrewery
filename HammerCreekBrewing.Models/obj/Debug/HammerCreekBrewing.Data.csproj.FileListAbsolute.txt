@@ -10,8 +10,7 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\EntityF
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.Data.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.WebData.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.Migrations.HCBDataBaseMigration.resources
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.Migrations.AutoMapper.resources
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.csproj.GenerateResource.Cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.pdb
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.csprojResolveAssemblyReference.cache
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.Migrations.AutoMapper.resources

@@ -8,7 +8,8 @@ using HammerCreekBrewing.Framework.Mvc;
 using HammerCreekBrewing.Data;
 using WebMatrix.WebData;
 using System.Data.Entity;
-
+using AutoMapper;
+using AutoMapper.Mappers;
 
 namespace HammerCreekBrewing
 {
@@ -37,6 +38,14 @@ namespace HammerCreekBrewing
             var builder = new ContainerBuilder();
             builder.RegisterModule(new HCBModule(db));
             var _container = builder.Build();
+
+            // register auto mapping
+            builder.Register(ctx => new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers))
+                   .AsImplementedInterfaces()
+                   .SingleInstance();
+
+            builder.RegisterType<MappingEngine>()
+                   .As<IMappingEngine>();
 
             // initialize controller factory
             var controllerFactory = new ControllerFactory(_container);

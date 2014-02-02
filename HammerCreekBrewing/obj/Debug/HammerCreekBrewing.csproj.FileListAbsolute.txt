@@ -154,6 +154,7 @@ D:\Hammer Creek\HammerCreekBrewing\bin\log4net.xml
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\AutoMapper.Net4.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll.config
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll
@@ -187,6 +188,7 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Owin.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Net.Http.Formatting.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Helpers.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Http.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Http.WebHost.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Mvc.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Optimization.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Razor.dll
@@ -210,6 +212,7 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.Secur
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.OAuth.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Net.Http.Formatting.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Http.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Http.WebHost.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Helpers.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Mvc.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\System.Web.Optimization.xml
@@ -232,6 +235,5 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.Secur
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Twitter.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\log4net.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb

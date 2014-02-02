@@ -9,49 +9,93 @@ using System.Linq.Expressions;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace HammerCreekBrewing.Services
 {
     public class BeerService : IBeerService
     {
-       // private readonly HCBContext _uow = new HCBContext();
-        //private readonly Expression<Func<Beer, BeerDto>> AsBeerDto = x => new BeerDto { Name = x.Name, Style = x.Style.StyleName };
-
         private readonly IUnitOfWork _uow;
-        public BeerService(IUnitOfWork unit)
+        private readonly IMappingEngine _mapper;
+        public BeerService(IUnitOfWork unit, IMappingEngine mapper)
         {
             _uow = unit;
+            _mapper = mapper;
         }
 
-        public IQueryable<Beer> GetBeerOnTap()
+        //public IQueryable<Beer> GetBeerOnTap()
+        //{
+        //    return _uow.Beers.GetAll().Where(b => b.OnTap);
+        //}
+        //public IQueryable<Beer> GetBeerOnTapInside()
+        //{
+        //    return GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Basement);
+        //}
+        //public IQueryable<Beer> GetBeerOnTapGarage()
+        //{
+        //    return GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Garage);
+        //}
+        //public IQueryable<Beer> GetBeerInFridge()
+        //{
+        //    return _uow.Beers.GetAll().Where(b => !b.OnTap);
+        //}
+
+
+        //public List<T> GetBeerOnTap<T>()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public List<T> GetBeerOnTapInside<T>()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public List<T> GetBeerOnTapGarage<T>()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public List<T> GetBeerInFridge<T>()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public Task<List<T>> GetAllBeersAsync<T>()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public Task<List<T>> GetBeerAsync<T>(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        /// <summary>
+        /// Gets Beer On Tap and maps Beer entity to type T
+        /// </summary>
+        /// <typeparam name="T">The return type to map the beer enity</typeparam>
+        /// <returns></returns>
+        public async Task<List<T>> GetBeerOnTapAsync<T>()
         {
-            return _uow.Beers.GetAll().Where(b => b.OnTap);
+            var bOntap = await _uow.Beers.GetAll().Where(b => b.OnTap).ToListAsync();
+            return _mapper.Map<List<Beer>, List<T>>(bOntap) ;
         }
-        public IQueryable<Beer> GetBeerOnTapInside()
-        {
-            return GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Basement);
-        }
-        public IQueryable<Beer> GetBeerOnTapGarage()
-        {
-            return GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Garage);
-        }
-        public IQueryable<Beer> GetBeerInFridge()
-        {
-            return _uow.Beers.GetAll().Where(b => !b.OnTap);
-        }
-        public async Task<List<Beer>> GetBeerOnTapAsync()
-        { 
-            return await GetBeerOnTap().ToListAsync();
-        }
-        public async Task<List<Beer>> GetAllBeersAsync()
+        public async Task<List<T>> GetAllBeersAsync<T>()
         {
             var beers = await _uow.Beers.GetAllIncluding(b => b.Style).ToListAsync();
-            return beers;
+            return _mapper.Map<List<Beer>, List<T>>(beers); ;
         }
-        public async Task<Beer> GetBeerAsync(int? id)
+        public async Task<T> GetBeerAsync<T>(int id)
         {
             var beer = await _uow.Beers.GetAllIncluding(b => b.Style).Where(b => b.BeerId == id).FirstOrDefaultAsync();
-            return beer ;
+            return _mapper.Map<Beer, T>(beer); ;
+        }
+        public async Task<T> GetBeerModelAsync<T>(int id)
+        {
+
+            var beer = await _uow.Beers.GetAllIncluding(b => b.Style).Where(b => b.BeerId == id).FirstOrDefaultAsync();
+            return _mapper.Map<Beer, T>(beer);
         }
     }
 

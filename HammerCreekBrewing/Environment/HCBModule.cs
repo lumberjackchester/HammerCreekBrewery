@@ -18,8 +18,10 @@ namespace HammerCreekBrewing.Environment
         {
             // register repository dependencies
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
-           // builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().WithParameter("connection", new UnitOfWork(_conn)).InstancePerLifetimeScope();
+           
+            // builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().WithParameter("connection", new UnitOfWork(_conn)).InstancePerLifetimeScope();
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().WithParameter("context", context).InstancePerLifetimeScope();
+            
             // register Beer service
             builder.RegisterType<BeerService>().As<IBeerService>().InstancePerLifetimeScope();
             
@@ -29,8 +31,8 @@ namespace HammerCreekBrewing.Environment
             // register the admin controllers       
            // builder.RegisterControllers(typeof(HammerCreekBrewing.Areas.Admin.Controllers.BeerController).Assembly);
 
-            // register the public controllers 
-            builder.RegisterControllers(typeof(HammerCreekBrewing.Controllers.OnTapController).Assembly);
+            //// register the public controllers 
+            //builder.RegisterControllers(typeof(HammerCreekBrewing.Controllers.OnTapController).Assembly);
 
             //register home controller
             //    builder.RegisterControllers(typeof(HammerCreekBrewing.Controllers.HomeController).Assembly);      
@@ -39,6 +41,8 @@ namespace HammerCreekBrewing.Environment
             builder.Register(c => new Logging())
                 .As<ILogging>()
                 .InstancePerLifetimeScope();
+
+
 
             builder.RegisterFilterProvider();
         }     

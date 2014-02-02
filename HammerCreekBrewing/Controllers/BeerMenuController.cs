@@ -8,9 +8,9 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using System.Web.Http.Description;
-using HammerCreekBrewing.Models;
+using System.Web.Http.Description; 
 using HammerCreekBrewing.Services;
+using HammerCreekBrewing.Data.ViewModels;
 
 namespace HammerCreekBrewing.Controllers
 {
@@ -28,10 +28,10 @@ namespace HammerCreekBrewing.Controllers
         }
 
         // GET api/BeerMenu
-       // public async Task<List<Beer>> GetBeers()
+        //public async Task<List<BeerMenuViewModel>> GetBeers()
         public async Task<IHttpActionResult> GetBeerMenu()
         {
-            var allBeers = await _beerService.GetCurrentMenu();
+            var allBeers = await _beerService.GetAllBeersAsync<BeerMenuViewModel>();
             if (allBeers == null)
             {
                 return NotFound();
@@ -40,10 +40,10 @@ namespace HammerCreekBrewing.Controllers
         }
 
         // GET api/BeerMenu/5
-        [ResponseType(typeof(Beer))]
+        [ResponseType(typeof(ViewModels.BeerMenuViewModel))]
         public async Task<IHttpActionResult> GetBeer(int id)
-        { 
-            var thisBeer = await _beerService.GetBeerAsync(id);
+        {
+            var thisBeer = await _beerService.GetBeerAsync<BeerMenuViewModel>(id);
             if (thisBeer == null)
             {
                 return NotFound();

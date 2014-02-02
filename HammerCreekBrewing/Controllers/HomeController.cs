@@ -27,9 +27,9 @@ namespace HammerCreekBrewing.Controllers
         public ActionResult Index()
         {
             var homeVM = new ViewModels.HomeViewModel();
-            homeVM.BeerOnTapInside = Mapper.Map<IEnumerable<Beer>, IEnumerable<BeerMenuViewModel>>(_beerService.GetBeerOnTapInside());
-            homeVM.BeerOnTapGarage = Mapper.Map<IEnumerable<Beer>, IEnumerable<BeerMenuViewModel>>(_beerService.GetBeerOnTapGarage());
-            homeVM.BeerInFridge = Mapper.Map<IEnumerable<Beer>, IEnumerable<BeerMenuViewModel>>(_beerService.GetBeerInFridge());
+            homeVM.BeerOnTapInside = await _beerService.GetBeerOnTapAsync<BeerMenuViewModel>();
+            homeVM.BeerOnTapGarage =  _beerService.GetBeerOnTapGarage<BeerMenuViewModel>();
+            homeVM.BeerInFridge = _beerService.GetBeerInFridge<BeerMenuViewModel>();
             return View(homeVM);
         }
 
