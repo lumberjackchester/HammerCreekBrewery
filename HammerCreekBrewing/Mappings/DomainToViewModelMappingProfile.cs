@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using AutoMapper;
 using HammerCreekBrewing.Data.Models;
-using HammerCreekBrewing.ViewModels;
+using HammerCreekBrewing.Data.ViewModels;
 
 
 namespace HammerCreekBrewing.Mappings

@@ -39,7 +39,7 @@ namespace HammerCreekBrewing.Controllers
         }
 
         // GET api/BeerMenu/5
-        [ResponseType(typeof(ViewModels.BeerMenuViewModel))]
+        [ResponseType(typeof(BeerMenuViewModel))]
         public async Task<IHttpActionResult> GetBeer(int id)
         {
             var thisBeer = await _beerService.GetBeerAsync<BeerMenuViewModel>(id);

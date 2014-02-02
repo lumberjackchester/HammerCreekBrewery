@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using HammerCreekBrewing.Services;
-using HammerCreekBrewing.ViewModels;
+using HammerCreekBrewing.Data.ViewModels;
 using HammerCreekBrewing.Data.Models;
 using System.Linq.Expressions;
 using AutoMapper;
@@ -27,7 +27,7 @@ namespace HammerCreekBrewing.Controllers
 
         public async Task<ActionResult> Index()
         {
-            var homeVM = new ViewModels.HomeViewModel();
+            var homeVM = new HomeViewModel();
             homeVM.BeerOnTapInside =  await _beerService.GetBeerOnTapAsync<BeerMenuViewModel>();
             homeVM.BeerOnTapGarage = await _beerService.GetBeerOnTapGarage<BeerMenuViewModel>();
             homeVM.BeerInFridge = await _beerService.GetBeerInFridge<BeerMenuViewModel>();
