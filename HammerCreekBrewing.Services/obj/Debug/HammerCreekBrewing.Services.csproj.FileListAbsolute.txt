@@ -88,3 +88,4 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMa
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache

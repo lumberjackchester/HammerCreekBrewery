@@ -64,3 +64,4 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\WebM
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.csprojResolveAssemblyReference.cache
