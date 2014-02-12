@@ -28,9 +28,9 @@ namespace HammerCreekBrewing.Controllers
         public async Task<ActionResult> Index()
         {
             var homeVM = new HomeViewModel();
-            homeVM.BeerOnTapInside =  await _beerService.GetBeerOnTapAsync<BeerMenuViewModel>();
-            homeVM.BeerOnTapGarage = await _beerService.GetBeerOnTapGarage<BeerMenuViewModel>();
-            homeVM.BeerInFridge = await _beerService.GetBeerInFridge<BeerMenuViewModel>();
+            homeVM.BeerOnTapInside = await _beerService.GetBeerOnTapInside<BeerMenuViewModel>();
+            //homeVM.BeerOnTapGarage = await _beerService.GetBeerOnTapGarage<BeerMenuViewModel>();
+            //homeVM.BeerInFridge = await _beerService.GetBeerInFridge<BeerMenuViewModel>();
 
             return View(homeVM);
         }

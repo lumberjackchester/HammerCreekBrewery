@@ -22,10 +22,17 @@ namespace HammerCreekBrewing.Mappings
             //Mapper.CreateMap<Beer, BeerMenuViewModel>();
             Mapper.CreateMap<Beer, BeerMenuViewModel>().ForMember(x => x.StyleName, opt => opt.MapFrom(source => source.Style.StyleName))
                                                       .ForMember(x => x.BreweryName, opt => opt.MapFrom(source => source.Brewery.Name))
-                                                      .ForMember(x => x.LocationName, opt => opt.MapFrom(source => source.Location.Name))
-                                                      .ForMember(x => x.KeggedDate, opt => opt.MapFrom(source => source.KeggedDate.HasValue ? source.KeggedDate.Value.ToString("dd MMM yyyy") : "N/A" ))
-                                                      .ForMember(x => x.TappedDate, opt => opt.MapFrom(source => source.TappedDate.HasValue ? source.TappedDate.Value.ToString("dd MMM yyyy") : "N/A"))                                                      
-                                                      .ForMember(x => x.BrewDate, opt => opt.MapFrom(source => source.BrewDate.ToString("dd MMM yyyy")));
+                                                      .ForMember(x => x.LocationName, opt => opt.MapFrom(source => source.Location.Name)) 
+                                                      .ForMember(x => x.KeggedDate, opt => opt.MapFrom(source => source.KeggedDate.HasValue ? source.KeggedDate.Value.ToString("dd MMM yyyy") : "N/A"))
+                                                      .ForMember(x => x.TappedDate, opt => opt.MapFrom(source => source.TappedDate.HasValue ? source.TappedDate.Value.ToString("dd MMM yyyy") : "N/A"))
+                                                      .ForMember(x => x.BrewDate, opt => opt.MapFrom(source => source.BrewDate.ToString("dd MMM yyyy")))
+                                                      .ForMember(x => x.Id, opt => opt.MapFrom(source => source.BeerId))
+                                                      .ForMember(x => x.TapName, opt => opt.MapFrom(source => source.TapName))
+                                                      .ForMember(x => x.Name, opt => opt.MapFrom(source => source.Name))
+                                                      .ForMember(x => x.Abv, opt => opt.MapFrom(source => source.Abv))
+                                                      .ForMember(x => x.KegId, opt => opt.MapFrom(source => source.KegId));
+
+             
             //Mapper.CreateMap<Goal, GoalFormModel>();
             //Mapper.CreateMap<Comment, CommentsViewModel>();
             //Mapper.CreateMap<UserProfile, UserProfileFormModel>();
@@ -59,4 +66,5 @@ namespace HammerCreekBrewing.Mappings
 
         }
     }
+
 }

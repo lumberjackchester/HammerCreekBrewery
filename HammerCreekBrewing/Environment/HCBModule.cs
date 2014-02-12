@@ -6,6 +6,7 @@ using System.Web.Http;
 using HammerCreekBrewing.Data;
 using AutoMapper;
 using AutoMapper.Mappers;
+using System.Collections.Generic;
 
 namespace HammerCreekBrewing.Environment
 {
@@ -19,13 +20,19 @@ namespace HammerCreekBrewing.Environment
         protected override void Load(ContainerBuilder builder)
         {
 
-            // register auto mapping
-            builder.Register(ctx => new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers))
-                   .AsImplementedInterfaces()
-                   .SingleInstance();
-
-            builder.RegisterType<MappingEngine>()
-                   .As<IMappingEngine>();
+            //// register auto mapping
+            //builder.Register(ctx => new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers))
+            //       .AsImplementedInterfaces()
+            //       .SingleInstance()
+            //       .OnActivating(x =>
+            //       {
+            //           foreach (var profile in x.Context.Resolve<IEnumerable<Profile>>())
+            //           {
+            //               x.Instance.AddProfile(profile);
+            //           }
+            //       });
+            //builder.RegisterType<MappingEngine>()
+            //       .As<IMappingEngine>();
 
             // register repository dependencies
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();

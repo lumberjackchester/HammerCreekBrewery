@@ -10,58 +10,50 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Threading.Tasks;
 using AutoMapper;
+using HammerCreekBrewing.Data.ViewModels;
 
 namespace HammerCreekBrewing.Services
 {
+     
     public class BeerService : IBeerService
     {
         private readonly IUnitOfWork _uow;
-        private readonly IMappingEngine _mapper;
-        public BeerService(IUnitOfWork unit, IMappingEngine mapper)
+        //private readonly Mapper Mapper;
+        //public BeerService(IUnitOfWork unit, IMappingEngine mapper)
+        public BeerService(IUnitOfWork unit)
         {
             _uow = unit;
-            _mapper = mapper;
+           // _mapper = new Mapper();
         }
 
         public IQueryable<Beer> GetBeerOnTap()
         {
             return _uow.Beers.GetAll().Where(b => b.OnTap);
-        }
-        //public IQueryable<Beer> GetBeerOnTapInside()
-        //{
-        //    return GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Basement);
-        //}
-        //public IQueryable<Beer> GetBeerOnTapGarage()
-        //{
-        //    return GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Garage);
-        //}
-        //public IQueryable<Beer> GetBeerInFridge()
-        //{
-        //    return _uow.Beers.GetAll().Where(b => !b.OnTap);
-        //}
+        } 
 
-
-        //public List<T> GetBeerOnTap<T>()
+        //public async Task<List<T>> GetBeerOnTapInside<T>()
         //{
-        //    throw new NotImplementedException();
+        //    var bOntap = await GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Basement).ToListAsync();
+        //    return _mapper.Map<List<Beer>, List<T>>(bOntap);                 
         //}
 
         public async Task<List<T>> GetBeerOnTapInside<T>()
         {
-            var bOntap = await GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Basement).ToListAsync();
-            return _mapper.Map<List<Beer>, List<T>>(bOntap);                 
+            var bOntap = await GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Basement).FirstOrDefaultAsync();
+            var vms = Mapper.Map<Beer, T>(bOntap);
+            return new List<T>{vms};
         }
 
         public async Task<List<T>> GetBeerOnTapGarage<T>()
         {
             var bOntap =  await GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Garage).ToListAsync();
-            return _mapper.Map<List<Beer>, List<T>>(bOntap);      
+            return Mapper.Map<List<Beer>, List<T>>(bOntap);      
         }
 
         public async Task<List<T>> GetBeerInFridge<T>()
         {
             var bOntap =   await GetBeerOnTap().Where(b => !b.OnTap).ToListAsync();
-            return _mapper.Map<List<Beer>, List<T>>(bOntap);      
+            return Mapper.Map<List<Beer>, List<T>>(bOntap);      
         }
          
 
@@ -73,25 +65,33 @@ namespace HammerCreekBrewing.Services
         public async Task<List<T>> GetBeerOnTapAsync<T>()
         {
             var bOntap = await GetBeerOnTap().ToListAsync();
-            return _mapper.Map<List<Beer>, List<T>>(bOntap);
+            return Mapper.Map<List<Beer>, List<T>>(bOntap);  
         }
         public async Task<List<T>> GetAllBeersAsync<T>()
         {
             var beers = await _uow.Beers.GetAllIncluding(b => b.Style).ToListAsync();
-            return _mapper.Map<List<Beer>, List<T>>(beers); ;
+
+            return Mapper.Map<List<Beer>, List<T>>(beers); ;
         }
         public async Task<T> GetBeerAsync<T>(int id)
         {
             var beer = await _uow.Beers.GetAllIncluding(b => b.Style).Where(b => b.BeerId == id).FirstOrDefaultAsync();
-            return _mapper.Map<Beer, T>(beer); ;
+            return Mapper.Map<Beer, T>(beer); ;
         }
         public async Task<T> GetBeerModelAsync<T>(int id)
         {
 
             var beer = await _uow.Beers.GetAllIncluding(b => b.Style).Where(b => b.BeerId == id).FirstOrDefaultAsync();
-            return _mapper.Map<Beer, T>(beer);
+            return Mapper.Map<Beer, T>(beer);
         }
-         
+        //private List<T> MapBeerEntityToViewModel<T>(object source) //where T : EntityBaseViewModel
+        //{
+        //    var sourceType = source.GetType();
+        //    //var list = (List)Activator.CreateInstance(typeof(List<>).MakeGenericType(typeof(T)));
+        //    T newT = Activator.CreateInstance<T>();
+        //    //var destType = new List<destObjectT>();
+        //    return _mapper.Map(source, sourceType, typeof(List<newT>)) as List<T>;
+        //}
 
     }
 

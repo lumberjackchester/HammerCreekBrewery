@@ -19,6 +19,7 @@ namespace HammerCreekBrewing.Mappings
         public static void Configure()
         {
             Mapper.Initialize(x => GetConfiguration(Mapper.Configuration));
+            Mapper.AssertConfigurationIsValid();
         }
 
         private static void GetConfiguration(IConfiguration configuration)
