@@ -237,3 +237,4 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\log4net.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
