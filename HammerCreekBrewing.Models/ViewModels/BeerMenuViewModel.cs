@@ -6,7 +6,8 @@ using System.Web;
 namespace HammerCreekBrewing.Data.ViewModels
 {
     public class BeerMenuViewModel : EntityBaseViewModel
-    { 
+    {
+        public int StyleId { get; set; }
         public string StyleName { get; set; } 
         public string TapName { get; set; } 
         public string LocationName { get; set; } 

@@ -11,7 +11,6 @@ namespace HammerCreekBrewing.Data{
     public class HCBContext : DbContext {
         public HCBContext(string connectionString = "name=HammerCreekBrewingContext")
             : base(connectionString)
-         //   : base("name=HammerCreekBrewingContext")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }

@@ -7,6 +7,7 @@ namespace HammerCreekBrewing.Data.Migrations
     using System.Linq;
     using System.Web.Security;
     using WebMatrix.WebData;
+    using BeerEnums = HammerCreekBrewing.Data.Enums;
 
     internal sealed class Configuration : DbMigrationsConfiguration<HammerCreekBrewing.Data.HCBContext>
     {
@@ -53,18 +54,18 @@ namespace HammerCreekBrewing.Data.Migrations
 
             #region BeerStyles
 
-            db.BeerStyles.AddOrUpdate(new BeerStyle { BeerStyleId = 1, StyleName = "WitBier" });
-            db.BeerStyles.AddOrUpdate(new BeerStyle { BeerStyleId = 2, StyleName = "Stout" });
-            db.BeerStyles.AddOrUpdate(new BeerStyle { BeerStyleId = 3, StyleName = "Ale" });
-            db.BeerStyles.AddOrUpdate(new BeerStyle { BeerStyleId = 4, StyleName = "Belgium" });
+            db.BeerStyles.AddOrUpdate(new BeerStyle { BeerStyleId = (int)BeerEnums.BeerStyle.Witbier, StyleName = "Witbier" });
+            db.BeerStyles.AddOrUpdate(new BeerStyle { BeerStyleId = (int)BeerEnums.BeerStyle.Stout, StyleName = "Stout" });
+            db.BeerStyles.AddOrUpdate(new BeerStyle { BeerStyleId = (int)BeerEnums.BeerStyle.PaleAle, StyleName = "Pale Ale" });
+            db.BeerStyles.AddOrUpdate(new BeerStyle { BeerStyleId = (int)BeerEnums.BeerStyle.BelgiumTripple, StyleName = "Belgium Tripple" });
 
             #endregion
 
             #region Beers
 
 
-            db.Beers.AddOrUpdate(new Beer { BeerId = 1, StyleId = 1, LocationId = 2, BreweryId = 1, Name = "Peach On Wit", BrewDate = new DateTime(2013, 9, 28) });
-            db.Beers.AddOrUpdate(new Beer { BeerId = 2, StyleId = 2, LocationId = 2, BreweryId = 1, Name = "Milk Stout", BrewDate = new DateTime(2013, 9, 28) });
+            db.Beers.AddOrUpdate(new Beer { BeerId = 1, StyleId = (int)BeerEnums.BeerStyle.Wit, LocationId = 2, BreweryId = 1, Name = "Peach On Wit", BrewDate = new DateTime(2013, 9, 28) });
+            db.Beers.AddOrUpdate(new Beer { BeerId = 2, StyleId = (int)BeerEnums.BeerStyle.Stout, LocationId = 2, BreweryId = 1, Name = "Milk Stout", BrewDate = new DateTime(2013, 9, 28) });
             db.Beers.AddOrUpdate(new Beer
             {
                 BeerId = 3,

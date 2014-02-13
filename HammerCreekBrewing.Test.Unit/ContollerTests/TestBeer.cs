@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Web;
 using Autofac;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using HammerCreekBrewing.Data;
 using HammerCreekBrewing.Services;
 
 
 namespace HammerCreekBrewing.Test.Unit.ContollerTests
 {
-    [TestClass]
+    [TestFixture]
     public class TestBeerController : TestBaseClass
     {
-        [TestMethod]
+        [Test]
         public void TestGetBeer()
         {
             using (var cScope = Container.BeginLifetimeScope())

@@ -12,5 +12,12 @@ namespace HammerCreekBrewing.Data.Enums
         Garage = 2,
         Storage = 3
     }
+    public enum BeerStyle
+    {
+        Witbier = 1,
+        Stout = 2,
+        PaleAle = 3,
+        BelgiumTripple = 4
+    }
 
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Data.Entity;
 using FakeItEasy; 
 using System.Web.Mvc;
@@ -10,14 +10,15 @@ using HammerCreekBrewing.Environment;
 
 namespace HammerCreekBrewing.Test.Unit
 {
-    [TestClass]
+    [SetUpFixture]
     public class TestBaseClass
     {
         public static IContainer Container { get; set; }
         public static readonly string Connection = "name=HammerCreekBrewingContext.Test";
         public static HCBContext db;
-        [TestInitialize]
-        public void tstStart()
+        
+        [SetUp]
+        public void RunBeforeAnyTests()
         {
             //db = new HCBContext(Connection); 
             //db.Database.Initialize(true);
@@ -29,12 +30,12 @@ namespace HammerCreekBrewing.Test.Unit
             //Container = builder.Build();
 
             // initialize controller factory
-            var controllerFactory = new ControllerFactory(Container);
-            ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+            //var controllerFactory = new ControllerFactory(Container);
+            //ControllerBuilder.Current.SetControllerFactory(controllerFactory);
 
         }
-        [TestCleanup]
-        public void tstClean()
+        [TearDown]
+        public void RunAfterAnyTests()
         {
             db.Database.Delete();
             //db.Dispose();
