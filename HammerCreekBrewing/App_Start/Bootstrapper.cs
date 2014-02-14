@@ -16,27 +16,36 @@ namespace HammerCreekBrewing
     public static class Bootstrapper
     {
         private static string _dbconn;
+        private static HCBContext _db;
 
-        //private IContainer _container;
         public static void Run(string dbConnection)
         {
             _dbconn = dbConnection;
+            if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
+                Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
+
+            _db = new HCBContext(_dbconn);
+            _db.Database.Initialize(true);
             // Initilize mapping Profiles
             AutoMapperConfiguration.Configure();
             SetAutofacContainer(); 
         }
-        private static void SetAutofacContainer()
+        public static IContainer Run(HCBContext db)
         {
-           // Database.SetInitializer(new DevelopmentContextInitializer());
-            var db = new HCBContext(_dbconn);
-            db.Database.Initialize(true);
+            _db = db;
+            // Initilize mapping Profiles
+            AutoMapperConfiguration.Configure();
+            return SetAutofacContainer();
+        }
+        private static IContainer SetAutofacContainer()
+        {
             //if (!WebSecurity.Initialized)
             //    WebSecurity.InitializeDatabaseConnection("HammerCreekBrewingContext",
             //                                             "UserProfile", "UserId", "UserName", autoCreateTables: true);
 
             // new container
             var builder = new ContainerBuilder();
-            builder.RegisterModule(new HCBModule(db));
+            builder.RegisterModule(new HCBModule(_db));
             var _container = builder.Build();
 
 
@@ -44,6 +53,7 @@ namespace HammerCreekBrewing
             var controllerFactory = new ControllerFactory(_container);
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);
             DependencyResolver.SetResolver(new AutofacDependencyResolver(_container));
+            return _container;
         }
     }
 }

@@ -17,7 +17,8 @@ namespace HammerCreekBrewing.Data.Enums
         Witbier = 1,
         Stout = 2,
         PaleAle = 3,
-        BelgiumTripple = 4
+        BelgiumTripple = 4,
+        BelgiumStrongPaleAle = 5
     }
 
 }

@@ -1,3 +1,4 @@
+D:\HammerCreekBrewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\AutoMapper.Net4.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.Test.Unit.dll.config
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.Test.Unit.dll
@@ -10,8 +11,8 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Hamm
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.Framework.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.Services.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.Web.Infrastructure.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\nunit.framework.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Helpers.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Mvc.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Razor.dll
@@ -19,7 +20,6 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Syst
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.WebPages.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.WebPages.Razor.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Http.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\WebMatrix.WebData.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\log4net.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\AutoMapper.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Optimization.dll
@@ -31,7 +31,6 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Micr
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Net.Http.Formatting.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Newtonsoft.Json.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\WebMatrix.Data.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.Framework.pdb
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.Data.pdb
@@ -41,6 +40,7 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Auto
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\EntityFramework.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\EntityFramework.SqlServer.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\FakeItEasy.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\nunit.framework.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Helpers.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Mvc.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Razor.xml
@@ -48,7 +48,6 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Syst
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.WebPages.Deployment.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.WebPages.Razor.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Http.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\WebMatrix.WebData.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\log4net.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\AutoMapper.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Optimization.xml
@@ -59,9 +58,7 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Micr
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Net.Http.Formatting.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Newtonsoft.Json.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\WebMatrix.Data.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.pdb
-D:\HammerCreekBrewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.csprojResolveAssemblyReference.cache

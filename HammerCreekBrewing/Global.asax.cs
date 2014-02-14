@@ -20,15 +20,7 @@ namespace HammerCreekBrewing
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
-        {
-            //if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
-          //  Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
-            //else if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "CreateIfNotExists")
-            //    Database.SetInitializer(new ProductionContextInitializer());
-            //else
-            //    Database.SetInitializer<HCBContext>(null);
-
-            
+        {            
             AreaRegistration.RegisterAllAreas(); 
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

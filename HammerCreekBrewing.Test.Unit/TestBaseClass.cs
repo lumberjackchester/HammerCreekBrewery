@@ -15,14 +15,21 @@ namespace HammerCreekBrewing.Test.Unit
     {
         public static IContainer Container { get; set; }
         public static readonly string Connection = "name=HammerCreekBrewingContext.Test";
-        public static HCBContext db;
+        public static HCBContext _db;
+
         
         [SetUp]
         public void RunBeforeAnyTests()
-        {
-            //db = new HCBContext(Connection); 
-            //db.Database.Initialize(true);
-            Bootstrapper.Run(Connection);
+        { 
+            AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Directory.GetCurrentDirectory());
+
+
+
+            Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
+            _db = new HCBContext(Connection);
+            _db.Database.Delete();
+            _db.Database.Initialize(true);
+            Container = Bootstrapper.Run(_db);
 
             ////// The connetion string for Testing 
             //var builder = new ContainerBuilder();
@@ -37,7 +44,7 @@ namespace HammerCreekBrewing.Test.Unit
         [TearDown]
         public void RunAfterAnyTests()
         {
-            db.Database.Delete();
+           // _db.Database.Delete();
             //db.Dispose();
         }              
 

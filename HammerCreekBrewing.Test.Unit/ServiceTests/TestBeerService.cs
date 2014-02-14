@@ -18,16 +18,23 @@ namespace HammerCreekBrewing.Test.Unit.ServiceTests
         [Test]
         public async void TestGetBeer()
         {
-            var beerService = A.Fake<IBeerService>();
+            using (var cScope = Container.BeginLifetimeScope())
+            {
 
-            //get a beer should return beer with id = 1  see dbcontext seed definition in context configuration
-            //also test automapper
-            var beerMenuVM = await beerService.GetBeerAsync<BeerMenuViewModel>(1);
-            Assert.AreEqual(1, beerMenuVM.Id);
-            Assert.AreEqual((int)BeerStyle.Witbier, beerMenuVM.StyleId);
-            Assert.AreEqual("Witbier", beerMenuVM.StyleName);
-            Assert.AreEqual("Peach On Wit", beerMenuVM.Name);
-            Assert.AreEqual("Hammer Creek Brewing", beerMenuVM.BreweryName);
+                var beerService = cScope.Resolve<IBeerService>();
+
+                //var beerServ = new BeerService(uow); 
+                //var beerService = new BeerService();
+
+                //get a beer should return beer with id = 1  see dbcontext seed definition in context configuration
+                //also testing automapper
+                var beerMenuVM = await beerService.GetBeerAsync<BeerMenuViewModel>(1);
+                Assert.AreEqual(1, beerMenuVM.Id);
+                Assert.AreEqual((int)BeerStyle.Witbier, beerMenuVM.StyleId);
+                Assert.AreEqual("Witbier", beerMenuVM.StyleName);
+                Assert.AreEqual("Peach On Wit", beerMenuVM.Name);
+                Assert.AreEqual("Hammer Creek Brewing", beerMenuVM.BreweryName);
+            }
         }
     }
 }
