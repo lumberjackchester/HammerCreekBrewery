@@ -29,8 +29,8 @@ namespace HammerCreekBrewing.Data.Models
         public DateTime BrewDate { get; set; }
         public DateTime? KeggedDate { get; set; }
         public DateTime? TappedDate { get; set; }
-        [Required]
-        public decimal Abv { get; set; }
+       // [Required]
+        public string Abv { get; set; }
         public int? KegId { get; set; }
         [Required]
         public bool OnTap { get; set; }

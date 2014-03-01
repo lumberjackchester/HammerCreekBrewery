@@ -25,14 +25,16 @@ namespace HammerCreekBrewing.Controllers
             _logger = logger;
         }
 
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
-            var homeVM = new HomeViewModel();
-            homeVM.BeerOnTapInside = await _beerService.GetBeerOnTapInside<BeerMenuViewModel>();
-            //homeVM.BeerOnTapGarage = await _beerService.GetBeerOnTapGarage<BeerMenuViewModel>();
-            //homeVM.BeerInFridge = await _beerService.GetBeerInFridge<BeerMenuViewModel>();
+            //    var homeVM = new HomeViewModel();
+            //    homeVM.BeerOnTapInside = await _beerService.GetBeerOnTapInside<BeerMenuViewModel>();
+            //    //homeVM.BeerOnTapGarage = await _beerService.GetBeerOnTapGarage<BeerMenuViewModel>();
+            //    //homeVM.BeerInFridge = await _beerService.GetBeerInFridge<BeerMenuViewModel>();
 
-            return View(homeVM);
+            //    return View(homeVM);
+
+            return View();
         }
 
         //

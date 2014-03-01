@@ -37,7 +37,7 @@ namespace HammerCreekBrewing.Data
             #region Breweries
             db.Breweries.Add(new Brewery { BreweryId = 1, Name = "Hammer Creek Brewing" });
             db.SaveChanges();
-            db.Breweries.Add(new Brewery { BreweryId = 2, Name = "Delirium" });
+            db.Breweries.Add(new Brewery { BreweryId = 2, Name = "Brouwerij Huyghe" });
             db.SaveChanges();
             #endregion
 
@@ -47,7 +47,9 @@ namespace HammerCreekBrewing.Data
             db.SaveChanges();
             db.Locations.Add(new Location { LocationId = 2, Name = "Garage" });
             db.SaveChanges();
-            db.Locations.Add(new Location { LocationId = 3, Name = "Storage" });
+            db.Locations.Add(new Location { LocationId = 3, Name = "Fridge" });
+            db.SaveChanges();
+            db.Locations.Add(new Location { LocationId = 4, Name = "Storage" });
 
             #endregion
 
@@ -69,13 +71,50 @@ namespace HammerCreekBrewing.Data
             #region Beers
 
 
-            db.Beers.Add(new Beer { BeerId = 1, StyleId = (int)BeerEnums.BeerStyle.Witbier, LocationId = 2, BreweryId = 1, Name = "Peach On Wit", BrewDate = new DateTime(2013, 9, 28) });
+            db.Beers.Add(new Beer
+            {
+                BeerId = 1,
+                StyleId = (int)BeerEnums.BeerStyle.Witbier,
+                LocationId = (int)BeerEnums.Locations.Garage,
+                BreweryId = 1,
+                TapName = "Moose Drool",
+                OnTap = true,
+                Name = "Peach On Wit",
+                BrewDate = new DateTime(2013, 9, 28)
+            });
             db.SaveChanges();
-            db.Beers.Add(new Beer { BeerId = 2, StyleId = (int)BeerEnums.BeerStyle.Stout, LocationId = 2, BreweryId = 1, Name = "Milk Stout", BrewDate = new DateTime(2013, 9, 28) });
+            //db.Beers.Add(new Beer
+            //{
+            //    BeerId = 2,
+            //    StyleId = (int)BeerEnums.BeerStyle.Stout,
+            //    LocationId = (int)BeerEnums.Locations.Garage,
+            //    BreweryId = 1,
+            //    Name = "Milk Stout",
+            //    BrewDate = new DateTime(2013, 9, 28)
+            //});
+            //   db.SaveChanges();
+            db.Beers.Add(new Beer
+            {
+                BeerId = 2,
+                StyleId = (int)BeerEnums.BeerStyle.PaleAle,
+                LocationId = (int)BeerEnums.Locations.Basement,
+                BreweryId = 1,
+                TapName = "Dale's Pale Ale",
+                OnTap = true,
+                Name = "Pumpkin Ale",
+                BrewDate = new DateTime(2013, 9, 28)
+            });
             db.SaveChanges();
-            db.Beers.Add(new Beer { BeerId = 3, StyleId = (int)BeerEnums.BeerStyle.PaleAle, LocationId = 1, BreweryId = 1, TapName = "Dale's Pale Ale", OnTap = true, Name = "Pumpkin Ale", BrewDate = new DateTime(2013, 9, 28) });
-            db.SaveChanges();
-            db.Beers.Add(new Beer { BeerId = 4, StyleId = (int)BeerEnums.BeerStyle.BelgiumStrongPaleAle, LocationId = 2, BreweryId = 1, Name = "Tremens", BrewDate = new DateTime(2013, 9, 28) });
+            db.Beers.Add(new Beer
+            {
+                BeerId = 3,
+                StyleId = (int)BeerEnums.BeerStyle.BelgiumStrongPaleAle,
+                LocationId = (int)BeerEnums.Locations.Fridge,
+                BreweryId = 2,
+                Name = "Delirium Tremens",
+                Abv = "8.5%",
+                BrewDate = new DateTime(2013, 9, 28)
+            });
             db.SaveChanges();
 
             #endregion

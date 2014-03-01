@@ -14,7 +14,7 @@ namespace HammerCreekBrewing.Data.ViewModels
         public string BrewDate { get; set; }
         public string KeggedDate { get; set; }
         public string TappedDate { get; set; } 
-        public decimal Abv { get; set; }
+        public string Abv { get; set; }
         public int KegId { get; set; } 
         public string BreweryName { get; set; } 
     }

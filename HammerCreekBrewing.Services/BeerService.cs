@@ -25,12 +25,16 @@ namespace HammerCreekBrewing.Services
 
         public IQueryable<Beer> GetBeerOnTap()
         {
-            return _uow.Beers.GetAll().Where(b => b.OnTap);
+            return _uow.Beers.GetAllIncluding(s=> s.Style, b=> b.Brewery).Where(b => b.OnTap);
+        } 
+        public IQueryable<Beer> GetAllBeers()
+        {
+            return _uow.Beers.GetAllIncluding(s => s.Style, b => b.Brewery);
         } 
 
         public async Task<List<T>> GetBeerOnTapInside<T>()
         {
-            var bOntap = await GetBeerOnTap().Include(b=> b.Brewery).Where(b => b.LocationId == (int)Locations.Basement).FirstOrDefaultAsync();
+            var bOntap = await GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Basement).FirstOrDefaultAsync();
             var vms = Mapper.Map<Beer, T>(bOntap);
             return new List<T>{vms};
         }
@@ -43,7 +47,13 @@ namespace HammerCreekBrewing.Services
 
         public async Task<List<T>> GetBeerInFridge<T>()
         {
-            var bOntap =   await GetBeerOnTap().Where(b => !b.OnTap).ToListAsync();
+            var bOntap = await GetAllBeers().Where(b => !b.OnTap && b.LocationId == (int)Locations.Fridge).ToListAsync();
+            return Mapper.Map<List<Beer>, List<T>>(bOntap);      
+        }
+         
+        public async Task<List<T>> GetBeerInStorage<T>()
+        {
+            var bOntap = await GetAllBeers().Where(b => !b.OnTap && b.LocationId == (int)Locations.Storage).ToListAsync();
             return Mapper.Map<List<Beer>, List<T>>(bOntap);      
         }
          
@@ -60,13 +70,13 @@ namespace HammerCreekBrewing.Services
         }
         public async Task<List<T>> GetAllBeersAsync<T>()
         {
-            var beers = await _uow.Beers.GetAllIncluding(b => b.Style).ToListAsync();
+            var beers = await GetAllBeers().ToListAsync();
 
             return Mapper.Map<List<Beer>, List<T>>(beers);
         }
         public async Task<T> GetBeerAsync<T>(int id)
         {
-            var beer = await _uow.Beers.GetAllIncluding(b => b.Style, r=> r.Brewery).Where(b => b.BeerId == id).FirstOrDefaultAsync();
+            var beer = await GetAllBeers().Where(b => b.BeerId == id).FirstOrDefaultAsync();
             return Mapper.Map<Beer, T>(beer); ;
         }
 

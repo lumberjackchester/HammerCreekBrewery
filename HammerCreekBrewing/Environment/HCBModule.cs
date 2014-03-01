@@ -55,6 +55,9 @@ namespace HammerCreekBrewing.Environment
             //register home controller
             builder.RegisterControllers(typeof(HammerCreekBrewing.Controllers.HomeController).Assembly);      
 
+            //register Web API controler
+            builder.RegisterControllers(typeof(HammerCreekBrewing.Controllers.BeerMenuController).Assembly);  
+
             // register logging service
             builder.Register(c => new Logging())
                 .As<ILogging>()

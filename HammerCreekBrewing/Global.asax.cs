@@ -20,14 +20,17 @@ namespace HammerCreekBrewing
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
-        {            
-            AreaRegistration.RegisterAllAreas(); 
+        {
+
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+            AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Bootstrapper.Run(System.Configuration.ConfigurationManager.AppSettings["DatabaseContextConnectionName"]);
-    
+
 
         }
     }
+    
 }

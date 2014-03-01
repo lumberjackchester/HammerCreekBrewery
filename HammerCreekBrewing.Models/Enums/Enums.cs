@@ -10,7 +10,8 @@ namespace HammerCreekBrewing.Data.Enums
     {
         Basement = 1,
         Garage = 2,
-        Storage = 3
+        Fridge = 3,
+        Storage = 4
     }
     public enum BeerStyle
     {

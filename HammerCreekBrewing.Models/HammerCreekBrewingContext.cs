@@ -24,6 +24,7 @@ namespace HammerCreekBrewing.Data{
         public DbSet<BeerStyle> BeerStyles {get; set;}
         public DbSet<Location> Locations { get; set; }
         public DbSet<Brewery> Breweries { get; set; }
+        //public DbSet<Container> Breweries { get; set; }
   
 
         //private string GetConnectionStringName()
