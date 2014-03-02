@@ -29,8 +29,8 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Auto
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.Owin.Security.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Http.WebHost.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Net.Http.Formatting.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Newtonsoft.Json.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.Framework.pdb
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.Data.pdb
@@ -56,11 +56,9 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Auto
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.Owin.Security.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Http.WebHost.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Net.Http.Formatting.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Newtonsoft.Json.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.pdb
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Http.WebHost.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\System.Web.Http.WebHost.xml
