@@ -25,7 +25,7 @@ namespace HammerCreekBrewing
                 Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
 
             _db = new HCBContext(_dbconn);
-            _db.Database.Initialize(true);
+          //  _db.Database.Initialize(true);
             // Initilize mapping Profiles
             AutoMapperConfiguration.Configure();
             SetAutofacContainer(); 

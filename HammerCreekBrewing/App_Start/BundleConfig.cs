@@ -19,6 +19,14 @@ namespace HammerCreekBrewing
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
+
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                        "~/Scripts/angular.js",
+                        "~/Scripts/angular-resource.js",
+                        "~/Scripts/App/controller.js"));
+                        //"~/Scripts/App/Services/*.js",
+                        //"~/Scripts/App/Directives/*.js", "~/Scripts/App/Directives/Services/*.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));

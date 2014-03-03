@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="hammercreekApp">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,8 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
+<body ng-controller="BeerMenuCtrl">
+    @RenderBody()
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -29,13 +30,20 @@
         </div>
     </div>
     <div class="container body-content">
-        @RenderBody()
+
+        <ul>
+            <li ng-repeat="beer in beerInFridge">
+                {{beer.name}}
+                <p>{{beer.snippet}}</p>
+            </li>
+        </ul>
+
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
+    @Scripts.Render("~/bundles/angular")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

@@ -62,3 +62,5 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Micr
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.pdb
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Newtonsoft.Json.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Newtonsoft.Json.xml

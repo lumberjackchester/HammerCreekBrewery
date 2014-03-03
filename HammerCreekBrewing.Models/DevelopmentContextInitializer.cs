@@ -10,7 +10,7 @@ using BeerEnums = HammerCreekBrewing.Data.Enums;
 
 namespace HammerCreekBrewing.Data
 {
-    public class DevelopmentContextInitializer : DropCreateDatabaseAlways<HCBContext>
+    public class DevelopmentContextInitializer : DropCreateDatabaseIfModelChanges<HCBContext>
     {
         protected override void Seed(HCBContext db)
         {

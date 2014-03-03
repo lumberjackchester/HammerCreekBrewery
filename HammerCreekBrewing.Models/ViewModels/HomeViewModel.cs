@@ -8,9 +8,9 @@ namespace HammerCreekBrewing.Data.ViewModels
 {
     public class HomeViewModel
     {
-        public IEnumerable<BeerMenuViewModel> BeerOnTapInside { get; set; }
-        public IEnumerable<BeerMenuViewModel> BeerOnTapGarage { get; set; }
-        public IEnumerable<BeerMenuViewModel> BeerInFridge { get; set; }
+        public List<BeerMenuViewModel> BeerOnTapInside { get; set; }
+        public List<BeerMenuViewModel> BeerOnTapGarage { get; set; }
+        public List<BeerMenuViewModel> BeerInFridge { get; set; }
                
     }
 }

@@ -10,6 +10,8 @@ using HammerCreekBrewing.Environment;
 using HammerCreekBrewing.Services;
 using HammerCreekBrewing.Data.ViewModels;
 using HammerCreekBrewing.Data.Enums;
+using FakeItEasy;
+using System.Collections.Generic;
 
 namespace HammerCreekBrewing.Test.Unit
 {
@@ -25,6 +27,7 @@ namespace HammerCreekBrewing.Test.Unit
         public BeerMenuViewModel Tremens;
         public BeerMenuViewModel Peach;
 
+        public BeerVMEqualityComparer BeerEqualComparer = new HammerCreekBrewing.Test.Unit.BeerVMEqualityComparer();
         [SetUp]
         public void RunBeforeAnyTests()
         { 
@@ -95,6 +98,13 @@ namespace HammerCreekBrewing.Test.Unit
            };
         }
 
+        public HammerCreekBrewing.Controllers.BeerMenuController GetBeerMenuAPI()
+        {
+            var fakeLogging = A.Fake<ILogging>();
+            var bmApi = new HammerCreekBrewing.Controllers.BeerMenuController(BeerService, fakeLogging);
+            return bmApi;
+        }
+
         [TearDown]
         public void RunAfterAnyTests()
         {
@@ -106,7 +116,41 @@ namespace HammerCreekBrewing.Test.Unit
                     _db.Dispose();
                 }
             }
-        }              
+        }
 
     }
+
+    
+        public class BeerVMEqualityComparer : IEqualityComparer<BeerMenuViewModel>
+        {
+
+            public bool Equals(BeerMenuViewModel b1, BeerMenuViewModel b2)
+            {
+                if (b1.Abv == b2.Abv
+                    & b1.BrewDate == b2.BrewDate
+                    & b1.BreweryName == b2.BreweryName
+                    & b1.KeggedDate == b2.KeggedDate
+                    & b1.KegId == b2.KegId
+                    & b1.LocationName == b2.LocationName
+                    & b1.Name == b2.Name
+                    & b1.StyleId == b2.StyleId
+                    & b1.StyleName == b2.StyleName
+                    & b1.TapName == b2.TapName
+                    & b1.TappedDate == b2.TappedDate
+                    & b1.Id == b2.Id)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            public int GetHashCode(BeerMenuViewModel beer)
+            {
+                return beer.Id;
+            }
+
+        }
+
 }

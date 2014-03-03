@@ -263,6 +263,7 @@
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\App\controller.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\errors.json" />
@@ -562,6 +563,11 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\" />
     <Folder Include="Attributes\" />
+    <Folder Include="Content\bootstrap\" />
+    <Folder Include="Content\fonts\" />
+    <Folder Include="Content\font\" />
+    <Folder Include="Content\themes\base\images\" />
+    <Folder Include="Content\themes\base\minified\images\" />
     <Folder Include="Filters\" />
     <Folder Include="Models\" />
   </ItemGroup>
