@@ -21,14 +21,25 @@ namespace HammerCreekBrewing.Test.Unit.ContollerTests
 
             var beerHomeVM =  bmAPi.GetBeerMenu().Result as OkNegotiatedContentResult<HomeViewModel>;              
             Assert.IsNotNull(beerHomeVM);
+            Assert.IsNotNull(beerHomeVM.Content);
 
-           Assert.AreEqual(1, beerHomeVM.Content.BeerInFridge.Count);
-           Assert.AreEqual(1, beerHomeVM.Content.BeerOnTapInside.Count);
-           Assert.AreEqual(1, beerHomeVM.Content.BeerOnTapGarage.Count); 
+            Assert.IsNotNull(beerHomeVM.Content.AllBeer);
+            Assert.AreEqual(3, beerHomeVM.Content.AllBeer.Count);
+            Assert.True(beerHomeVM.Content.AllBeer.Contains<BeerMenuViewModel>(Peach, BeerEqualComparer));
+            Assert.True(beerHomeVM.Content.AllBeer.Contains<BeerMenuViewModel>(Tremens, BeerEqualComparer));
+            Assert.True(beerHomeVM.Content.AllBeer.Contains<BeerMenuViewModel>(PumpkinAle, BeerEqualComparer)); 
+             
+            //Assert.IsNotNull(beerHomeVM.Content.BeerInFridge);
+            //Assert.IsNotNull(beerHomeVM.Content.BeerOnTapInside);
+            //Assert.IsNotNull(beerHomeVM.Content.BeerOnTapGarage);
 
-           Assert.True(beerHomeVM.Content.BeerOnTapGarage.Contains<BeerMenuViewModel>(Peach, BeerEqualComparer));
-           Assert.True(beerHomeVM.Content.BeerInFridge.Contains<BeerMenuViewModel>(Tremens, BeerEqualComparer));
-           Assert.True(beerHomeVM.Content.BeerOnTapInside.Contains<BeerMenuViewModel>(PumpkinAle, BeerEqualComparer)); 
+           //Assert.AreEqual(1, beerHomeVM.Content.BeerInFridge.Count);
+           //Assert.AreEqual(1, beerHomeVM.Content.BeerOnTapInside.Count);
+           //Assert.AreEqual(1, beerHomeVM.Content.BeerOnTapGarage.Count); 
+
+           //Assert.True(beerHomeVM.Content.BeerOnTapGarage.Contains<BeerMenuViewModel>(Peach, BeerEqualComparer));
+           //Assert.True(beerHomeVM.Content.BeerInFridge.Contains<BeerMenuViewModel>(Tremens, BeerEqualComparer));
+           //Assert.True(beerHomeVM.Content.BeerOnTapInside.Contains<BeerMenuViewModel>(PumpkinAle, BeerEqualComparer)); 
 
           
 

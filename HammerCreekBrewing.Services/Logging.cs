@@ -14,9 +14,9 @@ namespace HammerCreekBrewing.Services
 
         public  void Init()
         {
-
-            log4net.Config.XmlConfigurator.Configure();
-
+            var fileName = string.Format("log_{0}", DateTime.Now.ToString("yyyy.MM.dd"));
+            GlobalContext.Properties["LogFileName"] = fileName;
+            log4net.Config.XmlConfigurator.Configure(); 
 
         }
 

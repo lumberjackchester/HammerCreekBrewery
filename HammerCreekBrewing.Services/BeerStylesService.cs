@@ -15,20 +15,20 @@ namespace HammerCreekBrewing.Services
 {
     public class BeerStyleService : IBeerStylesService
     {
-        private readonly IUnitOfWork _uow;
-        public BeerStyleService(IUnitOfWork unit)
+        private readonly HammerCreekBrewing.Data.HCBContext _db;
+        public BeerStyleService(HCBContext db)
         {
-            _uow = unit;
+            _db = db;
         }
 
         public IQueryable<BeerStyle> GetBeerStyles()
         {
-            return _uow.BeerStyles.GetAll();
+            return _db.BeerStyles;
         }
         public async Task<List<BeerStyle>> GetBeerStylesAsync()
         {
 
-            var styles = await GetBeerStyles().ToListAsync();
+            var styles = await _db.BeerStyles.ToListAsync();
             return styles;
         }
 

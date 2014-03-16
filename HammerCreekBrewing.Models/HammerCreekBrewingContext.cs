@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HammerCreekBrewing.Data.Models;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace HammerCreekBrewing.Data{
     public class HCBContext : DbContext {
@@ -24,12 +25,9 @@ namespace HammerCreekBrewing.Data{
         public DbSet<BeerStyle> BeerStyles {get; set;}
         public DbSet<Location> Locations { get; set; }
         public DbSet<Brewery> Breweries { get; set; }
-        //public DbSet<Container> Breweries { get; set; }
-  
-
-        //private string GetConnectionStringName()
-        //{
-
-        //}
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
     }
 }

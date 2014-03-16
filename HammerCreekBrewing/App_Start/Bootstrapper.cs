@@ -10,50 +10,60 @@ using WebMatrix.WebData;
 using System.Data.Entity;
 using AutoMapper;
 using AutoMapper.Mappers;
+using Autofac.Integration.WebApi;
+using System.Web.Http;
 
 namespace HammerCreekBrewing
 {
     public static class Bootstrapper
     {
         private static string _dbconn;
-        private static HCBContext _db;
+      //  private static HCBContext _db;
 
         public static void Run(string dbConnection)
         {
             _dbconn = dbConnection;
             if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
                 Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
-
-            _db = new HCBContext(_dbconn);
-          //  _db.Database.Initialize(true);
-            // Initilize mapping Profiles
+             
             AutoMapperConfiguration.Configure();
             SetAutofacContainer(); 
         }
-        public static IContainer Run(HCBContext db)
+        public static IContainer TestRun(string dbConnection)
         {
-            _db = db;
+            _dbconn = dbConnection;
             // Initilize mapping Profiles
             AutoMapperConfiguration.Configure();
             return SetAutofacContainer();
         }
         private static IContainer SetAutofacContainer()
         {
-            //if (!WebSecurity.Initialized)
-            //    WebSecurity.InitializeDatabaseConnection("HammerCreekBrewingContext",
-            //                                             "UserProfile", "UserId", "UserName", autoCreateTables: true);
 
+            if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
+                Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
+
+             
             // new container
             var builder = new ContainerBuilder();
-            builder.RegisterModule(new HCBModule(_db));
-            var _container = builder.Build();
+            builder.RegisterModule(new HCBModule(_dbconn));           
 
+
+            // Build the container.
+            var container = builder.Build();
 
             // initialize controller factory
-            var controllerFactory = new ControllerFactory(_container);
+            var controllerFactory = new ControllerFactory(container);
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(_container));
-            return _container;
+
+            // Set the dependency resolver for Web API.
+            var webApiResolver = new AutofacWebApiDependencyResolver(container);
+            GlobalConfiguration.Configuration.DependencyResolver = webApiResolver;
+
+            // Set the dependency resolver for MVC.
+            var mvcResolver = new AutofacDependencyResolver(container);
+            DependencyResolver.SetResolver(mvcResolver);
+
+            return container;
         }
     }
 }

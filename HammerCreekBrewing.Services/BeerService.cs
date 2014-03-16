@@ -17,24 +17,30 @@ namespace HammerCreekBrewing.Services
      
     public class BeerService : IBeerService
     {
-        private readonly IUnitOfWork _uow;
-        public BeerService(IUnitOfWork unit)
+        private readonly HCBContext _db;
+        public BeerService(HCBContext db)
         {
-            _uow = unit;
+            _db = db;
         }
 
-        public IQueryable<Beer> GetBeerOnTap()
-        {
-            return _uow.Beers.GetAllIncluding(s=> s.Style, b=> b.Brewery).Where(b => b.OnTap);
-        } 
         public IQueryable<Beer> GetAllBeers()
         {
-            return _uow.Beers.GetAllIncluding(s => s.Style, b => b.Brewery);
+            return _db.Beers.Include(s => s.Style).Include(b => b.Brewery).Include(l=> l.Location);
         } 
-
-        public async Task<List<T>> GetBeerOnTapInside<T>()
+        public IQueryable<Beer> GetBeerOnTap()
         {
-            var bOntap = await GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Basement).FirstOrDefaultAsync();
+            return GetAllBeers().Where(b => b.OnTap);
+        }
+
+        //public async Task<List<T>> GetBeerOnTapInside<T>()
+        //{
+        //    var bOntap = await GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Basement).FirstOrDefaultAsync();
+        //    var vms = Mapper.Map<Beer, T>(bOntap);
+        //    return new List<T>{vms};
+        //}
+        public List<T> GetBeerOnTapInside<T>()
+        {
+            var bOntap =  GetBeerOnTap().Where(b => b.LocationId == (int)Locations.Basement).FirstOrDefault();
             var vms = Mapper.Map<Beer, T>(bOntap);
             return new List<T>{vms};
         }
@@ -47,13 +53,13 @@ namespace HammerCreekBrewing.Services
 
         public async Task<List<T>> GetBeerInFridge<T>()
         {
-            var bOntap = await GetAllBeers().Where(b => !b.OnTap && b.LocationId == (int)Locations.Fridge).ToListAsync();
+            var bOntap = await _db.Beers.Where(b => !b.OnTap && b.LocationId == (int)Locations.Fridge).ToListAsync();
             return Mapper.Map<List<Beer>, List<T>>(bOntap);      
         }
          
         public async Task<List<T>> GetBeerInStorage<T>()
         {
-            var bOntap = await GetAllBeers().Where(b => !b.OnTap && b.LocationId == (int)Locations.Storage).ToListAsync();
+            var bOntap = await _db.Beers.Where(b => !b.OnTap && b.LocationId == (int)Locations.Storage).ToListAsync();
             return Mapper.Map<List<Beer>, List<T>>(bOntap);      
         }
          
@@ -76,7 +82,7 @@ namespace HammerCreekBrewing.Services
         }
         public async Task<T> GetBeerAsync<T>(int id)
         {
-            var beer = await GetAllBeers().Where(b => b.BeerId == id).FirstOrDefaultAsync();
+            var beer = await _db.Beers.Where(b => b.BeerId == id).FirstOrDefaultAsync();
             return Mapper.Map<Beer, T>(beer); ;
         }
 

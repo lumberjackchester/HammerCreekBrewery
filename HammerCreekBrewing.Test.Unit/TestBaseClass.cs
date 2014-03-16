@@ -4,13 +4,13 @@ using System.Data.Entity;
 using FakeItEasy; 
 using System.Web.Mvc;
 using Autofac;
+using Autofac.Integration.WebApi;
 using HammerCreekBrewing.Data;
 using HammerCreekBrewing.Framework.Mvc;
 using HammerCreekBrewing.Environment;
 using HammerCreekBrewing.Services;
 using HammerCreekBrewing.Data.ViewModels;
 using HammerCreekBrewing.Data.Enums;
-using FakeItEasy;
 using System.Collections.Generic;
 
 namespace HammerCreekBrewing.Test.Unit
@@ -21,7 +21,7 @@ namespace HammerCreekBrewing.Test.Unit
         public static IContainer Container { get; set; }
         public static readonly string Connection = "name=HammerCreekBrewingContext.Test";
         public static HCBContext _db;
-        public IBeerService BeerService;
+        public IBeerService TestBeerService;
 
         public BeerMenuViewModel PumpkinAle;
         public BeerMenuViewModel Tremens;
@@ -39,21 +39,19 @@ namespace HammerCreekBrewing.Test.Unit
             _db = new HCBContext(Connection);
             _db.Database.Delete();
             _db.Database.Initialize(true);
-            Container = Bootstrapper.Run(_db);
+            Container = Bootstrapper.TestRun(Connection);
 
             Assert.IsNotNull(Container);
-            BeerService = Container.Resolve<IBeerService>();
 
-            Assert.IsNotNull(BeerService);
-            SetStaticBeerVMs();
-            ////// The connetion string for Testing 
-            //var builder = new ContainerBuilder();
-            //builder.RegisterModule(new HCBModule(db));
-            //Container = builder.Build();
+            var lifetimeScope = Container.BeginLifetimeScope(AutofacWebApiDependencyResolver.ApiRequestTag);
+            var dependencyScope = new AutofacWebApiDependencyScope(lifetimeScope);
 
-            // initialize controller factory
-            //var controllerFactory = new ControllerFactory(Container);
-            //ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+            TestBeerService = dependencyScope.GetService(typeof(IBeerService)) as BeerService;
+
+          //TestBeerService = Container.Resolve<IBeerService>();
+            //TestBeerService = A.Fake<IBeerService>();
+            Assert.IsNotNull(TestBeerService);
+            SetStaticBeerVMs(); 
 
         }
 
@@ -101,21 +99,14 @@ namespace HammerCreekBrewing.Test.Unit
         public HammerCreekBrewing.Controllers.BeerMenuController GetBeerMenuAPI()
         {
             var fakeLogging = A.Fake<ILogging>();
-            var bmApi = new HammerCreekBrewing.Controllers.BeerMenuController(BeerService, fakeLogging);
+            var bmApi = new HammerCreekBrewing.Controllers.BeerMenuController(TestBeerService, fakeLogging);
             return bmApi;
         }
 
         [TearDown]
         public void RunAfterAnyTests()
         {
-            if (_db != null)
-            {
-                if (_db.Database.Exists())
-                {
-                    _db.Database.Delete();
-                    _db.Dispose();
-                }
-            }
+          
         }
 
     }
@@ -124,20 +115,20 @@ namespace HammerCreekBrewing.Test.Unit
         public class BeerVMEqualityComparer : IEqualityComparer<BeerMenuViewModel>
         {
 
-            public bool Equals(BeerMenuViewModel b1, BeerMenuViewModel b2)
+            public bool Equals(BeerMenuViewModel dbBeer, BeerMenuViewModel testBaseBeer)
             {
-                if (b1.Abv == b2.Abv
-                    & b1.BrewDate == b2.BrewDate
-                    & b1.BreweryName == b2.BreweryName
-                    & b1.KeggedDate == b2.KeggedDate
-                    & b1.KegId == b2.KegId
-                    & b1.LocationName == b2.LocationName
-                    & b1.Name == b2.Name
-                    & b1.StyleId == b2.StyleId
-                    & b1.StyleName == b2.StyleName
-                    & b1.TapName == b2.TapName
-                    & b1.TappedDate == b2.TappedDate
-                    & b1.Id == b2.Id)
+                if (testBaseBeer.Abv == dbBeer.Abv
+                    & testBaseBeer.BrewDate == dbBeer.BrewDate
+                    & testBaseBeer.BreweryName == dbBeer.BreweryName
+                    & testBaseBeer.KeggedDate == dbBeer.KeggedDate
+                    & testBaseBeer.KegId == dbBeer.KegId
+                    & testBaseBeer.LocationName == dbBeer.LocationName
+                    & testBaseBeer.Name == dbBeer.Name
+                    & testBaseBeer.StyleId == dbBeer.StyleId
+                    & testBaseBeer.StyleName == dbBeer.StyleName
+                    & testBaseBeer.TapName == dbBeer.TapName
+                    & testBaseBeer.TappedDate == dbBeer.TappedDate
+                    & testBaseBeer.Id == dbBeer.Id)
                 {
                     return true;
                 }
