@@ -12,6 +12,7 @@ using HammerCreekBrewing.Services;
 using HammerCreekBrewing.Data.ViewModels;
 using HammerCreekBrewing.Data.Enums;
 using System.Collections.Generic;
+using System.IO;
 
 namespace HammerCreekBrewing.Test.Unit
 {
@@ -19,7 +20,7 @@ namespace HammerCreekBrewing.Test.Unit
     public class TestBaseClass
     {
         public static IContainer Container { get; set; }
-        public static readonly string Connection = "name=HammerCreekBrewingContext.Test";
+        public static readonly string Connection = "HammerCreekBrewingContext.Test";
         public static HCBContext _db;
         public IBeerService TestBeerService;
 
@@ -31,14 +32,15 @@ namespace HammerCreekBrewing.Test.Unit
         [SetUp]
         public void RunBeforeAnyTests()
         { 
-            AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Directory.GetCurrentDirectory());
+            AppDomain.CurrentDomain.SetData("DataDirectory", Directory.GetCurrentDirectory());
 
+                 DeleteDBIfExists();
 
-
-            Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
-            _db = new HCBContext(Connection);
-            _db.Database.Delete();
-            _db.Database.Initialize(true);
+            Database.SetInitializer<HCBContext>(new TestingContextInitializer());
+                _db = new HCBContext(Connection);
+            
+                _db.Database.Initialize(true);
+            
             Container = Bootstrapper.TestRun(Connection);
 
             Assert.IsNotNull(Container);
@@ -67,7 +69,8 @@ namespace HammerCreekBrewing.Test.Unit
                 Name = "Pumpkin Ale",
                 BrewDate = new DateTime(2013, 9, 28).ToString("dd MMM yyyy"),
                 KeggedDate = "N/A",
-                TappedDate = "N/A"
+                TappedDate = "N/A",
+                LocationName = "Basement"
             };
 
            Tremens = new BeerMenuViewModel
@@ -80,7 +83,8 @@ namespace HammerCreekBrewing.Test.Unit
                Abv = "8.5%",
                BrewDate = new DateTime(2013, 9, 28).ToString("dd MMM yyyy"),
                KeggedDate = "N/A",
-               TappedDate = "N/A"
+               TappedDate = "N/A",
+                LocationName = "Fridge"
            };
            Peach = new BeerMenuViewModel
            {
@@ -92,7 +96,8 @@ namespace HammerCreekBrewing.Test.Unit
                Name = "Peach On Wit",
                BrewDate = new DateTime(2013, 9, 28).ToString("dd MMM yyyy"),
                KeggedDate = "N/A",
-               TappedDate = "N/A"
+               TappedDate = "N/A",
+               LocationName = "Garage"
            };
         }
 
@@ -103,10 +108,25 @@ namespace HammerCreekBrewing.Test.Unit
             return bmApi;
         }
 
+        private void DeleteDBIfExists()
+        {
+            var dirToDB = AppDomain.CurrentDomain.GetData("DataDirectory").ToString();
+            var mdfName =Path.Combine(dirToDB, "HammerCreekBrewing.Test.mdf");
+            var logName = Path.Combine(dirToDB, "HammerCreekBrewing.Test_log.ldf");
+            if (File.Exists(mdfName))
+            {
+                File.Delete(mdfName);
+            }
+            if (File.Exists(logName))
+            {
+                File.Delete(logName);
+            }
+        }
+
         [TearDown]
         public void RunAfterAnyTests()
         {
-          
+            DeleteDBIfExists();
         }
 
     }

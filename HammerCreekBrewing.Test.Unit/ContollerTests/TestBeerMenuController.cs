@@ -19,7 +19,7 @@ namespace HammerCreekBrewing.Test.Unit.ContollerTests
         {
             var bmAPi = GetBeerMenuAPI();
 
-            var beerHomeVM =  bmAPi.GetBeerMenu().Result as OkNegotiatedContentResult<HomeViewModel>;              
+            var beerHomeVM =  bmAPi.GetBeerMenu() as OkNegotiatedContentResult<HomeViewModel>;              
             Assert.IsNotNull(beerHomeVM);
             Assert.IsNotNull(beerHomeVM.Content);
 

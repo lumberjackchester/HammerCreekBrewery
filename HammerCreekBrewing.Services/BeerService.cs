@@ -74,9 +74,9 @@ namespace HammerCreekBrewing.Services
             var bOntap = await GetBeerOnTap().ToListAsync();
             return Mapper.Map<List<Beer>, List<T>>(bOntap);  
         }
-        public async Task<List<T>> GetAllBeersAsync<T>()
+        public List<T> GetAllBeers<T>()
         {
-            var beers = await GetAllBeers().ToListAsync();
+            var beers = GetAllBeers().ToList();
 
             return Mapper.Map<List<Beer>, List<T>>(beers);
         }

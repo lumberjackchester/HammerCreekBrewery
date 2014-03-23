@@ -32,7 +32,19 @@
     <div class="container body-content">
 
         <ul>
-            <li ng-repeat="beer in menu.AllBeers">
+            <li ng-repeat="beer in menu.AllBeer | filter:{LocationName:'Fridge'}">
+                {{beer.Name}}
+                <p>{{beer.LocationName}}</p>
+            </li>
+        </ul>
+        <ul>
+            <li ng-repeat="beer in menu.AllBeer | filter:{LocationName:'Garage'}">
+                {{beer.Name}}
+                <p>{{beer.LocationName}}</p>
+            </li>
+        </ul>
+        <ul>
+            <li ng-repeat="beer in menu.AllBeer | filter:{LocationName:'Basement'}">
                 {{beer.Name}}
                 <p>{{beer.LocationName}}</p>
             </li>

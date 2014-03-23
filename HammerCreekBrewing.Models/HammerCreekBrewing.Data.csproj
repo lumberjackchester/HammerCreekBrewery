@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestingContextInitializer.cs" />
     <Compile Include="DevelopmentContextInitializer.cs" />
     <Compile Include="Enums\Enums.cs" />
+    <Compile Include="HammerCreekDataContextSeed.cs" />
     <Compile Include="Models\Beer.cs" />
     <Compile Include="HammerCreekBrewingContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
