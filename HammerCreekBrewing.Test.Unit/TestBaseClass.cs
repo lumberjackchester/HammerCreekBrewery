@@ -34,8 +34,10 @@ namespace HammerCreekBrewing.Test.Unit
         { 
             AppDomain.CurrentDomain.SetData("DataDirectory", Directory.GetCurrentDirectory());
 
-                 DeleteDBIfExists();
-
+            if (_db == null)
+            {
+                DeleteDBIfExists();
+            }
             Database.SetInitializer<HCBContext>(new TestingContextInitializer());
                 _db = new HCBContext(Connection);
             
@@ -110,6 +112,10 @@ namespace HammerCreekBrewing.Test.Unit
 
         private void DeleteDBIfExists()
         {
+            if (_db != null)
+            {
+                _db.Dispose();
+            }
             var dirToDB = AppDomain.CurrentDomain.GetData("DataDirectory").ToString();
             var mdfName =Path.Combine(dirToDB, "HammerCreekBrewing.Test.mdf");
             var logName = Path.Combine(dirToDB, "HammerCreekBrewing.Test_log.ldf");
@@ -123,11 +129,11 @@ namespace HammerCreekBrewing.Test.Unit
             }
         }
 
-        [TearDown]
-        public void RunAfterAnyTests()
-        {
-            DeleteDBIfExists();
-        }
+        //[TearDown]
+        //public void RunAfterAnyTests()
+        //{
+        //    DeleteDBIfExists();
+        //}
 
     }
 
