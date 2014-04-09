@@ -23,9 +23,21 @@ namespace HammerCreekBrewing
         public static void Run(string dbConnection)
         {
             _dbconn = dbConnection;
-            if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
-                Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
-             
+   
+            var initializerType = System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"];
+            switch (initializerType)
+            {
+                case "DropAndRecreate":
+                    Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
+                    InitDataBase();
+                    break;
+                case "Create":
+                    Database.SetInitializer<HCBContext>(new DevelopmentCreateContextInitializer());
+                    InitDataBase();
+                    break;
+                default:
+                    break;
+            }
             AutoMapperConfiguration.Configure();
             SetAutofacContainer(); 
         }
@@ -38,11 +50,7 @@ namespace HammerCreekBrewing
         }
         private static IContainer SetAutofacContainer()
         {
-
-            if (System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"] == "DropAndRecreate")
-                Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
-
-             
+                         
             // new container
             var builder = new ContainerBuilder();
             builder.RegisterModule(new HCBModule(_dbconn));           
@@ -64,6 +72,12 @@ namespace HammerCreekBrewing
             DependencyResolver.SetResolver(mvcResolver);
 
             return container;
+        }
+
+        private static void InitDataBase()
+        { 
+            var _db = new HCBContext(_dbconn);
+            _db.Database.Initialize(true);
         }
     }
 }

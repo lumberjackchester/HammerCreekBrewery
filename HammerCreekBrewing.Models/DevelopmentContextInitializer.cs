@@ -17,4 +17,11 @@ namespace HammerCreekBrewing.Data
             HammerCreekDataContextSeed.InitData(db);
         }
     }
+    public class DevelopmentCreateContextInitializer : CreateDatabaseIfNotExists<HCBContext>
+    {
+        protected override void Seed(HCBContext db)
+        {
+            HammerCreekDataContextSeed.InitData(db);
+        }
+    }
 }
