@@ -12,6 +12,7 @@ namespace HammerCreekBrewing.Data.Models
         [Key]
         [Required]
         public int BeerId { get; set; }
+
         [Required]
         public string Name { get; set; }
         

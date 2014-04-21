@@ -1,3 +1,4 @@
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Release\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\AutoMapper.Net4.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll.config
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll
@@ -78,6 +79,5 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.AspNet.Ide
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.Owin.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\log4net.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Release\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Release\HammerCreekBrewing.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Release\HammerCreekBrewing.pdb

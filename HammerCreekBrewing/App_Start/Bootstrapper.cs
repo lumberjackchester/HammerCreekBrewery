@@ -22,22 +22,8 @@ namespace HammerCreekBrewing
 
         public static void Run(string dbConnection)
         {
-            _dbconn = dbConnection;
-   
-            var initializerType = System.Configuration.ConfigurationManager.AppSettings["DatabaseContextInitializer"];
-            switch (initializerType)
-            {
-                case "DropAndRecreate":
-                    Database.SetInitializer<HCBContext>(new DevelopmentContextInitializer());
-                    InitDataBase();
-                    break;
-                case "Create":
-                    Database.SetInitializer<HCBContext>(new DevelopmentCreateContextInitializer());
-                    InitDataBase();
-                    break;
-                default:
-                    break;
-            }
+            _dbconn = dbConnection; 
+            InitDataBase();
             AutoMapperConfiguration.Configure();
             SetAutofacContainer(); 
         }

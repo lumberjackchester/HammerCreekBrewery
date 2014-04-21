@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TestingContextInitializer.cs" />
-    <Compile Include="DevelopmentContextInitializer.cs" />
+    <Compile Include="ContextInitializers.cs" />
     <Compile Include="Enums\Enums.cs" />
     <Compile Include="HammerCreekDataContextSeed.cs" />
     <Compile Include="Models\Beer.cs" />
