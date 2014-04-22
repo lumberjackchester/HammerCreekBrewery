@@ -7,7 +7,6 @@ using HammerCreekBrewing.Services;
 using HammerCreekBrewing;
 using FakeItEasy;
 using System.Linq;
-using System.Web.Http.Results;
 
 namespace HammerCreekBrewing.Test.Unit.ContollerTests
 {
@@ -15,19 +14,22 @@ namespace HammerCreekBrewing.Test.Unit.ContollerTests
     public class TestBeerMenuController : TestBaseClass
     {
         [Test]
+        public void TestHomeVMIsNotNull()
+        {
+            SetHomeViewModelFromAPI();
+
+            Assert.IsNotNull(HomeView);
+            Assert.IsNotNull(HomeView.Content);
+        }
+        [Test]
         public void TestGetBeerMenu()
         {
-            var bmAPi = GetBeerMenuAPI();
 
-            var beerHomeVM =  bmAPi.GetBeerMenu() as OkNegotiatedContentResult<HomeViewModel>;              
-            Assert.IsNotNull(beerHomeVM);
-            Assert.IsNotNull(beerHomeVM.Content);
-
-            Assert.IsNotNull(beerHomeVM.Content.AllBeer);
-            Assert.AreEqual(3, beerHomeVM.Content.AllBeer.Count);
-            Assert.True(beerHomeVM.Content.AllBeer.Contains<BeerMenuViewModel>(Peach, BeerEqualComparer));
-            Assert.True(beerHomeVM.Content.AllBeer.Contains<BeerMenuViewModel>(Tremens, BeerEqualComparer));
-            Assert.True(beerHomeVM.Content.AllBeer.Contains<BeerMenuViewModel>(PumpkinAle, BeerEqualComparer)); 
+            Assert.IsNotNull(HomeView.Content.AllBeer);
+            Assert.AreEqual(3, HomeView.Content.AllBeer.Count);
+            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(Peach, BeerEqualComparer));
+            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(Tremens, BeerEqualComparer));
+            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(PumpkinAle, BeerEqualComparer)); 
              
             //Assert.IsNotNull(beerHomeVM.Content.BeerInFridge);
             //Assert.IsNotNull(beerHomeVM.Content.BeerOnTapInside);
@@ -66,5 +68,17 @@ namespace HammerCreekBrewing.Test.Unit.ContollerTests
 
              
         }
+        [Test]
+        public void TestBeerLocations()
+        {
+
+            Assert.IsNotNull(HomeView.Content.AllLocations);
+            Assert.AreEqual(4, HomeView.Content.AllLocations.Count);
+            Assert.True(HomeView.Content.AllLocations.Contains<LocationViewModel>(Basement, LocationEqualComparer));
+            Assert.True(HomeView.Content.AllLocations.Contains<LocationViewModel>(Garage, LocationEqualComparer));
+            Assert.True(HomeView.Content.AllLocations.Contains<LocationViewModel>(Fridge, LocationEqualComparer));
+            Assert.True(HomeView.Content.AllLocations.Contains<LocationViewModel>(Storage, LocationEqualComparer)); 
+        }
+
     }
 }

@@ -32,7 +32,8 @@ namespace HammerCreekBrewing.Controllers
         {
 
             var homeVM = new HomeViewModel();
-            homeVM.AllBeer = _beerService.GetAllBeers<BeerMenuViewModel>();
+            homeVM.AllBeer = _beerService.GetAllBeers<BeerViewModel>();
+            homeVM.AllBeer = _beerService.GetAllBeers<BeerViewModel>();
           //  homeVM.BeerOnTapInside = _beerService.GetBeerOnTapInside<BeerMenuViewModel>();
             //homeVM.BeerOnTapGarage = await _beerService.GetBeerOnTapGarage<BeerMenuViewModel>();
             //homeVM.BeerInFridge = await _beerService.GetBeerInFridge<BeerMenuViewModel>();
@@ -46,10 +47,10 @@ namespace HammerCreekBrewing.Controllers
         }
 
         // GET api/BeerMenu/5
-        [ResponseType(typeof(BeerMenuViewModel))]
+        [ResponseType(typeof(BeerViewModel))]
         public async Task<IHttpActionResult> GetBeer(int id)
         {
-            var thisBeer = await _beerService.GetBeerAsync<BeerMenuViewModel>(id);
+            var thisBeer = await _beerService.GetBeerAsync<BeerViewModel>(id);
             if (thisBeer == null)
             {
                 return NotFound();

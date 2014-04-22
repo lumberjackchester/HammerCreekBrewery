@@ -11,8 +11,10 @@ using HammerCreekBrewing.Environment;
 using HammerCreekBrewing.Services;
 using HammerCreekBrewing.Data.ViewModels;
 using HammerCreekBrewing.Data.Enums;
+using HammerCreekBrewing.Controllers;
 using System.Collections.Generic;
 using System.IO;
+using System.Web.Http.Results;
 
 namespace HammerCreekBrewing.Test.Unit
 {
@@ -24,11 +26,20 @@ namespace HammerCreekBrewing.Test.Unit
         public static HCBContext _db;
         public IBeerService TestBeerService;
 
-        public BeerMenuViewModel PumpkinAle;
-        public BeerMenuViewModel Tremens;
-        public BeerMenuViewModel Peach;
+        public BeerViewModel PumpkinAle;
+        public BeerViewModel Tremens;
+        public BeerViewModel Peach;
+        public LocationViewModel Basement = new LocationViewModel { Id = 1, Name = "Basement" };
+        public LocationViewModel Garage = new LocationViewModel { Id = 2, Name = "Garage" };
+        public LocationViewModel Fridge = new LocationViewModel { Id = 3, Name = "Fridge" };
+        public LocationViewModel Storage = new LocationViewModel { Id = 4, Name = "Storage" };
+        public OkNegotiatedContentResult<HomeViewModel> HomeView;
 
-        public BeerVMEqualityComparer BeerEqualComparer = new HammerCreekBrewing.Test.Unit.BeerVMEqualityComparer();
+        public BeerMenuController BeerMenuAPi;
+
+        public BeerVMEqualityComparer BeerEqualComparer = new BeerVMEqualityComparer();
+        public LocationVMEqualityComparer LocationEqualComparer = new LocationVMEqualityComparer();
+
         [SetUp]
         public void RunBeforeAnyTests()
         { 
@@ -61,7 +72,7 @@ namespace HammerCreekBrewing.Test.Unit
 
         private void SetStaticBeerVMs(){
 
-            PumpkinAle = new BeerMenuViewModel
+            PumpkinAle = new BeerViewModel
             {
                 Id = 2,
                 StyleId = (int)HammerCreekBrewing.Data.Enums.BeerStyle.PaleAle,
@@ -75,7 +86,7 @@ namespace HammerCreekBrewing.Test.Unit
                 LocationName = "Basement"
             };
 
-           Tremens = new BeerMenuViewModel
+           Tremens = new BeerViewModel
            {
                Id = 3,
                StyleId = (int)HammerCreekBrewing.Data.Enums.BeerStyle.BelgiumStrongPaleAle,
@@ -88,7 +99,7 @@ namespace HammerCreekBrewing.Test.Unit
                TappedDate = "N/A",
                 LocationName = "Fridge"
            };
-           Peach = new BeerMenuViewModel
+           Peach = new BeerViewModel
            {
                Id = 1,
                StyleId = (int)HammerCreekBrewing.Data.Enums.BeerStyle.Witbier,
@@ -103,11 +114,19 @@ namespace HammerCreekBrewing.Test.Unit
            };
         }
 
-        public HammerCreekBrewing.Controllers.BeerMenuController GetBeerMenuAPI()
+        public BeerMenuController GetBeerMenuAPI()
         {
             var fakeLogging = A.Fake<ILogging>();
             var bmApi = new HammerCreekBrewing.Controllers.BeerMenuController(TestBeerService, fakeLogging);
             return bmApi;
+        }
+
+        public void SetHomeViewModelFromAPI()
+        {
+
+            BeerMenuAPi = GetBeerMenuAPI();
+
+            HomeView = BeerMenuAPi.GetBeerMenu() as OkNegotiatedContentResult<HomeViewModel>;   
         }
 
         private void DeleteDBIfExists()
@@ -138,10 +157,10 @@ namespace HammerCreekBrewing.Test.Unit
     }
 
     
-        public class BeerVMEqualityComparer : IEqualityComparer<BeerMenuViewModel>
+        public class BeerVMEqualityComparer : IEqualityComparer<BeerViewModel>
         {
 
-            public bool Equals(BeerMenuViewModel dbBeer, BeerMenuViewModel testBaseBeer)
+            public bool Equals(BeerViewModel dbBeer, BeerViewModel testBaseBeer)
             {
                 if (testBaseBeer.Abv == dbBeer.Abv
                     & testBaseBeer.BrewDate == dbBeer.BrewDate
@@ -163,9 +182,31 @@ namespace HammerCreekBrewing.Test.Unit
                     return false;
                 }
             }
-            public int GetHashCode(BeerMenuViewModel beer)
+            public int GetHashCode(BeerViewModel beer)
             {
                 return beer.Id;
+            }
+
+        }
+
+        public class LocationVMEqualityComparer : IEqualityComparer<LocationViewModel>
+        {
+
+            public bool Equals(LocationViewModel dbLocation, LocationViewModel testBaseLocation)
+            {
+                if (testBaseLocation.Name == dbLocation.Name 
+                    & testBaseLocation.Id == dbLocation.Id)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            public int GetHashCode(LocationViewModel location)
+            {
+                return location.Id;
             }
 
         }

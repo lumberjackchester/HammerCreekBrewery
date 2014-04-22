@@ -20,7 +20,7 @@ namespace HammerCreekBrewing.Mappings
         {
 
             //Mapper.CreateMap<Beer, BeerMenuViewModel>();
-            Mapper.CreateMap<Beer, BeerMenuViewModel>().ForMember(x => x.StyleName, opt => opt.MapFrom(source => source.Style.StyleName))
+            Mapper.CreateMap<Beer, BeerViewModel>().ForMember(x => x.StyleName, opt => opt.MapFrom(source => source.Style.StyleName))
                                                       .ForMember(x => x.BreweryName, opt => opt.MapFrom(source => source.Brewery.Name))
                                                       .ForMember(x => x.LocationName, opt => opt.MapFrom(source => source.Location.Name)) 
                                                       .ForMember(x => x.KeggedDate, opt => opt.MapFrom(source => source.KeggedDate.HasValue ? source.KeggedDate.Value.ToString("dd MMM yyyy") : "N/A"))
@@ -32,8 +32,8 @@ namespace HammerCreekBrewing.Mappings
                                                       .ForMember(x => x.Abv, opt => opt.MapFrom(source => source.Abv))
                                                       .ForMember(x => x.KegId, opt => opt.MapFrom(source => source.KegId));
 
-             
-            //Mapper.CreateMap<Goal, GoalFormModel>();
+
+            Mapper.CreateMap<Location, LocationViewModel>();
             //Mapper.CreateMap<Comment, CommentsViewModel>();
             //Mapper.CreateMap<UserProfile, UserProfileFormModel>();
             //Mapper.CreateMap<Group, GroupGoalFormModel>();

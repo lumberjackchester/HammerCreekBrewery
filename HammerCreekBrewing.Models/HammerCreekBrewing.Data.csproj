@@ -73,7 +73,7 @@
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Brewery.cs" />
     <Compile Include="Models\Style.cs" />
-    <Compile Include="ViewModels\BeerMenuViewModel.cs" />
+    <Compile Include="ViewModels\BeerViewModel.cs" />
     <Compile Include="ViewModels\BeerStyleViewModel.cs" />
     <Compile Include="ViewModels\BreweryViewModel.cs" />
     <Compile Include="ViewModels\EntityBaseViewModel.cs" />
