@@ -27,13 +27,13 @@ namespace HammerCreekBrewing
                         //"~/Scripts/App/Services/*.js",
                         //"~/Scripts/App/Directives/*.js", "~/Scripts/App/Directives/Services/*.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            //          "~/Scripts/bootstrap.js",
+            //          "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      //"~/Content/bootstrap.css",
+                      "~/Content/business-frontpage.css"));
         }
     }
 }
