@@ -51,97 +51,35 @@
         </div>
 
     </div>
+    <div ng-repeat="location in menu.AllLocations" ng-cloak>
+        <div class="container body-content">
+            <div class="row">
 
-    <div class="container body-content" ng-cloak>
-        <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        {{location.Name}}
+                        <small>Beer on Tap</small>
+                    </h1>
+                </div>
 
-            <div class="col-lg-12">
-                <h1 class="page-header">
-                    Basement
-                    <small>Beer on Tap</small>
-                </h1>
+            </div>
+            <div class="row">
+
+                <div class=" col-md-4 portfolio-item" ng-repeat="beer in menu.AllBeer | filter:{LocationName:location}">
+                    <a href="#project-link">
+                        <img class="img-responsive" src="http://placehold.it/700x400">
+                    </a>
+                    <h3>
+                        <a href="#project-link"> {{beer.Name}}</a>
+                    </h3>
+                    <p>{{beer.TapName}}.</p>
+                </div>
+
             </div>
 
         </div>
-        <div class="row">
+   </div>
 
-            <div class="col-md-4 portfolio-item" ng-repeat="beer in menu.AllBeer | filter:{LocationName:'Basement'}">
-                <a href="#project-link">
-                    <img class="img-responsive" src="http://placehold.it/700x400">
-                </a>
-                <h3>
-                    <a href="#project-link"> {{beer.Name}}</a>
-                </h3>
-                <p>{{beer.TapName}}.</p>
-            </div> 
-
-        </div>
-        <div class="row">
-
-            <div class="col-lg-12">
-                <h1 class="page-header">
-                    Garage
-                    <small>Beer on Tap</small>
-                </h1>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-4 portfolio-item" ng-repeat="beer in menu.AllBeer | filter:{LocationName:'Garage'}">
-                <a href="#project-link">
-                    <img class="img-responsive" src="http://placehold.it/700x400">
-                </a>
-                <h3>
-                    <a href="#project-link"> {{beer.Name}}</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-        </div>
-        <div class="row">
-
-            <div class="col-lg-12">
-                <h1 class="page-header">
-                    Fridge
-                    <small>Beer on Tap</small>
-                </h1>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-4 portfolio-item" ng-repeat="beer in menu.AllBeer | filter:{LocationName:'Fridge'}">
-                <a href="#project-link">
-                    <img class="img-responsive" src="http://placehold.it/700x400">
-                </a>
-                <h3>
-                    <a href="#project-link"> {{beer.Name}}</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-        </div>
-        @*<ul>
-            <li ng-repeat="beer in menu.AllBeer | filter:{LocationName:'Fridge'}">
-                {{beer.Name}}
-                <p>{{beer.LocationName}}</p>
-            </li>
-        </ul>
-        <ul>
-            <li ng-repeat="beer in menu.AllBeer | filter:{LocationName:'Garage'}">
-                {{beer.Name}}
-                <p>{{beer.LocationName}}</p>
-            </li>
-        </ul>
-        <ul>
-            <li ng-repeat="beer in menu.AllBeer | filter:{LocationName:'Basement'}">
-                {{beer.Name}}
-                <p>{{beer.LocationName}}</p>
-            </li>
-        </ul>*@
 
         <hr />
         <footer>

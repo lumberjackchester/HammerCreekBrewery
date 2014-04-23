@@ -19,5 +19,6 @@ namespace HammerCreekBrewing.Services
         Task<List<T>> GetBeerOnTapAsync<T>();
         List<T> GetAllBeers<T>();
         Task<T> GetBeerAsync<T>(int id);
+        List<T> GetAllLocations<T>();
     }
 }

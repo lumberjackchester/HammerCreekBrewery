@@ -85,6 +85,12 @@ namespace HammerCreekBrewing.Services
             var beer = await _db.Beers.Where(b => b.BeerId == id).FirstOrDefaultAsync();
             return Mapper.Map<Beer, T>(beer); ;
         }
+        public List<T> GetAllLocations<T>()
+        {
+            var beers = _db.Locations.ToList();
+
+            return Mapper.Map<List<Location>, List<T>>(beers);
+        }
 
     }
 

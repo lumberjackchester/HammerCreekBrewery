@@ -13,10 +13,9 @@ namespace HammerCreekBrewing.Test.Unit.ContollerTests
     [TestFixture]
     public class TestBeerMenuController : TestBaseClass
     {
-        [Test]
+       
         public void TestHomeVMIsNotNull()
         {
-            SetHomeViewModelFromAPI();
 
             Assert.IsNotNull(HomeView);
             Assert.IsNotNull(HomeView.Content);
@@ -24,12 +23,13 @@ namespace HammerCreekBrewing.Test.Unit.ContollerTests
         [Test]
         public void TestGetBeerMenu()
         {
-
+            TestHomeVMIsNotNull();
             Assert.IsNotNull(HomeView.Content.AllBeer);
-            Assert.AreEqual(3, HomeView.Content.AllBeer.Count);
+            Assert.AreEqual(4, HomeView.Content.AllBeer.Count);
             Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(Peach, BeerEqualComparer));
             Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(Tremens, BeerEqualComparer));
             Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(PumpkinAle, BeerEqualComparer)); 
+            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(MilkStout, BeerEqualComparer)); 
              
             //Assert.IsNotNull(beerHomeVM.Content.BeerInFridge);
             //Assert.IsNotNull(beerHomeVM.Content.BeerOnTapInside);
@@ -71,7 +71,7 @@ namespace HammerCreekBrewing.Test.Unit.ContollerTests
         [Test]
         public void TestBeerLocations()
         {
-
+            TestHomeVMIsNotNull();
             Assert.IsNotNull(HomeView.Content.AllLocations);
             Assert.AreEqual(4, HomeView.Content.AllLocations.Count);
             Assert.True(HomeView.Content.AllLocations.Contains<LocationViewModel>(Basement, LocationEqualComparer));

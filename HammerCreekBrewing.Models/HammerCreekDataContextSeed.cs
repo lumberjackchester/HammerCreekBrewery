@@ -82,16 +82,6 @@ namespace HammerCreekBrewing.Data
                 BrewDate = new DateTime(2013, 9, 28)
             });
             db.SaveChanges();
-            //db.Beers.Add(new Beer
-            //{
-            //    BeerId = 2,
-            //    StyleId = (int)BeerEnums.BeerStyle.Stout,
-            //    LocationId = (int)BeerEnums.Locations.Garage,
-            //    BreweryId = 1,
-            //    Name = "Milk Stout",
-            //    BrewDate = new DateTime(2013, 9, 28)
-            //});
-            //   db.SaveChanges();
             db.Beers.Add(new Beer
             {
                 BeerId = 2,
@@ -112,6 +102,16 @@ namespace HammerCreekBrewing.Data
                 BreweryId = 2,
                 Name = "Delirium Tremens",
                 Abv = "8.5%",
+                BrewDate = new DateTime(2013, 9, 28)
+            });
+            db.SaveChanges();
+            db.Beers.Add(new Beer
+            {
+                BeerId = 4,
+                StyleId = (int)BeerEnums.BeerStyle.Stout,
+                LocationId = (int)BeerEnums.Locations.Storage,
+                BreweryId = 1,
+                Name = "Milk Stout",
                 BrewDate = new DateTime(2013, 9, 28)
             });
             db.SaveChanges();

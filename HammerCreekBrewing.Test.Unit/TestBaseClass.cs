@@ -29,6 +29,7 @@ namespace HammerCreekBrewing.Test.Unit
         public BeerViewModel PumpkinAle;
         public BeerViewModel Tremens;
         public BeerViewModel Peach;
+        public BeerViewModel MilkStout;
         public LocationViewModel Basement = new LocationViewModel { Id = 1, Name = "Basement" };
         public LocationViewModel Garage = new LocationViewModel { Id = 2, Name = "Garage" };
         public LocationViewModel Fridge = new LocationViewModel { Id = 3, Name = "Fridge" };
@@ -66,12 +67,26 @@ namespace HammerCreekBrewing.Test.Unit
           //TestBeerService = Container.Resolve<IBeerService>();
             //TestBeerService = A.Fake<IBeerService>();
             Assert.IsNotNull(TestBeerService);
-            SetStaticBeerVMs(); 
+            SetStaticBeerVMs();
+            SetHomeViewModelFromAPI();
 
         }
 
         private void SetStaticBeerVMs(){
 
+            Peach = new BeerViewModel
+            {
+                Id = 1,
+                StyleId = (int)HammerCreekBrewing.Data.Enums.BeerStyle.Witbier,
+                StyleName = "Witbier",
+                BreweryName = "Hammer Creek Brewing",
+                TapName = "Moose Drool",
+                Name = "Peach On Wit",
+                BrewDate = new DateTime(2013, 9, 28).ToString("dd MMM yyyy"),
+                KeggedDate = "N/A",
+                TappedDate = "N/A",
+                LocationName = "Garage"
+            };
             PumpkinAle = new BeerViewModel
             {
                 Id = 2,
@@ -99,18 +114,17 @@ namespace HammerCreekBrewing.Test.Unit
                TappedDate = "N/A",
                 LocationName = "Fridge"
            };
-           Peach = new BeerViewModel
+           MilkStout = new BeerViewModel
            {
-               Id = 1,
-               StyleId = (int)HammerCreekBrewing.Data.Enums.BeerStyle.Witbier,
-               StyleName = "Witbier",
-               BreweryName = "Hammer Creek Brewing",
-               TapName = "Moose Drool",
-               Name = "Peach On Wit",
+               Id = 4,
+               StyleId = (int)HammerCreekBrewing.Data.Enums.BeerStyle.Stout,
+               StyleName = "Stout",
+               BreweryName = "Hammer Creek Brewing", 
+               Name = "Milk Stout",
                BrewDate = new DateTime(2013, 9, 28).ToString("dd MMM yyyy"),
                KeggedDate = "N/A",
                TappedDate = "N/A",
-               LocationName = "Garage"
+               LocationName = "Storage"
            };
         }
 

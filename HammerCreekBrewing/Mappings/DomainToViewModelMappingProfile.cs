@@ -33,7 +33,8 @@ namespace HammerCreekBrewing.Mappings
                                                       .ForMember(x => x.KegId, opt => opt.MapFrom(source => source.KegId));
 
 
-            Mapper.CreateMap<Location, LocationViewModel>();
+            Mapper.CreateMap<Location, LocationViewModel>().ForMember(x => x.Id, opt => opt.MapFrom(source => source.LocationId))
+                                                      .ForMember(x => x.Name, opt => opt.MapFrom(source => source.Name));
             //Mapper.CreateMap<Comment, CommentsViewModel>();
             //Mapper.CreateMap<UserProfile, UserProfileFormModel>();
             //Mapper.CreateMap<Group, GroupGoalFormModel>();
