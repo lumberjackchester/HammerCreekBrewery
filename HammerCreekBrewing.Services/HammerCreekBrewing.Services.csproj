@@ -125,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BeerService.cs" />
+    <Compile Include="IAuthenticationService.cs" />
     <Compile Include="IBeerService.cs" />
     <Compile Include="BeerStylesService.cs" />
     <Compile Include="IBeerStylesService.cs" />
