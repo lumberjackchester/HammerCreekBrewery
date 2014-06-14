@@ -283,6 +283,12 @@
             </summary>
             <param name="profileName">Profile name of type maps to test</param>
         </member>
+        <member name="M:AutoMapper.Mapper.AssertConfigurationIsValid``1">
+            <summary>
+            Dry run all type maps in given profile
+            </summary>
+            <typeparam name="TProfile">Profile type</typeparam>
+        </member>
         <member name="M:AutoMapper.Mapper.Reset">
             <summary>
             Clear out all existing configuration
@@ -398,6 +404,11 @@
         <member name="P:AutoMapper.IMappingOperationOptions.Items">
             <summary>
             Add context items to be accessed at map time inside an <see cref="T:AutoMapper.IValueResolver"/> or <see cref="T:AutoMapper.ITypeConverter`2"/>
+            </summary>
+        </member>
+        <member name="P:AutoMapper.IMappingOperationOptions.DisableCache">
+            <summary>
+            Disable the cache used to re-use destination instances based on equality
             </summary>
         </member>
         <member name="T:AutoMapper.INamingConvention">
@@ -568,6 +579,12 @@
             Dry run all type maps in given profile
             </summary>
             <param name="profileName">Profile name of type maps to test</param>
+        </member>
+        <member name="M:AutoMapper.IConfigurationProvider.AssertConfigurationIsValid``1">
+            <summary>
+            Dry run all type maps in given profile
+            </summary>
+            <typeparam name="TProfile">Profile type</typeparam>
         </member>
         <member name="M:AutoMapper.IConfigurationProvider.GetMappers">
             <summary>
@@ -966,13 +983,33 @@
             </summary>
             <param name="memberOptions">Callback for member options</param>
         </member>
+        <member name="M:AutoMapper.IMappingExpression`2.IgnoreAllPropertiesWithAnInaccessibleSetter">
+            <summary>
+            Ignores all <typeparamref name="TDestination"/> properties that have either a private or protected setter, forcing the mapper to respect encapsulation (note: order matters, so place this before explicit configuration of any properties with an inaccessible setter)
+            </summary>
+            <returns>Itself</returns>
+        </member>
+        <member name="M:AutoMapper.IMappingExpression`2.IgnoreAllSourcePropertiesWithAnInaccessibleSetter">
+            <summary>
+            When using ReverseMap, ignores all <typeparamref name="TSource"/> properties that have either a private or protected setter, keeping the reverse mapping consistent with the forward mapping (note: <typeparamref name="TDestination"/> properties with an inaccessible setter may still be mapped unless IgnoreAllPropertiesWithAnInaccessibleSetter is also used)
+            </summary>
+            <returns>Itself</returns>
+        </member>
         <member name="M:AutoMapper.IMappingExpression`2.Include``2">
             <summary>
             Include this configuration in derived types' maps
             </summary>
             <typeparam name="TOtherSource">Derived source type</typeparam>
             <typeparam name="TOtherDestination">Derived destination type</typeparam>
-            <returns></returns>
+            <returns>Itself</returns>
+        </member>
+        <member name="M:AutoMapper.IMappingExpression`2.Include(System.Type,System.Type)">
+            <summary>
+            Include this configuration in derived types' maps
+            </summary>
+            <param name="derivedSourceType">Derived source type</param>
+            <param name="derivedDestinationType">Derived destination type</param>
+            <returns>Itself</returns>
         </member>
         <member name="M:AutoMapper.IMappingExpression`2.WithProfile(System.String)">
             <summary>
@@ -1082,6 +1119,14 @@
             <param name="memberOptions">Callback for member configuration options</param>
             <returns>Itself</returns>
         </member>
+        <member name="M:AutoMapper.IMappingExpression`2.Substitute(System.Func{`0,System.Object})">
+            <summary>
+            Replace the original runtime instance with a new source instance. Useful when ORMs return proxy types with no relationships to runtime types.
+            The returned source object will be mapped instead of what was supplied in the original source object.
+            </summary>
+            <param name="substituteFunc">Substitution function</param>
+            <returns>New source object to map.</returns>
+        </member>
         <member name="T:AutoMapper.IMemberConfigurationExpression">
             <summary>
             Configuration options for an individual member
@@ -1175,6 +1220,14 @@
             </summary>
             <param name="resolver">Callback function to resolve against source type</param>
         </member>
+        <member name="M:AutoMapper.IMemberConfigurationExpression`1.ResolveUsing(System.Func{AutoMapper.ResolutionResult,System.Object})">
+            <summary>
+            Resolve destination member using a custom value resolver callback. Used instead of MapFrom when not simply redirecting a source member
+            Access both the source object and current resolution context for additional mapping, context items and parent objects
+            This method cannot be used in conjunction with LINQ query projection
+            </summary>
+            <param name="resolver">Callback function to resolve against source type</param>
+        </member>
         <member name="M:AutoMapper.IMemberConfigurationExpression`1.MapFrom``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             Specify the source member to map from. Can only reference a member on the <typeparamref name="TSource"/> type
@@ -1227,6 +1280,18 @@
         <member name="M:AutoMapper.IMemberConfigurationExpression`1.Condition(System.Func{AutoMapper.ResolutionContext,System.Boolean})">
             <summary>
             Conditionally map this member
+            </summary>
+            <param name="condition">Condition to evaluate using the current resolution context</param>
+        </member>
+        <member name="M:AutoMapper.IMemberConfigurationExpression`1.PreCondition(System.Func{`0,System.Boolean})">
+            <summary>
+            Conditionally map this member, evaluated before accessing the source value
+            </summary>
+            <param name="condition">Condition to evaluate using the source object</param>
+        </member>
+        <member name="M:AutoMapper.IMemberConfigurationExpression`1.PreCondition(System.Func{AutoMapper.ResolutionContext,System.Boolean})">
+            <summary>
+            Conditionally map this member, evaluated before accessing the source value
             </summary>
             <param name="condition">Condition to evaluate using the current resolution context</param>
         </member>
@@ -1327,13 +1392,6 @@
             Avoid calling the <see cref="T:AutoMapper.Mapper"/> class from this method.
             </summary>
         </member>
-        <member name="T:AutoMapper.PropertyMap.ConversionVisitor">
-            <summary>
-            This expression visitor will replace an input parameter by another one
-            
-            see http://stackoverflow.com/questions/4601844/expression-tree-copy-or-convert
-            </summary>
-        </member>
         <member name="M:AutoMapper.QueryableExtensions.Extensions.CreateMapExpression``2(AutoMapper.IMappingEngine)">
             <summary>
             Create an expression tree representing a mapping from the <typeparamref name="TSource"/> type to <typeparamref name="TDestination"/> type
@@ -1364,6 +1422,13 @@
             <param name="source">Queryable source</param>
             <param name="mappingEngine">Mapping engine instance</param>
             <returns>Expression to project into</returns>
+        </member>
+        <member name="T:AutoMapper.QueryableExtensions.Extensions.ConversionVisitor">
+            <summary>
+            This expression visitor will replace an input parameter by another one
+            
+            see http://stackoverflow.com/questions/4601844/expression-tree-copy-or-convert
+            </summary>
         </member>
         <member name="T:AutoMapper.QueryableExtensions.IProjectionExpression">
             <summary>
@@ -1430,6 +1495,11 @@
         <member name="P:AutoMapper.ResolutionContext.InstanceCache">
             <summary>
             Instance cache for resolving circular references
+            </summary>
+        </member>
+        <member name="P:AutoMapper.ResolutionContext.Engine">
+            <summary>
+            Current mapping engine
             </summary>
         </member>
         <member name="T:AutoMapper.ResolutionResult">
