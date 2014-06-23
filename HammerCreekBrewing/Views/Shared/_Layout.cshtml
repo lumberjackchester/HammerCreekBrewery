@@ -114,7 +114,7 @@
                 result.get('/plus/v1/people/me').done(function (res) {
                     var test = res.id;
                     $('#result').html("success = " + JSON.stringify(res.id, undefined, 2));
-                    $("a[href='#login']").text('').append("<img style='height: 25px;' src='" + res.image.url + "'> <span>" + res.displayName + "</span>")
+                    $("a[href='#login']").text('').append("<img style='height: 25px;' src='" + res.image.url + "'> <span>" + res.displayName + "</span>");
                 });
             });
 

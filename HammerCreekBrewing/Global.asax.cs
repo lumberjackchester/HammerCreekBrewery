@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
 using Autofac.Integration.Mvc;
+using HammerCreekBrewing.App_Start;
 using HammerCreekBrewing.Data;
 using System;
 using System.Collections.Generic;

@@ -72,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\User.cs" />
     <Compile Include="TestingContextInitializer.cs" />
     <Compile Include="ContextInitializers.cs" />
     <Compile Include="Enums\Enums.cs" />

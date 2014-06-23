@@ -1,4 +1,5 @@
 ﻿using System;
+using HammerCreekBrewing.App_Start;
 using NUnit.Framework;
 using System.Data.Entity;
 using FakeItEasy; 
