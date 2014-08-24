@@ -38,6 +38,8 @@ namespace HammerCreekBrewing.Data
             db.SaveChanges();
             db.Breweries.Add(new Brewery { BreweryId = 2, Name = "Brouwerij Huyghe" });
             db.SaveChanges();
+            db.Breweries.Add(new Brewery { BreweryId = 3, Name = "Cigar City" });
+            db.SaveChanges();
             #endregion
 
             #region Locations
@@ -54,16 +56,22 @@ namespace HammerCreekBrewing.Data
 
             #region BeerStyles
 
-            db.BeerStyles.Add(new BeerStyle { BeerStyleId = (int)BeerEnums.BeerStyle.Witbier, StyleName = "Witbier" });
+            db.BeerStyles.Add(new BeerStyle { BeerStyleId = 1, StyleName = "Witbier" });
             db.SaveChanges();
-            db.BeerStyles.Add(new BeerStyle { BeerStyleId = (int)BeerEnums.BeerStyle.Stout, StyleName = "Stout" });
+            db.BeerStyles.Add(new BeerStyle { BeerStyleId = 2, StyleName = "Stout" });
             db.SaveChanges();
-            db.BeerStyles.Add(new BeerStyle { BeerStyleId = (int)BeerEnums.BeerStyle.PaleAle, StyleName = "Pale Ale" });
+            db.BeerStyles.Add(new BeerStyle { BeerStyleId = 3, StyleName = "Pale Ale" });
             db.SaveChanges();
-            db.BeerStyles.Add(new BeerStyle { BeerStyleId = (int)BeerEnums.BeerStyle.BelgiumTripple, StyleName = "Belgium Tripple" });
+            db.BeerStyles.Add(new BeerStyle { BeerStyleId = 4, StyleName = "Belgium Tripple" });
             db.SaveChanges();
-            db.BeerStyles.Add(new BeerStyle { BeerStyleId = (int)BeerEnums.BeerStyle.BelgiumStrongPaleAle, StyleName = "Belgium Strong Pale Ale" });
+            db.BeerStyles.Add(new BeerStyle { BeerStyleId = 5, StyleName = "Belgium Strong Pale Ale" });
             db.SaveChanges();
+            db.BeerStyles.Add(new BeerStyle { BeerStyleId = 6, StyleName = "IPA" });
+            db.SaveChanges();
+            db.BeerStyles.Add(new BeerStyle { BeerStyleId = 7, StyleName = "ESB" });
+            db.SaveChanges();
+            //db.BeerStyles.Add(new BeerStyle { BeerStyleId = 5, StyleName = "Belgium Strong Pale Ale" });
+            //db.SaveChanges();
 
             #endregion
 
@@ -73,49 +81,39 @@ namespace HammerCreekBrewing.Data
             db.Beers.Add(new Beer
             {
                 BeerId = 1,
-                StyleId = (int)BeerEnums.BeerStyle.Witbier,
+                StyleId = 6,
                 LocationId = (int)BeerEnums.Locations.Garage,
-                BreweryId = 1,
-                TapName = "Moose Drool",
+                BreweryId = 3,
+                TapName = "Left Tap - Left Handle",
                 OnTap = true,
-                Name = "Peach On Wit",
+                Name = "Jai Alai",
                 BrewDate = new DateTime(2013, 9, 28)
             });
             db.SaveChanges();
             db.Beers.Add(new Beer
             {
                 BeerId = 2,
-                StyleId = (int)BeerEnums.BeerStyle.PaleAle,
-                LocationId = (int)BeerEnums.Locations.Basement,
+                StyleId = 6,
+                LocationId = (int)BeerEnums.Locations.Garage,
                 BreweryId = 1,
-                TapName = "Dale's Pale Ale",
+                TapName = "Right Tap - Center Handle",
                 OnTap = true,
-                Name = "Pumpkin Ale",
+                Name = "Pliny Clone",
                 BrewDate = new DateTime(2013, 9, 28)
             });
             db.SaveChanges();
             db.Beers.Add(new Beer
             {
                 BeerId = 3,
-                StyleId = (int)BeerEnums.BeerStyle.BelgiumStrongPaleAle,
-                LocationId = (int)BeerEnums.Locations.Fridge,
-                BreweryId = 2,
-                Name = "Delirium Tremens",
-                Abv = "8.5%",
-                BrewDate = new DateTime(2013, 9, 28)
-            });
-            db.SaveChanges();
-            db.Beers.Add(new Beer
-            {
-                BeerId = 4,
-                StyleId = (int)BeerEnums.BeerStyle.Stout,
-                LocationId = (int)BeerEnums.Locations.Storage,
+                StyleId = 7,
+                LocationId = (int)BeerEnums.Locations.Basement,
                 BreweryId = 1,
-                Name = "Milk Stout",
+                Name = "Hammer Creeek Brewing ESB",
+                TapName = "Right Handle",               
                 BrewDate = new DateTime(2013, 9, 28)
             });
             db.SaveChanges();
-
+           
             #endregion
 
             #endregion

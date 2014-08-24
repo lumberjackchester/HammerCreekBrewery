@@ -35,6 +35,7 @@ D:\Hammer Creek\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Service
 D:\Hammer Creek\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.dll
 D:\Hammer Creek\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.pdb
 D:\HammerCreekBrewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.WebData.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\AutoMapper.Net4.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.dll.config
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.dll
@@ -85,7 +86,6 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\Micro
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\Newtonsoft.Json.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\System.Web.Optimization.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.Data.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.WebData.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.pdb

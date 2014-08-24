@@ -13,13 +13,15 @@ namespace HammerCreekBrewing.Data.Enums
         Fridge = 3,
         Storage = 4
     }
-    public enum BeerStyle
-    {
-        Witbier = 1,
-        Stout = 2,
-        PaleAle = 3,
-        BelgiumTripple = 4,
-        BelgiumStrongPaleAle = 5
-    }
+    //public enum BeerStyle
+    //{
+    //    Witbier = 1,
+    //    Stout = 2,
+    //    PaleAle = 3,
+    //    BelgiumTripple = 4,
+    //    BelgiumStrongPaleAle = 5,
+    //    IPA = 6,
+    //    IPA = 6
+    //}
 
 }

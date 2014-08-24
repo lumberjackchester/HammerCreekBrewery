@@ -37,54 +37,69 @@
         <!-- /.container -->
     </nav>
 
-    <div class="business-header">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- The background image is set in the custom CSS -->
-                    <h1 class="tagline">An Informative Tagline Goes Here</h1>
-                </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- The background image is set in the custom CSS -->
+                <h1 class="tagline">Welcome To Hammer Creek Brewing</h1>
             </div>
-
         </div>
 
     </div>
-    <div ng-repeat="location in menu.AllLocations" ng-cloak>
+    <div ng-repeat="location in locations" ng-cloak>
         <div class="container body-content">
             <div class="row">
 
                 <div class="col-lg-12">
                     <h1 class="page-header">
                         {{location.Name}}
-                        <small>Beer on Tap</small>
+
                     </h1>
                 </div>
 
             </div>
+
+            <div class="row">
+                <div class=" col-md-4 portfolio-item">Name</div>
+                <div class=" col-md-4 portfolio-item">Tap</div>
+                <div class=" col-md-4 portfolio-item">Keg No.</div>
+            </div>
             <div class="row">
 
-                <div class=" col-md-4 portfolio-item" ng-repeat="beer in menu.AllBeer | filter:{LocationName:location}">
-                    <a href="#project-link">
-                        <img class="img-responsive" src="http://placehold.it/700x400">
-                    </a>
-                    <h3>
-                        <a href="#project-link"> {{beer.Name}}</a>
-                    </h3>
-                    <p>{{beer.TapName}}.</p>
+                <div ng-repeat="beer in allBeer | filter:{LocationName:location.Name}">
+                    @*<a href="#project-link">
+                            <img class="img-responsive" src="http://placehold.it/700x400">
+                        </a>*@
+                    <div class=" col-md-4 portfolio-item">
+                        <h3>
+                            <a href=""> {{beer.Name}}</a>
+                        </h3>
+                    </div>
+
+                    <div class=" col-md-4 portfolio-item">
+                        <h3>
+                            <a href=""> {{beer.TapName}}</a>
+                        </h3>
+                    </div>
+                    <div class=" col-md-4 portfolio-item">
+                        <h3>
+                            <a href=""> {{beer.KegId}}</a>
+                        </h3>
+                    </div>
                 </div>
 
             </div>
 
         </div>
-   </div>
+    </div>
 
 
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Hammer Creek Brewing</p>
-        </footer>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Hammer Creek Brewing</p>
+    </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
@@ -93,6 +108,6 @@
     <script src="/Scripts/respond.js"></script>
     <script src="/Scripts/angular.js"></script>
     <script src="/Scripts/angular-resource.js"></script>
-    <script src="/Scripts/App/controller.js"></script> 
+    <script src="/Scripts/App/controller.js"></script>
 </body>
 </html>

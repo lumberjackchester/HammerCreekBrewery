@@ -77,7 +77,7 @@ namespace HammerCreekBrewing.Test.Unit
             Peach = new BeerViewModel
             {
                 Id = 1,
-                StyleId = (int)HammerCreekBrewing.Data.Enums.BeerStyle.Witbier,
+                StyleId = 1,
                 StyleName = "Witbier",
                 BreweryName = "Hammer Creek Brewing",
                 TapName = "Moose Drool",
@@ -90,7 +90,7 @@ namespace HammerCreekBrewing.Test.Unit
             PumpkinAle = new BeerViewModel
             {
                 Id = 2,
-                StyleId = (int)HammerCreekBrewing.Data.Enums.BeerStyle.PaleAle,
+                StyleId = 2,
                 StyleName = "Pale Ale",
                 BreweryName = "Hammer Creek Brewing",
                 TapName = "Dale's Pale Ale",
@@ -104,7 +104,7 @@ namespace HammerCreekBrewing.Test.Unit
            Tremens = new BeerViewModel
            {
                Id = 3,
-               StyleId = (int)HammerCreekBrewing.Data.Enums.BeerStyle.BelgiumStrongPaleAle,
+               StyleId = 3,
                StyleName = "Belgium Strong Pale Ale",
                BreweryName = "Brouwerij Huyghe",
                Name = "Delirium Tremens",
@@ -117,7 +117,7 @@ namespace HammerCreekBrewing.Test.Unit
            MilkStout = new BeerViewModel
            {
                Id = 4,
-               StyleId = (int)HammerCreekBrewing.Data.Enums.BeerStyle.Stout,
+               StyleId = 4,
                StyleName = "Stout",
                BreweryName = "Hammer Creek Brewing", 
                Name = "Milk Stout",
