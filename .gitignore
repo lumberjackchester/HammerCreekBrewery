@@ -1,3 +1,4 @@
 HammerCreekBrewing/obj/
 packages/
 !.nuget/NuGet.exe
+HammerCreekBrewing.Test.Unit/bin/
