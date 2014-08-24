@@ -1,0 +1,5 @@
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Tools\bin\Release\HammerCreekBrewing.Tools.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Tools\bin\Release\HammerCreekBrewing.Tools.pdb
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Tools\obj\Release\HammerCreekBrewing.Tools.csprojResolveAssemblyReference.cache
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Tools\obj\Release\HammerCreekBrewing.Tools.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Tools\obj\Release\HammerCreekBrewing.Tools.pdb

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using HammerCreekBrewing.Data.Models;
+using HammerCreekBrewing.Data.Entities;
 using HammerCreekBrewing.Data;
 using HammerCreekBrewing.Data.Enums;
 using System.Linq.Expressions;
@@ -10,8 +10,7 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Threading.Tasks;
 using AutoMapper;
-using HammerCreekBrewing.Data.ViewModels;
-
+ 
 namespace HammerCreekBrewing.Services
 {
      

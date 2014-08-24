@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using HammerCreekBrewing.Data.Models;
+using HammerCreekBrewing.Data.Entities;
 using HammerCreekBrewing.Data;
 using System.Linq.Expressions;
 using System.Data.Entity;

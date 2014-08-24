@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing", "HammerCreekBrewing\HammerCreekBrewing.csproj", "{38AA0E74-50E7-4659-B824-7E067DCEE9B7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Data", "HammerCreekBrewing.Models\HammerCreekBrewing.Data.csproj", "{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}"
-EndProject
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{08C14CC9-6754-4D6E-B03F-94C486C0EB96}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -14,9 +12,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{08C14C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Services", "HammerCreekBrewing.Services\HammerCreekBrewing.Services.csproj", "{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Framework", "HammerCreekBrewing.Framework\HammerCreekBrewing.Framework.csproj", "{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Test.Unit", "HammerCreekBrewing.Test.Unit\HammerCreekBrewing.Test.Unit.csproj", "{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.API", "HammerCreekBrewing.API\HammerCreekBrewing.API.csproj", "{940A3A20-7888-4306-90AA-6F93D87CDA76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Web", "HammerCreekBrewing.Web\HammerCreekBrewing.Web.csproj", "{DD585B4F-36A6-4655-9A6F-897FEA878E71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Data", "HammerCreekBrewing.Data\HammerCreekBrewing.Data.csproj", "{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Tools", "HammerCreekBrewing.Tools\HammerCreekBrewing.Tools.csproj", "{ECB40FEA-72EA-4F4B-A5C8-F24835DA4875}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,36 +29,42 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Asus|Any CPU.ActiveCfg = Asus|Any CPU
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Asus|Any CPU.Build.0 = Asus|Any CPU
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Asus|Any CPU.ActiveCfg = Asus|Any CPU
-		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Asus|Any CPU.Build.0 = Asus|Any CPU
-		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}.Asus|Any CPU.ActiveCfg = Asus|Any CPU
 		{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}.Asus|Any CPU.Build.0 = Asus|Any CPU
 		{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E35F7C9-FF29-4976-9A61-BD56C6E5BACA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}.Asus|Any CPU.ActiveCfg = Asus|Any CPU
-		{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}.Asus|Any CPU.Build.0 = Asus|Any CPU
-		{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C56E8B7-6EB0-4797-BC67-3EDB50ED7366}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}.Asus|Any CPU.ActiveCfg = Asus|Any CPU
 		{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}.Asus|Any CPU.Build.0 = Asus|Any CPU
 		{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{940A3A20-7888-4306-90AA-6F93D87CDA76}.Asus|Any CPU.ActiveCfg = Release|Any CPU
+		{940A3A20-7888-4306-90AA-6F93D87CDA76}.Asus|Any CPU.Build.0 = Release|Any CPU
+		{940A3A20-7888-4306-90AA-6F93D87CDA76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940A3A20-7888-4306-90AA-6F93D87CDA76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940A3A20-7888-4306-90AA-6F93D87CDA76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940A3A20-7888-4306-90AA-6F93D87CDA76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD585B4F-36A6-4655-9A6F-897FEA878E71}.Asus|Any CPU.ActiveCfg = Release|Any CPU
+		{DD585B4F-36A6-4655-9A6F-897FEA878E71}.Asus|Any CPU.Build.0 = Release|Any CPU
+		{DD585B4F-36A6-4655-9A6F-897FEA878E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD585B4F-36A6-4655-9A6F-897FEA878E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD585B4F-36A6-4655-9A6F-897FEA878E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD585B4F-36A6-4655-9A6F-897FEA878E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Asus|Any CPU.ActiveCfg = Asus|Any CPU
+		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Asus|Any CPU.Build.0 = Asus|Any CPU
+		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB40FEA-72EA-4F4B-A5C8-F24835DA4875}.Asus|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB40FEA-72EA-4F4B-A5C8-F24835DA4875}.Asus|Any CPU.Build.0 = Release|Any CPU
+		{ECB40FEA-72EA-4F4B-A5C8-F24835DA4875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB40FEA-72EA-4F4B-A5C8-F24835DA4875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB40FEA-72EA-4F4B-A5C8-F24835DA4875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB40FEA-72EA-4F4B-A5C8-F24835DA4875}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

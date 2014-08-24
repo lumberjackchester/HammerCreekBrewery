@@ -27,6 +27,7 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\Sys
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\WebGrease.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\WebMatrix.Data.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\WebMatrix.WebData.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\HammerCreekBrewing.Tools.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\HammerCreekBrewing.Data.pdb
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\Antlr3.Runtime.pdb
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\AutoMapper.xml
@@ -49,6 +50,7 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\New
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\System.Web.Optimization.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\WebMatrix.Data.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\WebMatrix.WebData.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Release\HammerCreekBrewing.Tools.pdb
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Release\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Release\HammerCreekBrewing.Services.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Release\HammerCreekBrewing.Services.pdb

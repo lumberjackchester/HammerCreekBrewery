@@ -1,5 +1,5 @@
 ﻿using System;
-using HammerCreekBrewing.App_Start;
+using HammerCreekBrewing.API.App_Start;
 using NUnit.Framework;
 using System.Data.Entity;
 using FakeItEasy; 
@@ -7,15 +7,14 @@ using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.WebApi;
 using HammerCreekBrewing.Data;
-using HammerCreekBrewing.Framework.Mvc;
-using HammerCreekBrewing.Environment;
+using HammerCreekBrewing.API.Environment;
 using HammerCreekBrewing.Services;
 using HammerCreekBrewing.Data.ViewModels;
 using HammerCreekBrewing.Data.Enums;
-using HammerCreekBrewing.Controllers;
+using HammerCreekBrewing.API.Controllers;
 using System.Collections.Generic;
 using System.IO;
-using System.Web.Http.Results;
+using System.Web.Http.Results; 
 
 namespace HammerCreekBrewing.Test.Unit
 {
@@ -60,7 +59,8 @@ namespace HammerCreekBrewing.Test.Unit
 
             Assert.IsNotNull(Container);
 
-            var lifetimeScope = Container.BeginLifetimeScope(AutofacWebApiDependencyResolver.ApiRequestTag);
+            //var lifetimeScope = Container.BeginLifetimeScope(AutofacWebApiDependencyResolver.ApiRequestTag);
+            var lifetimeScope = Container.BeginLifetimeScope();
             var dependencyScope = new AutofacWebApiDependencyScope(lifetimeScope);
 
             TestBeerService = dependencyScope.GetService(typeof(IBeerService)) as BeerService;
@@ -132,7 +132,7 @@ namespace HammerCreekBrewing.Test.Unit
         public BeerMenuController GetBeerMenuAPI()
         {
             var fakeLogging = A.Fake<ILogging>();
-            var bmApi = new HammerCreekBrewing.Controllers.BeerMenuController(TestBeerService, fakeLogging);
+            var bmApi = new HammerCreekBrewing.API.Controllers.BeerMenuController(TestBeerService, fakeLogging);
             return bmApi;
         }
 
@@ -141,7 +141,7 @@ namespace HammerCreekBrewing.Test.Unit
 
             BeerMenuAPi = GetBeerMenuAPI();
 
-            HomeView = BeerMenuAPi.GetBeerMenu() as OkNegotiatedContentResult<HomeViewModel>;   
+            HomeView = BeerMenuAPi.Get() as OkNegotiatedContentResult<HomeViewModel>;   
         }
 
         private void DeleteDBIfExists()

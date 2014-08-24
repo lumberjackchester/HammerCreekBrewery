@@ -48,11 +48,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.3.3.0\lib\net40\Autofac.dll</HintPath>
+      <HintPath>..\packages\Autofac.3.5.0\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="Autofac.Integration.WebApi, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Autofac.WebApi2.3.2.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    <Reference Include="Autofac.Integration.WebApi">
+      <HintPath>..\packages\Autofac.WebApi2.3.3.3\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -134,21 +133,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HammerCreekBrewing.Framework\HammerCreekBrewing.Framework.csproj">
-      <Project>{9c56e8b7-6eb0-4797-bc67-3edb50ed7366}</Project>
-      <Name>HammerCreekBrewing.Framework</Name>
+    <ProjectReference Include="..\HammerCreekBrewing.API\HammerCreekBrewing.API.csproj">
+      <Project>{940a3a20-7888-4306-90aa-6f93d87cda76}</Project>
+      <Name>HammerCreekBrewing.API</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HammerCreekBrewing.Models\HammerCreekBrewing.Data.csproj">
+    <ProjectReference Include="..\HammerCreekBrewing.Data\HammerCreekBrewing.Data.csproj">
       <Project>{49d06b7a-0cf1-452b-8159-0dda0be870fb}</Project>
       <Name>HammerCreekBrewing.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\HammerCreekBrewing.Services\HammerCreekBrewing.Services.csproj">
       <Project>{1e35f7c9-ff29-4976-9a61-bd56c6e5baca}</Project>
       <Name>HammerCreekBrewing.Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HammerCreekBrewing\HammerCreekBrewing.csproj">
-      <Project>{38aa0e74-50e7-4659-b824-7e067dcee9b7}</Project>
-      <Name>HammerCreekBrewing</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

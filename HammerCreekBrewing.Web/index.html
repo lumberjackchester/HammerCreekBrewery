@@ -1,10 +1,84 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>Welcome to Hammer Creek Brewing</title>
-   
+﻿<html ng-app="hammercreekApp">
+<head> 
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Hammer Creek Brewing</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/flatly/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-       </body>
+    <!--<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="Index.html" class="navbar-brand">Hammer Creek Brewing</a>
+            </div> 
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/">About</a></li>
+                    <li><a href="#/">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#login">Log In</a></li>
+                </ul>
+            </div> 
+        </div> 
+    </nav>-->
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="../" class="navbar-brand">Hammer Creek Brewing</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav"> 
+
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/">About</a></li>
+                    <li><a href="#/">Contact</a></li> 
+                </ul>
+                 
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="page-header" id="banner">
+            <div class="row">
+                <div class="col-lg-8 col-md-7 col-sm-6">
+                    <h1>Beer Menu</h1>
+                    <p class="lead">Currently on tap</p>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6">
+                    <div class="sponsor">
+                        <a href="http://gridgum.com/themes/category/bootstrap-themes/?utm_source=Bootswatch&amp;utm_medium=250ad&amp;utm_campaign=Bootswatch%20Campaign" target="_blank" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'gridgum']);"><img src="../assets/img/gridgum.png" alt="Gridgum" onload="_gaq.push(['_trackEvent', 'banner', 'impression', 'gridgum']);"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+        <hr />
+        <footer>
+            <p>&copy; 2014 - Hammer Creek Brewing</p>
+        </footer>
+        <script src="/Scripts/libs/jquery-1.11.1.min.js"></script>
+        <script src="/Scripts/libs/jquery-ui-1.11.0.min.js"></script>
+        <script src="/Scripts/libs/select2/select2.min.js"></script>
+        <script src="/Scripts/libs/angular.min.js"></script>
+        <script src="/Scripts/libs/angular-resource.min.js"></script>
+        <script src="/Scripts/libs/angular-route.min.js"></script>
+        <script src="/Scripts/libs/angular-animate.min.js"></script>
+        <script src="/Scripts/libs/angular-ui/select2.min.js"></script>
+        <!--<script src="/Scripts/libs/semantic/semantic.min.js"></script>-->
+</body>
 </html>
