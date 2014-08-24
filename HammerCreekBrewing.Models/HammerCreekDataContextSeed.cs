@@ -108,7 +108,7 @@ namespace HammerCreekBrewing.Data
                 StyleId = 7,
                 LocationId = (int)BeerEnums.Locations.Basement,
                 BreweryId = 1,
-                Name = "Hammer Creeek Brewing ESB",
+                Name = "Hammer Creek Brewing ESB",
                 TapName = "Right Handle",               
                 BrewDate = new DateTime(2013, 9, 28)
             });

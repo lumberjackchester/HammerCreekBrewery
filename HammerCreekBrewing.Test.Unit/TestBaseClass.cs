@@ -26,9 +26,9 @@ namespace HammerCreekBrewing.Test.Unit
         public static HCBContext _db;
         public IBeerService TestBeerService;
 
-        public BeerViewModel PumpkinAle;
-        public BeerViewModel Tremens;
-        public BeerViewModel Peach;
+        public BeerViewModel Pliny;
+        public BeerViewModel ESB;
+        public BeerViewModel JaiAlai;
         public BeerViewModel MilkStout;
         public LocationViewModel Basement = new LocationViewModel { Id = 1, Name = "Basement" };
         public LocationViewModel Garage = new LocationViewModel { Id = 2, Name = "Garage" };
@@ -74,58 +74,84 @@ namespace HammerCreekBrewing.Test.Unit
 
         private void SetStaticBeerVMs(){
 
-            Peach = new BeerViewModel
+            JaiAlai = new BeerViewModel
             {
                 Id = 1,
-                StyleId = 1,
-                StyleName = "Witbier",
-                BreweryName = "Hammer Creek Brewing",
-                TapName = "Moose Drool",
-                Name = "Peach On Wit",
+                StyleId = 6,
+                StyleName = "IPA",
+                BreweryName = "Cigar City",
+                TapName = "Left Tap - Left Handle",
+                Name = "Jai Alai",
                 BrewDate = new DateTime(2013, 9, 28).ToString("dd MMM yyyy"),
                 KeggedDate = "N/A",
                 TappedDate = "N/A",
                 LocationName = "Garage"
+                //BeerId = 1,
+                //StyleId = 6,
+                //LocationId = (int)BeerEnums.Locations.Garage,
+                //BreweryId = 3,
+                //TapName = "Left Tap - Left Handle",
+                //OnTap = true,
+                //Name = "Jai Alai",
+                //BrewDate = new DateTime(2013, 9, 28)
             };
-            PumpkinAle = new BeerViewModel
+            Pliny = new BeerViewModel
             {
                 Id = 2,
-                StyleId = 2,
-                StyleName = "Pale Ale",
+                StyleId = 6,
+                StyleName = "IPA",
                 BreweryName = "Hammer Creek Brewing",
-                TapName = "Dale's Pale Ale",
-                Name = "Pumpkin Ale",
+                TapName = "Right Tap - Center Handle",
+                Name = "Pliny Clone",
                 BrewDate = new DateTime(2013, 9, 28).ToString("dd MMM yyyy"),
                 KeggedDate = "N/A",
                 TappedDate = "N/A",
-                LocationName = "Basement"
+                LocationName = "Garage"
+
+                //  BeerId = 2,
+                //StyleId = 6,
+                //LocationId = (int)BeerEnums.Locations.Garage,
+                //BreweryId = 1,
+                //TapName = "Right Tap - Center Handle",
+                //OnTap = true,
+                //Name = "Pliny Clone",
+                //BrewDate = new DateTime(2013, 9, 28)
+
             };
 
-           Tremens = new BeerViewModel
+           ESB = new BeerViewModel
            {
                Id = 3,
-               StyleId = 3,
-               StyleName = "Belgium Strong Pale Ale",
-               BreweryName = "Brouwerij Huyghe",
-               Name = "Delirium Tremens",
-               Abv = "8.5%",
+               StyleId = 7,
+               StyleName = "ESB",
+               BreweryName = "Hammer Creek Brewing",
+               TapName = "Right Handle",   
+               Name = "Hammer Creek Brewing ESB",
                BrewDate = new DateTime(2013, 9, 28).ToString("dd MMM yyyy"),
                KeggedDate = "N/A",
                TappedDate = "N/A",
-                LocationName = "Fridge"
+                LocationName = "Basement"
+
+                //BeerId = 3,
+                //StyleId = 7,
+                //LocationId = (int)BeerEnums.Locations.Basement,
+                //BreweryId = 1,
+                //Name = "Hammer Creek Brewing ESB",
+                //TapName = "Right Handle",               
+                //BrewDate = new DateTime(2013, 9, 28)
            };
-           MilkStout = new BeerViewModel
-           {
-               Id = 4,
-               StyleId = 4,
-               StyleName = "Stout",
-               BreweryName = "Hammer Creek Brewing", 
-               Name = "Milk Stout",
-               BrewDate = new DateTime(2013, 9, 28).ToString("dd MMM yyyy"),
-               KeggedDate = "N/A",
-               TappedDate = "N/A",
-               LocationName = "Storage"
-           };
+           //MilkStout = new BeerViewModel
+           //{
+           //    Id = 4,
+           //    StyleId = 4,
+           //    StyleName = "Stout",
+           //    BreweryName = "Hammer Creek Brewing", 
+           //    Name = "Milk Stout",
+           //    BrewDate = new DateTime(2013, 9, 28).ToString("dd MMM yyyy"),
+           //    KeggedDate = "N/A",
+           //    TappedDate = "N/A",
+           //    LocationName = "Storage"
+           //};
         }
 
         public BeerMenuController GetBeerMenuAPI()
@@ -176,25 +202,46 @@ namespace HammerCreekBrewing.Test.Unit
 
             public bool Equals(BeerViewModel dbBeer, BeerViewModel testBaseBeer)
             {
-                if (testBaseBeer.Abv == dbBeer.Abv
-                    & testBaseBeer.BrewDate == dbBeer.BrewDate
-                    & testBaseBeer.BreweryName == dbBeer.BreweryName
-                    & testBaseBeer.KeggedDate == dbBeer.KeggedDate
-                    & testBaseBeer.KegId == dbBeer.KegId
-                    & testBaseBeer.LocationName == dbBeer.LocationName
-                    & testBaseBeer.Name == dbBeer.Name
-                    & testBaseBeer.StyleId == dbBeer.StyleId
-                    & testBaseBeer.StyleName == dbBeer.StyleName
-                    & testBaseBeer.TapName == dbBeer.TapName
-                    & testBaseBeer.TappedDate == dbBeer.TappedDate
-                    & testBaseBeer.Id == dbBeer.Id)
+                if (testBaseBeer.Abv == dbBeer.Abv)
                 {
-                    return true;
+                    if (testBaseBeer.BrewDate == dbBeer.BrewDate)
+                    {
+                        if (testBaseBeer.BreweryName == dbBeer.BreweryName)
+                        {
+                            if (testBaseBeer.KeggedDate == dbBeer.KeggedDate)
+                            {
+                                if (testBaseBeer.KegId == dbBeer.KegId)
+                                {
+
+                                    if (testBaseBeer.LocationName == dbBeer.LocationName)
+                                    {
+                                        if (testBaseBeer.Name == dbBeer.Name)
+                                        {
+                                            if (testBaseBeer.StyleId == dbBeer.StyleId)
+                                            {
+                                                if (testBaseBeer.StyleName == dbBeer.StyleName)
+                                                {
+                                                    if (testBaseBeer.TapName == dbBeer.TapName)
+                                                    {
+                                                        if (testBaseBeer.TappedDate == dbBeer.TappedDate)
+                                                        {
+                                                            if (testBaseBeer.Id == dbBeer.Id)
+                                                            {
+
+                                                                return true;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
             public int GetHashCode(BeerViewModel beer)
             {

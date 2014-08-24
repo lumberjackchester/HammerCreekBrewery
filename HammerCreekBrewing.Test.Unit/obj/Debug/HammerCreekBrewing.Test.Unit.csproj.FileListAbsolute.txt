@@ -1,5 +1,4 @@
 D:\HammerCreekBrewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.csprojResolveAssemblyReference.cache
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\AutoMapper.Net4.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.Test.Unit.dll.config
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\HammerCreekBrewing.Test.Unit.dll
@@ -64,5 +63,6 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Micr
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.Owin.Security.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Test.Unit\obj\Debug\HammerCreekBrewing.Test.Unit.pdb

@@ -25,11 +25,11 @@ namespace HammerCreekBrewing.Test.Unit.ContollerTests
         {
             TestHomeVMIsNotNull();
             Assert.IsNotNull(HomeView.Content.AllBeer);
-            Assert.AreEqual(4, HomeView.Content.AllBeer.Count);
-            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(Peach, BeerEqualComparer));
-            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(Tremens, BeerEqualComparer));
-            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(PumpkinAle, BeerEqualComparer)); 
-            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(MilkStout, BeerEqualComparer)); 
+            Assert.AreEqual(3, HomeView.Content.AllBeer.Count);
+            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(JaiAlai, BeerEqualComparer));
+            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(ESB, BeerEqualComparer));
+            Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(Pliny, BeerEqualComparer)); 
+          //  Assert.True(HomeView.Content.AllBeer.Contains<BeerViewModel>(MilkStout, BeerEqualComparer)); 
              
             //Assert.IsNotNull(beerHomeVM.Content.BeerInFridge);
             //Assert.IsNotNull(beerHomeVM.Content.BeerOnTapInside);
