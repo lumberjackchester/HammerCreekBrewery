@@ -34,7 +34,6 @@ D:\Hammer Creek\HammerCreekBrewing.Services\bin\Debug\WebMatrix.WebData.xml
 D:\Hammer Creek\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
 D:\Hammer Creek\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.dll
 D:\Hammer Creek\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.pdb
-D:\HammerCreekBrewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\AutoMapper.Net4.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.dll.config
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.dll
@@ -89,3 +88,57 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\bin\Debug\WebMa
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\AutoMapper.Net4.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.dll.config
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Services.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Antlr3.Runtime.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\AutoMapper.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\EntityFramework.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\EntityFramework.SqlServer.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Data.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\log4net.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.Facebook.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.Google.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.Twitter.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Newtonsoft.Json.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Owin.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\System.Web.Optimization.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\WebGrease.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.Data.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.WebData.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\HammerCreekBrewing.Data.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Antlr3.Runtime.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\AutoMapper.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\EntityFramework.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\EntityFramework.SqlServer.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\log4net.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.Facebook.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.Google.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Microsoft.Owin.Security.Twitter.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\Newtonsoft.Json.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\System.Web.Optimization.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.Data.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\bin\Debug\WebMatrix.WebData.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.csprojResolveAssemblyReference.cache
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Services\obj\Debug\HammerCreekBrewing.Services.pdb

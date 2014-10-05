@@ -1,0 +1,16 @@
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\HammerCreekBrewing.Data.dll.config
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\HammerCreekBrewing.Data.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\HammerCreekBrewing.Data.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\Autofac.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\EntityFramework.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\EntityFramework.SqlServer.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\WebMatrix.Data.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\WebMatrix.WebData.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\Autofac.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\EntityFramework.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\EntityFramework.SqlServer.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\WebMatrix.Data.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Asus\WebMatrix.WebData.xml
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\obj\Asus\HammerCreekBrewing.Data.csprojResolveAssemblyReference.cache
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\obj\Asus\HammerCreekBrewing.Data.dll
+D:\HammerCreekBrewing\HammerCreekBrewing.Models\obj\Asus\HammerCreekBrewing.Data.pdb

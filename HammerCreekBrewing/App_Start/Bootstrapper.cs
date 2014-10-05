@@ -1,19 +1,14 @@
 using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
-using Microsoft.AspNet.Identity;
 using HammerCreekBrewing.Mappings;
 using HammerCreekBrewing.Environment;
 using HammerCreekBrewing.Framework.Mvc;
 using HammerCreekBrewing.Data;
-using WebMatrix.WebData;
-using System.Data.Entity;
-using AutoMapper;
-using AutoMapper.Mappers;
 using Autofac.Integration.WebApi;
 using System.Web.Http;
 
-namespace HammerCreekBrewing
+namespace HammerCreekBrewing.App_Start
 {
     public static class Bootstrapper
     {

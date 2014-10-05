@@ -7,7 +7,7 @@
     <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <script src="https://oauth.io/auth/download/latest/oauth.js"></script>
 </head>
 <body ng-controller="BeerMenuCtrl">
     @RenderBody()
@@ -29,7 +29,10 @@
 
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li> 
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#login">Log In</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -41,13 +44,14 @@
 
         <div class="container">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- The background image is set in the custom CSS -->
-                    <h1 class="tagline">An Informative Tagline Goes Here</h1>
-                </div>
-            </div>
-
+            @*<div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="tagline">An Informative Tagline Goes Here</h1>
+                    </div>
+                </div>*@
+            <h4 id="success-text" style="display:none;">Successful connection with <span class="provider stay"></span></h4>
+            <h4 id="error-text" style="display: none;">Connection fail with <span></span></h4>
+            <pre id="result" style="display: block;"></pre>
         </div>
 
     </div>
@@ -78,13 +82,13 @@
             </div>
 
         </div>
-   </div>
+    </div>
 
 
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Hammer Creek Brewing</p>
-        </footer>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Hammer Creek Brewing</p>
+    </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
@@ -93,6 +97,39 @@
     <script src="/Scripts/respond.js"></script>
     <script src="/Scripts/angular.js"></script>
     <script src="/Scripts/angular-resource.js"></script>
-    <script src="/Scripts/App/controller.js"></script> 
+    <script src="/Scripts/App/controller.js"></script>
+    <!-- Place this asynchronous JavaScript just before your </body> tag -->
+    <script type="text/javascript">
+
+
+        OAuth.initialize('feaJcVQX55RrE8uEwkV0Rg2v-6s');
+        $("a[href='#login']").click(function (e) {
+            e.preventDefault();
+            OAuth.popup('google', function (error, result) {
+                if (error) {
+                    $('#error-text').show().find('span').html('google');
+                }
+                //else {
+                //    $('#success-text').show().find('span').html('google')
+                //}
+                //$('#result').html("success = " + JSON.stringify(success, undefined, 2) + "\n\nerror = " + JSON.stringify(error, undefined, 2)).show();
+
+                //get user id and check if user properties
+                result.get('/plus/v1/people/me').done(function (res) {
+                    var test = res.id;
+                    $('#result').html("success = " + JSON.stringify(res.id, undefined, 2));
+                    $("a[href='#login']").text('').append("<img style='height: 25px;' src='" + res.image.url + "'> <span>" + res.displayName + "</span>")
+                });
+            });
+
+        });
+
+        //(function () {
+        //    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        //    po.src = 'https://apis.google.com/js/client:plusone.js';
+        //    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        //})();
+    </script>
 </body>
+
 </html>

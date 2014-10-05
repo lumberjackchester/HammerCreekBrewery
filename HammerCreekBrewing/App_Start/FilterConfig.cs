@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc; 
+﻿using System.Web.Mvc;
 
-namespace HammerCreekBrewing
+namespace HammerCreekBrewing.App_Start
 {
     public class FilterConfig
     {

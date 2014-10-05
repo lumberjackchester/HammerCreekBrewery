@@ -154,7 +154,6 @@ D:\Hammer Creek\HammerCreekBrewing\bin\log4net.xml
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
 D:\Hammer Creek\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
-D:\HammerCreekBrewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\AutoMapper.Net4.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll.config
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll
@@ -238,3 +237,85 @@ G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\bin\log4net.xml
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
 G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\AutoMapper.Net4.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\HammerCreekBrewing.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\HammerCreekBrewing.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Antlr3.Runtime.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Autofac.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Autofac.Integration.Mvc.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Autofac.Integration.WebApi.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\AutoMapper.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\EntityFramework.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\EntityFramework.SqlServer.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\HammerCreekBrewing.Data.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\HammerCreekBrewing.Framework.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\HammerCreekBrewing.Services.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.Core.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Cookies.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Facebook.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Google.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.OAuth.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Twitter.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Web.Helpers.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Web.Infrastructure.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Newtonsoft.Json.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Owin.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Net.Http.Formatting.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Helpers.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Http.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Http.WebHost.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Mvc.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Optimization.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Razor.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.WebPages.Deployment.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.WebPages.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.WebPages.Razor.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\WebGrease.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\WebMatrix.Data.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\WebMatrix.WebData.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\log4net.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\HammerCreekBrewing.Framework.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\HammerCreekBrewing.Data.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\HammerCreekBrewing.Services.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Antlr3.Runtime.pdb
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Autofac.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Autofac.Integration.Mvc.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Autofac.Integration.WebApi.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\AutoMapper.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\EntityFramework.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\EntityFramework.SqlServer.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Cookies.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Facebook.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Google.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.OAuth.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.Owin.Security.Twitter.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Newtonsoft.Json.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Net.Http.Formatting.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Helpers.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Http.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Http.WebHost.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Mvc.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Optimization.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.Razor.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.WebPages.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.WebPages.Deployment.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\System.Web.WebPages.Razor.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\WebMatrix.Data.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\WebMatrix.WebData.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.Core.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\bin\log4net.xml
+D:\HammerCreekBrewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.csprojResolveAssemblyReference.cache
+D:\HammerCreekBrewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.dll
+D:\HammerCreekBrewing\HammerCreekBrewing\obj\Debug\HammerCreekBrewing.pdb
