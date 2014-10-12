@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace HammerCreekBrewing.Services
 {
-    public class BeerStyleService : IBeerStylesService
+    public class BeerStyleService : IBeerStyleService
     {
         private readonly HammerCreekBrewing.Data.HCBContext _db;
         public BeerStyleService(HCBContext db)

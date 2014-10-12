@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HammerCreekBrewing.Services
 {
-    public interface IBeerStylesService
+    public interface IBeerStyleService
     {
         IQueryable<BeerStyle> GetBeerStyles();
         

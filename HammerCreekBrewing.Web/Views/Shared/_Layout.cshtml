@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html ng-app="hammercreekApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammer Creek Brewing</title>
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://oauth.io/auth/download/latest/oauth.js"></script>
+</head>
+<body ng-controller="BeerMenuCtrl">
+    @RenderBody()
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Hammer Creek Brewing", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li> 
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#login">Log In</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="business-header">
+
+        <div class="container">
+
+            @*<div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="tagline">An Informative Tagline Goes Here</h1>
+                    </div>
+                </div>*@
+            <h4 id="success-text" style="display:none;">Successful connection with <span class="provider stay"></span></h4>
+            <h4 id="error-text" style="display: none;">Connection fail with <span></span></h4>
+            <pre id="result" style="display: block;"></pre>
+        </div>
+
+    </div>
+    <div ng-repeat="location in menu.AllLocations" ng-cloak>
+        <div class="container body-content">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        {{location.Name}}
+                        <small>Beer on Tap</small>
+                    </h1>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class=" col-md-4 portfolio-item" ng-repeat="beer in menu.AllBeer | filter:{LocationName:location}">
+                    <a href="#project-link">
+                        <img class="img-responsive" src="http://placehold.it/700x400">
+                    </a>
+                    <h3>
+                        <a href="#project-link"> {{beer.Name}}</a>
+                    </h3>
+                    <p>{{beer.TapName}}.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Hammer Creek Brewing</p>
+    </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/Scripts/respond.js"></script>
+    <script src="/Scripts/angular.js"></script>
+    <script src="/Scripts/angular-resource.js"></script>
+    <script src="/Scripts/App/controller.js"></script>
+      
+</body>
+
+</html>

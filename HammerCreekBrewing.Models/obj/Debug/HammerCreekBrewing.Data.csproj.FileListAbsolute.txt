@@ -1,18 +1,3 @@
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Data.dll.config
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Data.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Data.pdb
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Autofac.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\EntityFramework.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\EntityFramework.SqlServer.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.Data.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.WebData.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Autofac.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\EntityFramework.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\EntityFramework.SqlServer.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.Data.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.WebData.xml
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.dll
-G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.pdb
 D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Data.dll.config
 D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Data.dll
 D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Data.pdb
@@ -29,3 +14,35 @@ D:\HammerCreekBrewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.WebData.xml
 D:\HammerCreekBrewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.csprojResolveAssemblyReference.cache
 D:\HammerCreekBrewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.dll
 D:\HammerCreekBrewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.pdb
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Data.dll.config
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Data.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\HammerCreekBrewing.Data.pdb
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Antlr3.Runtime.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Autofac.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\EntityFramework.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\EntityFramework.SqlServer.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.Owin.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.Owin.Security.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Newtonsoft.Json.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Owin.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.Data.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.WebData.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Autofac.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\EntityFramework.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\EntityFramework.SqlServer.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.Owin.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.Owin.Security.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\Newtonsoft.Json.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.Data.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\bin\Debug\WebMatrix.WebData.xml
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.csprojResolveAssemblyReference.cache
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.dll
+G:\Git Projects\Hammer Creek Brewing\HammerCreekBrewing.Models\obj\Debug\HammerCreekBrewing.Data.pdb

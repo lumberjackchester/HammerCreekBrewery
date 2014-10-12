@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing", "HammerCreekBrewing\HammerCreekBrewing.csproj", "{38AA0E74-50E7-4659-B824-7E067DCEE9B7}"
-EndProject
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Data", "HammerCreekBrewing.Models\HammerCreekBrewing.Data.csproj", "{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{08C14CC9-6754-4D6E-B03F-94C486C0EB96}"
@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Framewor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Test.Unit", "HammerCreekBrewing.Test.Unit\HammerCreekBrewing.Test.Unit.csproj", "{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerCreekBrewing.Web", "HammerCreekBrewing.Web\HammerCreekBrewing.Web.csproj", "{3BB2235D-6EA4-47F9-AE4C-34AE9766A119}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Asus|Any CPU = Asus|Any CPU
@@ -25,12 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Asus|Any CPU.ActiveCfg = Asus|Any CPU
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Asus|Any CPU.Build.0 = Asus|Any CPU
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38AA0E74-50E7-4659-B824-7E067DCEE9B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Asus|Any CPU.ActiveCfg = Asus|Any CPU
 		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Asus|Any CPU.Build.0 = Asus|Any CPU
 		{49D06B7A-0CF1-452B-8159-0DDA0BE870FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -55,6 +51,12 @@ Global
 		{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C743D15-EF4F-495E-AB9A-BFA98C9C5B56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BB2235D-6EA4-47F9-AE4C-34AE9766A119}.Asus|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB2235D-6EA4-47F9-AE4C-34AE9766A119}.Asus|Any CPU.Build.0 = Release|Any CPU
+		{3BB2235D-6EA4-47F9-AE4C-34AE9766A119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BB2235D-6EA4-47F9-AE4C-34AE9766A119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BB2235D-6EA4-47F9-AE4C-34AE9766A119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB2235D-6EA4-47F9-AE4C-34AE9766A119}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
