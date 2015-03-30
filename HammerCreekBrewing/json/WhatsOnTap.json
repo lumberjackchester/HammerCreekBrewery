@@ -1,0 +1,21 @@
+[
+  {
+    "Name": "Garage",
+    "Beers": [
+      {
+        "Name": "Winter Lager"
+      },
+      {
+        "Name": "Pliny Clone"
+      }
+    ]
+  },
+  {
+    "Name": "Basement",
+    "Beers": [
+      {
+        "Name": "Gaelic Ale"
+      }
+    ]
+  }
+]
